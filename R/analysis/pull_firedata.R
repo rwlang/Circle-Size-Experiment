@@ -5,11 +5,11 @@ if (!require("fireData")) devtools::install_github("Kohze/fireData")
 library(fireData) # https://github.com/Kohze/fireData
 
 
-# CSE secret key = QQwfjvlOXolwiMLsf2SleKPuo7D2IZn3WO7i8SS1
+# secret key = zVIDsa5nmGLKDD73ymLIKkrdoNpGDrTC4nKe2KKa
 
 # download all files from database
-dataBackup(projectURL = "https://circle-size-experiment.firebaseio.com", #databaseURL
-           secretKey = "QQwfjvlOXolwiMLsf2SleKPuo7D2IZn3WO7i8SS1", #Secret Key of the database
+dataBackup(projectURL = "https://contingencypractice.firebaseio.com", #databaseURL
+           secretKey = "zVIDsa5nmGLKDD73ymLIKkrdoNpGDrTC4nKe2KKa", #Secret Key of the database
            "./data/data.json") # file path of where to save the data (out default assumes cloning the GitHub repo)
 
 
