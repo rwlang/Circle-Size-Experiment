@@ -1,7 +1,10 @@
 <!doctype html>
 <html>
- <head>
+<head>
   <meta charset="utf-8">
+  <title>Experiment</title>
+  <!-- viewport setup -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- lab.js library and experiment code -->
   <!-- MousetrapPlugin -->
   <script src="https://mousetrap.felixhenninger.com/0.1.0/mousetrap.js"></script>
@@ -13,13 +16,13 @@
   <script src="https://mousetrap.felixhenninger.com/0.1.0/mousetrap.js"></script>
   <!-- MousetrapPlugin -->
   <script src="https://mousetrap.felixhenninger.com/0.1.0/mousetrap.js"></script>
-<!-- lab.js library code -->
+  <!-- lab.js library code -->
   <script src="lib/lab.js" data-labjs-script="library"></script>
   <script src="lib/lab.fallback.js" data-labjs-script="fallback"></script>
   <link rel="stylesheet" href="lib/lab.css">
   <!-- study code and styles -->
   <script src="script.js" defer="true"></script>
- <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- If you'd rather have a container with a fixed width
@@ -32,4 +35,5 @@
       </div>
     </main>
   </div>
-<body>
+</body>
+</html>
