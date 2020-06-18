@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1592498521574.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "7BAD7745",
+    "lastKnownWriteTime" : 1592436540,
+    "last_content_update" : 1592436540,
+    "path" : "C:/Users/Ryan Langridge/Desktop/Github/Circle Size Experiment/R/analysis/pull_firedata.R",
+    "project_path" : "R/analysis/pull_firedata.R",
+    "properties" : {
+        "cursorPosition" : "40,0",
+        "scrollLine" : "15"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

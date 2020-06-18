@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1592498585430.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "815CD44C",
+    "lastKnownWriteTime" : 1592406982,
+    "last_content_update" : 1592406982,
+    "path" : "C:/Users/Ryan Langridge/Desktop/Github/Circle Size Experiment/R/analysis/data_analysis.R",
+    "project_path" : "R/analysis/data_analysis.R",
+    "properties" : {
+        "cursorPosition" : "52,75",
+        "scrollLine" : "27"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
