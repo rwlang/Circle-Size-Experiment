@@ -67,8 +67,7 @@ const study = lab.util.fromObject({
       "responses": {},
       "parameters": {},
       "messageHandlers": {},
-      "title": "Page",
-      "width": "l"
+      "title": "Page"
     },
     {
       "type": "lab.html.Screen",
@@ -1509,35 +1508,6 @@ this.options.devicePixelScaling = false
             "type": "lab.canvas.Screen",
             "content": [
               {
-                "type": "image",
-                "left": 0,
-                "top": 0,
-                "angle": 0,
-                "width": "800",
-                "height": "600",
-                "stroke": null,
-                "strokeWidth": 0,
-                "fill": "black",
-                "src": "${ this.files[\"screen.jpeg\"] }"
-              }
-            ],
-            "viewport": [
-              800,
-              600
-            ],
-            "files": {
-              "screen.jpeg": "embedded\u002F0444150c2c031ef7f44caaa0725897453f39206c03dab57ddf1d6532b6aec5b0.jpeg"
-            },
-            "responses": {},
-            "parameters": {},
-            "messageHandlers": {},
-            "title": "Screen",
-            "timeout": "200"
-          },
-          {
-            "type": "lab.canvas.Screen",
-            "content": [
-              {
                 "type": "rect",
                 "left": 0,
                 "top": 0,
@@ -1644,12 +1614,12 @@ this.options.devicePixelScaling = false
         {
           "required": true,
           "type": "text",
-          "title": "You may now exit.  Thank you!"
+          "title": "Please click 'Continue', to proceed."
         }
       ],
       "scrollTop": true,
       "submitButtonText": "Continue →",
-      "submitButtonPosition": "hidden",
+      "submitButtonPosition": "right",
       "files": {},
       "responses": {},
       "parameters": {},
@@ -1660,8 +1630,24 @@ this.options.viewportScale = 1
 this.options.devicePixelScaling = false
 }
       },
-      "title": "Debrief",
-      "width": "l"
+      "title": "Debrief"
+    },
+    {
+      "type": "lab.html.Page",
+      "items": [
+        {
+          "type": "text",
+          "title": "Please click 'Continue', and then click 'Download Data'"
+        }
+      ],
+      "scrollTop": true,
+      "submitButtonText": "Continue →",
+      "submitButtonPosition": "right",
+      "files": {},
+      "responses": {},
+      "parameters": {},
+      "messageHandlers": {},
+      "title": "Data Download"
     }
   ]
 })
