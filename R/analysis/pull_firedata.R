@@ -8,7 +8,7 @@ library(fireData) # https://github.com/Kohze/fireData
 # secret key = QQwfjvlOXolwiMLsf2SleKPuo7D2IZn3WO7i8SS1
 
 # download all files from database
-dataBackup(projectURL = "https://contingencypractice.firebaseio.com", #databaseURL
+dataBackup(projectURL = "https://circle-size-experiment.firebaseio.com", #databaseURL
            secretKey = "QQwfjvlOXolwiMLsf2SleKPuo7D2IZn3WO7i8SS1", #Secret Key of the database
            "./data/data.json") # file path of where to save the data (out default assumes cloning the GitHub repo)
 
