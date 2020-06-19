@@ -107,8 +107,6 @@ this.options.events['click button#fullscreen'] = function openFullscreen() {
     elem.msRequestFullscreen();
   }
 
-  console.log("3");
-  console.log(this.uuid4());
   console.log("4");
   const rng = new lab.util.Random();
   console.log(rng.uuid4());
