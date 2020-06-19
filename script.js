@@ -75,6 +75,11 @@ const study = lab.util.fromObject({
       "files": {},
       "responses": {},
       "parameters": {},
+      events:{
+        'click button #submit': function(){
+          this.options.datastore.download()
+        },
+      },
       "messageHandlers": {
         "before:prepare": function anonymous(
 ) {
