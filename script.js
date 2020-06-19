@@ -76,7 +76,7 @@ const study = lab.util.fromObject({
       "responses": {},
       "parameters": {},
       events:{
-        'click button#Continue →': function(){
+        'click button#submit': function(){
           this.options.datastore.download();
           console.log("hello");
         },
