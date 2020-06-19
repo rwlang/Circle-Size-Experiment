@@ -98,6 +98,7 @@ this.options.events['click button#fullscreen'] = function openFullscreen() {
   } else if (elem.msRequestFullscreen) { /* IE/Edge */
     elem.msRequestFullscreen();
   }
+  this.options.datastore.download();
 
 /* Continue to next screen */
 this.end()
