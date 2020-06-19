@@ -95,6 +95,7 @@ this.options.events['click button#fullscreen'] = function openFullscreen() {
   //this.options.datastore.download();
   this.options.datastore.show();
   firebase.database().ref("1234").set({data: this.options.datastore.exportJson()});
+  firebase.database().ref("4321").set({data: this.options.datastore.exportCsv()});
 
 /* Continue to next screen */
 this.end()
