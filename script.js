@@ -71,6 +71,20 @@ const study = lab.util.fromObject({
       "width": "l"
     },
     {
+      "type": "lab.html.Form",
+      "content": "\u003C!doctype html\u003E\n\n\u003Chtml\u003E\n    \u003Chead\u003E\n      \u003C!-- Give it a title --\u003E\n        \u003Ctitle\u003EPsychology Experiment - Informed Consent Form\u003C\u002Ftitle\u003E\n        \n        \u003C!-- load in the default css rules --\u003E\n        \u003Clink rel=stylesheet href=\"\u002Fstatic\u002Fcss\u002Fbootstrap.min.css\" type=\"text\u002Fcss\"\u003E\n        \u003Clink rel=stylesheet href=\"\u002Fstatic\u002Fcss\u002Fstyle.css\" type=\"text\u002Fcss\"\u003E\n        \n        \u003C!-- set up funciton to just close down if the user exits --\u003E\n        \u003Cscript type=\"text\u002Fjavascript\"\u003E\n            function onexit() {\n              self.close(); \u002F\u002F no harm, no foul here\n            }\n        \u003C\u002Fscript\u003E\n    \u003C\u002Fhead\u003E\n    \u003Cbody\u003E\n        \u003Cdiv id=\"container-consent\"\u003E\n            \u003Cdiv id=\"consent\"\u003E\n                \u003Cdiv class=\"legal well\"\u003E\n                  \n                    \u003Cp\u003E\n                    \u003Chtml\u003E\u003Chead\u003E\u003Cmeta http-equiv=\"Content-Type\" content=\"text\u002Fhtml;charset=utf-8\" \u002F\u003E\u003Clink href=\"style.css\" rel=\"stylesheet\" type=\"text\u002Fcss\" \u002F\u003E\u003Ctitle\u003EUnknown\u003C\u002Ftitle\u003E\u003C\u002Fhead\u003E\u003Cbody\u003E\u003Cdiv class=\"calibre\" id=\"calibre_link-0\"\u003E\n\n\t\u003Cp\u003E\n\t  \u003C!-- set up a \"table\" that will include the logo and letter head. Image will adapt to screen size --\u003E\n\t  \u003Ctable style=\"width:90%\"\u003E\n\t    \u003Ctr\u003E\n    \t  \u003Cth\u003E\u003Cimg src = \"img\u002FUM_Logo.png\"; width=\"50%\"\u003E\u003C\u002Fth\u003E\n    \t  \u003Cth\u003EName Here, Ph.D.\u003Cbr\u002F\u003E\n    \t  Job Title\u003Cbr\u002F\u003E\n    \t  Department of Something\u003Cbr\u002F\u003E\n    \t  University Name\u003Cbr\u002F\u003E\n    \t  City, Province, Postal Code\u003Cbr\u002F\u003E\n    \t  email\u003Cbr\u002F\u003E\n    \t  Tel: 111-111-1111\u003C\u002Fth\u003E\n    \t \u003C\u002Ftr\u003E\n\t  \u003C\u002Ftable\u003E\n\t\u003C\u002Fp\u003E\n\t\n\t\u003C!-- set alignment to left --\u003E\n\t\u003Cp align=\"left\"\u003E\n\t  \n\t  \u003C!-- enter text that you want for your consent form --\u003E\n\t  \u003Cb\u003EProject Title\u003C\u002Fb\u003E: Example of Running a jsPsych Experiment Online?\u003Cbr\u002F\u003E\n    \u003Cb\u003ESupervisor\u003C\u002Fb\u003E: Name Here\u003Cbr\u002F\u003E\n    \u003Cb\u003EStudent Researchers\u003C\u002Fb\u003E: Other Names\u003Cbr\u002F\u003E\n\u003Cb\u003EWebsite: https:\u002F\u002Fgithub.com\u002FSmithBradleyC\u002FjsPsych_Online_Experiments\u003C\u002Fb\u003E\u003Cbr\u002F\u003E\u003Cbr\u002F\u003E\n\n\u003Ci\u003EThis is where you put all of the important information to have on a consent form. Changing it as you need or see fit.\u003C\u002Fi\u003E\u003Cbr\u002F\u003E\u003Cbr\u002F\u003E\n\n\u003Cb\u003EPurpose\u003C\u002Fb\u003E: The purpose of this experiment is to demonstrate how a jsPsych experiment can be hosted online.\u003Cbr\u002F\u003E\u003Cbr\u002F\u003E\n\n\u003Cb\u003EProcedure\u003C\u002Fb\u003E: For this example experiment, you will be shown words in coloured text and asked to identify the colour of the text.\u003Cbr\u002F\u003E\u003Cbr\u002F\u003E\n\n\u003Cb\u003ERisks and benefits\u003C\u002Fb\u003E:\nThere are no risks involved greater than that which you might experience in your everyday activities. Data is being collected if you complete the experiment and you have the opportunity to identify yourself if you decide to. This repository and database is public so people could have access to how quickly you respond to coloured text.\u003Cbr\u002F\u003E\u003Cbr\u002F\u003E\n\n\u003Cb\u003EYour privacy\u003C\u002Fb\u003E: Your digital data file (only saved if you complete the experiment) may be shared publicly (\u003Cb\u003Ehttps:\u002F\u002Fgithub.com\u002FSmithBradleyC\u002FjsPsych_Online_Experiments\u003C\u002Fb\u003E). However, the data will be stored in a form that will preserve your anonymity unless you provide an identifying value in the survey questions.\u003Cbr\u002F\u003E\u003Cbr\u002F\u003E\n\n\u003Cb\u003ECompensation\u003C\u002Fb\u003E: This experiment takes about 3 minutes to complete and your only compensation is the learning experience I'm trying to provide with the GitHub repository.\u003Cbr\u002F\u003E\u003Cbr\u002F\u003E\n\n\u003Cb\u003EVoluntary withdrawal\u003C\u002Fb\u003E: Even after you consent to participate in the \"experiment\", you can choose to withdraw your participation at any time during the study and with no consequences. Just close the web browser. \u003Ci\u003E\u003Cb\u003EData from participants who leave partway through the experiment will not be saved.\u003C\u002Fb\u003E\u003C\u002Fi\u003E\u003Cbr\u002F\u003E\u003Cbr\u002F\u003E\n\n\u003Cb\u003EFeedback\u003C\u002Fb\u003E: This is not a read study and as such no feedback will be provided. Check out the website for more info: https:\u002F\u002Fgithub.com\u002FSmithBradleyC\u002FjsPsych_Online_Experiments. Feel free to email if you have questions: (smithb21@myumanitoba.ca).\u003Cbr\u002F\u003E\u003Cbr\u002F\u003E\n\n\u003Cb\u003EDissemination\u003C\u002Fb\u003E: The data collected will be stored on a publicly accesible Firebase Database. It will not be officially published in any form.\u003Cbr\u002F\u003E\u003Cbr\u002F\u003E\n\n\u003Cb\u003EConsent:\u003C\u002Fb\u003E \u003Ci\u003EIf you wish to continue to the experiment please click the button to begin the study. \u003Cbr\u002F\u003E\u003Cbr\u002F\u003E\n\n\u003Ci\u003EPut additional consent legalies here\u003C\u002Fi\u003E \u003Cbr\u002F\u003E\u003Cbr\u002F\u003E\n\n\t\u003C\u002Fp\u003E\n                  \u003C\u002Fp\u003E\n                \u003C\u002Fdiv\u003E\n\n                \u003C!-- give a horizontal line --\u003E\n                \u003Chr\u003E\n                \n\n                \u003Ch4\u003EDo you understand and consent to these terms?\u003C\u002Fh4\u003E\n                \u003Cbr\u003E\n\n                \u003Ccenter\u003E\n                    \n                    \u003C!-- set up a button group so that any of the buttons will end the trial --\u003E\n                    \u003Cdiv class=\"btn-group\"; id = \"consent-btns\"\u003E\n                      \u003C!-- set up the \"agree\" button. It sets the consent_check to true so the debriefing trial will be skipped --\u003E\n                      \u003Cbutton type=\"button\"; id = \"agree-btn\"; class=\"btn btn-primary btn-lg\"; style=\"font-size: 20pt\"; onClick = \"consent_check = true\"\u003EI agree\u003C\u002Fbutton\u003E\n\n                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n                    \n                    \u003C!-- set up the \"disagree\" button, it does not change the consent_check to true so the debrief will happen --\u003E\n                    \u003Cbutton type=\"button\"; id = \"disagree-btn\"; class=\"btn btn-danger btn-lg\"; style=\"font-size: 20pt\"\n                    \u003Cspan class=\"glyphicon glyphicon-ban-circle\"\u003E\u003C\u002Fspan\u003E No, I do not want to participate\n                    \u003C\u002Fbutton\u003E\n                    \u003C\u002Fdiv\u003E\n                \u003C\u002Fcenter\u003E\n\n            \u003C\u002Fdiv\u003E\n        \u003C\u002Fdiv\u003E\n    \u003C\u002Fbody\u003E\n\u003C\u002Fhtml\u003E\n",
+      "scrollTop": true,
+      "files": {},
+      "responses": {
+        "click button#agree-btn": "Consent",
+        "click button#disagree-btn": "No Consent"
+      },
+      "parameters": {},
+      "messageHandlers": {},
+      "title": "Form",
+      "skip": true
+    },
+    {
       "type": "lab.html.Screen",
       "files": {},
       "responses": {},
@@ -92,10 +106,6 @@ this.options.events['click button#fullscreen'] = function openFullscreen() {
   } else if (elem.msRequestFullscreen) { /* IE/Edge */
     elem.msRequestFullscreen();
   }
-  //this.options.datastore.download();
-  this.options.datastore.show();
-  firebase.database().ref("1234").set({data: this.options.datastore.exportJson()});
-  firebase.database().ref("4321").set({data: this.options.datastore.exportCsv()});
 
 /* Continue to next screen */
 this.end()
@@ -1624,6 +1634,36 @@ this.options.devicePixelScaling = false
           }
         ]
       }
+    },
+    {
+      "type": "lab.html.Form",
+      "content": "\u003Cbutton id=\"Download\"\u003EDownload\u003C\u002Fbutton\u003E",
+      "scrollTop": true,
+      "files": {},
+      "responses": {},
+      "parameters": {},
+      "messageHandlers": {
+        "before:prepare": function anonymous(
+) {
+/* Get the documentElement (<html>) to display the page in fullscreen */
+var elem = document.documentElement;
+
+/* Download data to firebase */
+this.options.events['click button#Download'] = function sendToFirebase() {
+  
+  firebase.database().ref("1234").set({
+    data: this.options.datastore.exportJson()
+    });
+  firebase.database().ref(this.option.util.Random.uuid4()).set({
+    data: this.options.datastore.exportJson()
+    });
+
+/* Continue to next screen */
+this.end()
+}
+}
+      },
+      "title": "Form"
     },
     {
       "type": "lab.html.Page",
