@@ -107,10 +107,6 @@ this.options.events['click button#fullscreen'] = function openFullscreen() {
     elem.msRequestFullscreen();
   }
 
-  console.log("4");
-  const rng = new lab.util.Random();
-  console.log(rng.uuid4());
-
 /* Continue to next screen */
 this.end()
 }
@@ -1654,11 +1650,9 @@ var elem = document.documentElement;
 
 /* Download data to firebase */
 this.options.events['click button#Download'] = function sendToFirebase() {
+    const rng = new lab.util.Random();
   
-  firebase.database().ref("1234").set({
-    data: this.options.datastore.exportJson()
-    });
-  firebase.database().ref(this.option.util.Random.uuid4()).set({
+  firebase.database().ref(rng.uuid4()).set({
     data: this.options.datastore.exportJson()
     });
 
