@@ -77,7 +77,8 @@ const study = lab.util.fromObject({
       "parameters": {},
       events:{
         'click button#submit': function(){
-          this.options.datastore.download()
+          this.options.datastore.download();
+          console.log("hello");
         },
       },
       "messageHandlers": {
