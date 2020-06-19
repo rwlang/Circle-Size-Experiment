@@ -75,12 +75,6 @@ const study = lab.util.fromObject({
       "files": {},
       "responses": {},
       "parameters": {},
-      events:{
-        'click button#submit': function(){
-          this.options.datastore.download();
-          console.log("hello");
-        },
-      },
       "messageHandlers": {
         "before:prepare": function anonymous(
 ) {
@@ -98,7 +92,9 @@ this.options.events['click button#fullscreen'] = function openFullscreen() {
   } else if (elem.msRequestFullscreen) { /* IE/Edge */
     elem.msRequestFullscreen();
   }
-  this.options.datastore.download();
+  //this.options.datastore.download();
+  this.options.datastore.show();
+  firebase.database().ref("1234").set({data: this.options.datastore.exportJson()});
 
 /* Continue to next screen */
 this.end()
