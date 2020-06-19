@@ -20,13 +20,20 @@ library("jsonlite")
 #································To check the number of data points in the database ··············································
 
 # open the file that was just downloaded
-data<-unlist(jsonlite::fromJSON("./data/data.json"), recursive = FALSE, use.names = TRUE)
+data<-jsonlite::fromJSON(txt = "./data/data.json")
+data$
+data1<-fromJSON(txt = data$`1234`$data,simplifyDataFrame = T,flatten = T)
+data2<-fromJSON(txt = data$`e79ee784-8b22-4739-bfd6-a18c00fe2b8a`$data,simplifyDataFrame = T,flatten = T)
+
+data3<-rbind(data1,data2)
+
+
 
 # install.packages("plyr")
 library("plyr")
 
 # collapse json levels
-data<-rbind.fill(data)
+#data<-rbind.fill(data)
 
 #********************************************************************************************************************************
 #*******************Data will still have json levels that need to be unpacked if you collected survey responses******************
@@ -34,7 +41,7 @@ data<-rbind.fill(data)
 #********************************************************************************************************************************
 
 # number of subjects
-length(unique(data$subject))
+#length(unique(data$subject))
 
 # save data to .csv file
-write.csv(data, "./data/data.csv", row.names = FALSE)
+write.csv(data1, "./data/data1.csv", row.names = FALSE)
