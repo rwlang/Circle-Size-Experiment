@@ -198,8 +198,8 @@ this.options.devicePixelScaling = false
               "coding": "3"
             }
           ],
-          "label": "Gender:",
-          "name": "gender:"
+          "label": "Sex:",
+          "name": "sex:"
         },
         {
           "required": true,
@@ -425,7 +425,7 @@ this.end()
 }
 }
       },
-      "title": "Screen",
+      "title": "Fullscreen",
       "content": "\u003Cbutton id=\"fullscreen\"\u003EPress to enter full screen\u003C\u002Fbutton\u003E"
     },
     {
@@ -562,7 +562,7 @@ this.options.viewportScale = 1
 this.options.devicePixelScaling = false
 }
       },
-      "title": "Loop",
+      "title": "Screen Setup",
       "shuffleGroups": [],
       "template": {
         "type": "lab.flow.Sequence",
@@ -676,7 +676,7 @@ this.options.devicePixelScaling = false
             "responses": {},
             "parameters": {},
             "messageHandlers": {},
-            "title": "Screen",
+            "title": "Mask",
             "timeout": "200"
           }
         ]
@@ -948,7 +948,7 @@ this.options.devicePixelScaling = false
             "responses": {},
             "parameters": {},
             "messageHandlers": {},
-            "title": "Screen",
+            "title": "Mask",
             "timeout": "200"
           },
           {
@@ -1036,7 +1036,7 @@ this.options.viewportScale = 1
 this.options.devicePixelScaling = false
 }
             },
-            "title": "Screen_1",
+            "title": "Comparison",
             "plugins": [
               {
                 "type": "mousetrap",
@@ -1256,7 +1256,7 @@ this.options.devicePixelScaling = false
             "responses": {},
             "parameters": {},
             "messageHandlers": {},
-            "title": "Screen",
+            "title": "Mask",
             "timeout": "200"
           },
           {
@@ -1334,7 +1334,7 @@ this.options.viewportScale = 1
 this.options.devicePixelScaling = false
 }
             },
-            "title": "Screen_2",
+            "title": "Practice",
             "plugins": [
               {
                 "type": "mousetrap",
@@ -1545,7 +1545,7 @@ this.options.devicePixelScaling = false
             "responses": {},
             "parameters": {},
             "messageHandlers": {},
-            "title": "Screen",
+            "title": "Mask",
             "timeout": "200"
           },
           {
@@ -1623,7 +1623,7 @@ this.options.viewportScale = 1
 this.options.devicePixelScaling = false
 }
             },
-            "title": "Screen_3",
+            "title": "Pre_Manip Exp Trial",
             "plugins": [
               {
                 "type": "mousetrap",
@@ -1858,7 +1858,7 @@ this.options.devicePixelScaling = false
             "responses": {},
             "parameters": {},
             "messageHandlers": {},
-            "title": "Screen",
+            "title": "Mask",
             "timeout": "200"
           },
           {
@@ -1936,7 +1936,7 @@ this.options.viewportScale = 1
 this.options.devicePixelScaling = false
 }
             },
-            "title": "Screen_4",
+            "title": "Post_Manip Exp Trial",
             "plugins": [
               {
                 "type": "mousetrap",
@@ -1966,7 +1966,7 @@ this.options.events['click button#Download'] = function sendToFirebase() {
     const rng = new lab.util.Random();
   
   firebase.database().ref(rng.uuid4()).set({
-    data: this.options.datastore.export.Json()
+    data: this.options.datastore.exportJson()
     });
 
 /* Continue to next screen */
@@ -1974,7 +1974,7 @@ this.end()
 }
 }
       },
-      "title": "Form"
+      "title": "Download to Firebase"
     },
     {
       "type": "lab.html.Page",
