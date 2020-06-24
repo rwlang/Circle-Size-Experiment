@@ -1966,7 +1966,7 @@ this.options.events['click button#Download'] = function sendToFirebase() {
     const rng = new lab.util.Random();
   
   firebase.database().ref(rng.uuid4()).set({
-    data: this.options.datastore.exportBlob(filetype="json")/*export.Json()*/
+    data: this.options.datastore.export.Json()//exportBlob(filetype="json")/*export.Json()*/
     });
 
 /* Continue to next screen */
