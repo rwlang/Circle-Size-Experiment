@@ -35,8 +35,67 @@ const study = lab.util.fromObject({
           "name": ""
         },
         {
+          "required": true,
           "type": "text",
-          "title": "(Consent form information here)"
+          "title": "Principal Investigators:",
+          "content": "Ryan Langridge (PhD Candidate, Psychology, University of Manitoba, langrirw@myumanitoba.ca)"
+        },
+        {
+          "required": true,
+          "type": "text",
+          "content": "Tiffany Carther-Krone (PhD Candidate, Psychology, University of Manitoba, lazart@myumanitoba.ca)",
+          "title": ""
+        },
+        {
+          "required": true,
+          "type": "text",
+          "content": "Dr. Jonathan Marotta (Professor, Psychology, University of Manitoba, Jonathan.Marotta@umanitoba.ca)"
+        },
+        {
+          "required": true,
+          "type": "text",
+          "content": "We are interested in how your perception of a circle affects your performance when clicking on it.",
+          "title": "Purpose:"
+        },
+        {
+          "required": true,
+          "type": "text",
+          "title": "Description:",
+          "content": "This study will last approximately 30 minutes.  During the experiment you will be asked to click on circular targets as quickly and as accurately as possible.  Prior to this task, you will be asked to fill out a brief questionnaire involving questions about your age, sex, handedness, vision, and the device you are currently using to complete the experiment."
+        },
+        {
+          "required": true,
+          "type": "text",
+          "title": "Risks and Benefits:",
+          "content": "There are no risks (physical, psychological, and\u002For emotional) inherent in the tasks you will perform, but some of the tests may be repetitive.  By participating in this study you will be providing valuable data regarding how the way we perceive our visual environment affects the way we interact with it."
+        },
+        {
+          "required": true,
+          "type": "text",
+          "title": "Costs and Payments:",
+          "content": "There are no fees or charges to participate in this study.  You will receive 1 experimental credit for your participation in this study."
+        },
+        {
+          "required": true,
+          "type": "text",
+          "title": "Confidentiality",
+          "content": "Your information will be kept confidential.  You will be referred to by a code number.  After completing the experiment, all identifying information will be saved separately from your experimental data, and will only be used to assign you participation credit.  Your files will only be accessible by the investigators.  Results from this study will be disseminated through conference presentations and refereed publications.  Participant confidentiality will not be jeopardized."
+        },
+        {
+          "required": true,
+          "type": "text",
+          "title": "Voluntary Consent",
+          "content": "By selecting the 'I Consent' option below, you are indicating that you have understood to your satisfaction the information regarding participation in the research project and agree to participate as a subject.  In no way does this waive your legal rights nor release the researchers, sponsors, or involved institutions form their legal and professional responsibilities.  You are free to withdraw from the study at any time by exiting your browser (participation is completely voluntary), and\u002For refrain from answering any questions you prefer to omit, without prejudice or consequence.  You will also still receive your participation credit if you encounter any technical difficulties, and cannot continue.  This means that should you choose to withdraw at any point from the study, you will still receive 1 participation credit."
+        },
+        {
+          "required": true,
+          "type": "text",
+          "content": "The University of Manitoba may look at your research records to see that the research is being done in a safe and proper way"
+        },
+        {
+          "required": true,
+          "type": "text",
+          "content": "This research has been approved by the Psychology\u002FSociology Research Ethics Board of the University of Manitoba.  If you have any concerns or complaints about this project you may contact any of the above named persons or the Human Ethics Coordinator (HEC) at (204) 474-7122 (Email: humanethics@umanitoba.ca)."
         },
         {
           "required": true,
@@ -51,13 +110,19 @@ const study = lab.util.fromObject({
               "coding": "2"
             }
           ],
-          "name": "Participant_Consent"
+          "name": "Participant_Consent",
+          "label": "Do you understand and consent to these terms?"
         },
         {
           "required": false,
           "type": "input",
           "label": "If you would like to receive a general summary of the results from this study when it is completed, please provide your email address below:",
           "name": "if-you-would-like-to-receive-a-general-summary-of-the-results-from-this-study-when-it-is-completed-please-provide-your-email-address-below:"
+        },
+        {
+          "required": true,
+          "type": "text",
+          "content": "Thank you for your participation!"
         }
       ],
       "scrollTop": true,
@@ -69,7 +134,8 @@ const study = lab.util.fromObject({
       "responses": {},
       "parameters": {},
       "messageHandlers": {},
-      "title": "Consent Form"
+      "title": "Consent Form",
+      "width": "m"
     },
     {
       "type": "lab.html.Page",
@@ -78,13 +144,41 @@ const study = lab.util.fromObject({
           "required": true,
           "type": "text",
           "title": "Debriefing:",
-          "content": "The purpose of this study was to measure how the perception of a circle's size influences how accurately participants judge the center of that circle.  To bias size perception, we used a commonly known illusion often referred to as the 'Ebbinghaus Illusion'.  This illusion involves surrounding a middle circle with a ring of larger or smaller circles.\n\nIn this illusion, a circle is usually perceived as larger when surrounded by smaller circles, while an identical sized circle is typically perceived as smaller when surrounded by larger circles.  participants were required to choose the larger of two circles.  In some of those trials, the target circles were actually the same size, even though the illusion may have made them appear smaller or larger."
+          "content": "The purpose of this study was to measure how the perception of a circle's size influences how accurately participants judge the location of that circle's center.  To bias size perception, we used a commonly known illusion often referred to as the 'Ebbinghaus Illusion'.  This illusion involves surrounding a middle circle with a ring of larger or smaller circles.\n\nIn this illusion, a circle is usually perceived as larger when surrounded by smaller circles, while an identical sized circle is typically perceived as smaller when surrounded by larger circles.  During the experiment, participants were required to choose the larger of two circles.  In some of those trials, the target circles were actually the same size, even though the illusion may have made them appear smaller or larger."
         },
         {
           "required": true,
           "type": "text",
           "title": "",
-          "content": "During the experimental trials, participants received feedback about their performance (e.g., you were moving to slowly, or not clicking the target circle accurately enough).  These messages were automated, and did not reflect participants' actual speed or accuracy in any way.  Our intention was to encourage participants to emphasize either speed or accuracy while completing the trials, to see how these added motivations would influence the results."
+          "content": "During the experimental trials, participants received feedback about their performance (e.g., you were moving to slowly, or not clicking the target circle accurately enough).  These messages were automated, and did not reflect participants' actual speed or accuracy in any way.  Our intention was to encourage participants to emphasize either speed or accuracy while completing the trials, to see how these added motivations would influence their accuracy when clicking the center of the circle."
+        },
+        {
+          "required": true,
+          "type": "text",
+          "title": "",
+          "content": "If you have any questions about this study, please feel free to contact us:"
+        },
+        {
+          "required": true,
+          "type": "text",
+          "content": "Ryan Langridge (PhD Candidate, Psychology, University of Manitoba, langrirw@myumanitoba.ca)",
+          "title": ""
+        },
+        {
+          "required": true,
+          "type": "text",
+          "content": "Tiffany Carther-Krone (PhD Candidate, Psychology, University of Manitoba, lazart@myumanitoba.ca)",
+          "title": ""
+        },
+        {
+          "required": true,
+          "type": "text",
+          "content": "Dr. Jonathan Marotta (Professor, Psychology, University of Manitoba, Jonathan.Marotta@umanitoba.ca)"
+        },
+        {
+          "required": true,
+          "type": "text",
+          "content": "Or, you can contact the Human Ethics Coordinator at humanethics@umanitoba.ca."
         },
         {
           "required": true,
@@ -114,9 +208,14 @@ this.options.devicePixelScaling = false
       "type": "lab.html.Page",
       "items": [
         {
+          "required": true,
           "type": "text",
-          "title": "Instructions",
-          "content": "Please read each question very carefully and fill out the following information to the best of your knowledge (leave blank if you don't know the answer):"
+          "title": "The following information is used to assist us in conducting our study.  Please note that there is no personally identifiable information kept, and you will only be referred to by an arbitrary participant number.  All information will be kept confidential, and your files will only be accessible by the investigators.  You may refrain from answering any questions you choose."
+        },
+        {
+          "type": "text",
+          "content": "Please read each question very carefully and fill out the following information to the best of your knowledge (leave blank if you don't know the answer):",
+          "title": "Instructions"
         },
         {
           "required": false,
@@ -129,41 +228,26 @@ this.options.devicePixelScaling = false
           "type": "checkbox",
           "options": [
             {
-              "label": "Mouse"
+              "label": "Touch pad",
+              "coding": "1"
             },
             {
-              "label": "Touch pad"
+              "label": "Mouse",
+              "coding": "2"
             },
             {
-              "label": "Finger (Touchscreen)"
+              "label": "Finger (Touch screen)",
+              "coding": "3"
             }
           ],
           "label": "How are you controlling the cursor on your device?",
           "name": "how-are-you-controlling-the-cursor-on-your-device"
         },
         {
-          "required": true,
-          "type": "text",
-          "title": "Click 'Continue' to proceed. "
-        }
-      ],
-      "scrollTop": true,
-      "submitButtonText": "Continue →",
-      "submitButtonPosition": "right",
-      "files": {},
-      "responses": {},
-      "parameters": {},
-      "messageHandlers": {},
-      "title": "Demographics_1",
-      "width": "l"
-    },
-    {
-      "type": "lab.html.Page",
-      "items": [
-        {
-          "type": "text",
-          "content": "Please read each question very carefully and fill out the following information to the best of your knowledge (leave blank if you don't know the answer):",
-          "title": "Instructions"
+          "required": false,
+          "type": "input",
+          "label": "What is your age (years)?",
+          "name": "what-is-your-age-(years)"
         },
         {
           "required": false,
@@ -395,7 +479,7 @@ this.options.devicePixelScaling = false
       "responses": {},
       "parameters": {},
       "messageHandlers": {},
-      "title": "Demographics_2"
+      "title": "Demographics"
     },
     {
       "type": "lab.html.Screen",
@@ -1950,7 +2034,7 @@ this.options.devicePixelScaling = false
     },
     {
       "type": "lab.html.Form",
-      "content": "\u003Cbutton id=\"Download\"\u003EDownload\u003C\u002Fbutton\u003E",
+      "content": "\u003Cbutton id=\"Continue\"\u003EContinue\u003C\u002Fbutton\u003E",
       "scrollTop": true,
       "files": {},
       "responses": {},
@@ -1962,7 +2046,7 @@ this.options.devicePixelScaling = false
 var elem = document.documentElement;
 
 /* Download data to firebase */
-this.options.events['click button#Download'] = function sendToFirebase() {
+this.options.events['click button#Continue'] = function sendToFirebase() {
     const rng = new lab.util.Random();
   
   firebase.database().ref(rng.uuid4()).set({
@@ -1980,21 +2064,52 @@ this.end()
       "type": "lab.html.Page",
       "items": [
         {
+          "required": true,
           "type": "text",
-          "title": "Experiment Finished",
-          "content": "Great Job!  Thank you for participating."
+          "title": "Experiment Finished!",
+          "content": "Thank you for participating."
         },
         {
           "required": true,
           "type": "text",
           "title": "Debriefing:",
-          "content": "The purpose of this study was to measure how the perception of a circle's size influences how accurately participants judge the center of that circle.  To bias size perception, we used a commonly known illusion often referred to as the 'Ebbinghaus Illusion'.  This illusion involves surrounding a middle circle with a ring of larger or smaller circles.\n\nIn this illusion, a circle is usually perceived as larger when surrounded by smaller circles, while an identical sized circle is typically perceived as smaller when surrounded by larger circles.  During part 2 of this experiment, you were required to choose the larger of two circles.  In some of those trials, the target circles were actually the same size, even though the illusion may have made them appear smaller or larger."
+          "content": "The purpose of this study was to measure how the perception of a circle's size influences how accurately participants judge the location of that circle's center.  To bias size perception, we used a commonly known illusion often referred to as the 'Ebbinghaus Illusion'.  This illusion involves surrounding a middle circle with a ring of larger or smaller circles.\n\nIn this illusion, a circle is usually perceived as larger when surrounded by smaller circles, while an identical sized circle is typically perceived as smaller when surrounded by larger circles.  During the experiment, participants were required to choose the larger of two circles.  In some of those trials, the target circles were actually the same size, even though the illusion may have made them appear smaller or larger."
         },
         {
           "required": true,
           "type": "text",
           "title": "",
-          "content": "During the experimental trials, you will have received feedback about your performance (e.g., you were moving to slowly, or not clicking the target circle accurately enough).  These messages were automated, and did not reflect your actual speed or accuracy in any way.  Our intention was to encourage participants to emphasize either speed or accuracy while completing the trials, to see how these added motivations would influence the results."
+          "content": "During the experimental trials, participants received feedback about their performance (e.g., you were moving to slowly, or not clicking the target circle accurately enough).  These messages were automated, and did not reflect participants' actual speed or accuracy in any way.  Our intention was to encourage participants to emphasize either speed or accuracy while completing the trials, to see how these added motivations would influence their accuracy when clicking the center of the circle."
+        },
+        {
+          "required": true,
+          "type": "text",
+          "title": "",
+          "content": "If you have any questions about this study, please contact us:"
+        },
+        {
+          "required": true,
+          "type": "text",
+          "content": "Ryan Langridge (PhD Candidate, Psychology, University of Manitoba, langrirw@myumanitoba.ca)",
+          "title": ""
+        },
+        {
+          "required": true,
+          "type": "text",
+          "content": "Dr. Jonathan Marotta (Professor, Psychology, University of Manitoba, Jonathan.Marotta@umanitoba.ca)",
+          "title": ""
+        },
+        {
+          "required": true,
+          "type": "text",
+          "content": "Tiffany Carther-Krone (PhD Candidate, Psychology, University of Manitoba, lazart@myumanitoba.ca)",
+          "title": ""
+        },
+        {
+          "required": true,
+          "type": "text",
+          "content": "Or, you can contact the Human Ethics Coordinator at humanethics@umanitoba.ca.",
+          "title": ""
         },
         {
           "required": true,
@@ -2015,7 +2130,7 @@ this.options.viewportScale = 1
 this.options.devicePixelScaling = false
 }
       },
-      "title": "Debrief Experiment Complete",
+      "title": "Debrief_Experiment Complete",
       "width": "l"
     }
   ]
