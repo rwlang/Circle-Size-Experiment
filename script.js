@@ -150,7 +150,7 @@ const study = lab.util.fromObject({
           "required": true,
           "type": "text",
           "title": "",
-          "content": "During the experimental trials, participants received feedback about their performance (e.g., you were moving to slowly, or not clicking the target circle accurately enough).  These messages were automated, and did not reflect participants' actual speed or accuracy in any way.  Our intention was to encourage participants to emphasize either speed or accuracy while completing the trials, to see how these added motivations would influence their accuracy when clicking the center of the circle."
+          "content": "During the experimental trials, participants received feedback about their performance (e.g., you were moving too slowly, or not clicking the target circle accurately enough).  These messages were automated, and did not reflect participants' actual speed or accuracy in any way.  Our intention was to encourage participants to emphasize either speed or accuracy while completing the trials, to see how these added motivations would influence their accuracy when clicking the center of the circle."
         },
         {
           "required": true,
@@ -2079,7 +2079,7 @@ this.end()
           "required": true,
           "type": "text",
           "title": "",
-          "content": "During the experimental trials, participants received feedback about their performance (e.g., you were moving to slowly, or not clicking the target circle accurately enough).  These messages were automated, and did not reflect participants' actual speed or accuracy in any way.  Our intention was to encourage participants to emphasize either speed or accuracy while completing the trials, to see how these added motivations would influence their accuracy when clicking the center of the circle."
+          "content": "During the experimental trials, participants received feedback about their performance (e.g., you were moving too slowly, or not clicking the target circle accurately enough).  These messages were automated, and did not reflect participants' actual speed or accuracy in any way.  Our intention was to encourage participants to emphasize either speed or accuracy while completing the trials, to see how these added motivations would influence their accuracy when clicking the center of the circle."
         },
         {
           "required": true,
