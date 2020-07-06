@@ -55,7 +55,7 @@ mouse_pos <- capture.output(data2[27:28])
 
 write.csv(pData1, "C:\\Users\\Ryan Langridge\\Desktop\\Github\\Circle Size Experiment\\data\\P2/pData1.csv", row.names = FALSE)
 write.csv(pData2, "C:\\Users\\Ryan Langridge\\Desktop\\Github\\Circle Size Experiment\\data\\P2/pData2.csv", row.names = FALSE)
-write.csv(pData3, "C:\\Users\\Ryan Langridge\\Desktop\\Github\\Circle Size Experiment\\data\\P2/mouse-pos.csv", row.names = FALSE)
+write.csv(mouse_pos, "C:\\Users\\Ryan Langridge\\Desktop\\Github\\Circle Size Experiment\\data\\P2/mouse-pos.csv", row.names = FALSE)
 
 
 
