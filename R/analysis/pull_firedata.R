@@ -1,3 +1,5 @@
+options(max.print = 10000)
+
 # require devtools and fireData packages
 if (!require("devtools")) install.packages("devtools")
 if (!require("fireData")) devtools::install_github("Kohze/fireData")
@@ -22,10 +24,10 @@ library("jsonlite")
 # open the file that was just downloaded
 data<-jsonlite::fromJSON(txt = "./data/data.json")
 data$
-data1<-fromJSON(txt = data$`1234`$data,simplifyDataFrame = T,flatten = T)
-data2<-fromJSON(txt = data$`e79ee784-8b22-4739-bfd6-a18c00fe2b8a`$data,simplifyDataFrame = T,flatten = T)
+#data1<-fromJSON(txt = data$`1234`$data,simplifyDataFrame = T,flatten = T)
+data2<-fromJSON(txt = data$`17e43945-ebf1-432a-8d22-f7cbb9b9f64e`$data,simplifyDataFrame = T,flatten = T)
 
-data3<-rbind(data1,data2)
+#data3<-rbind(data1,data2)
 
 
 
@@ -44,4 +46,16 @@ library("plyr")
 #length(unique(data$subject))
 
 # save data to .csv file
-write.csv(data1, "./data/data1.csv", row.names = FALSE)
+#write.csv(data1, "./data/data1.csv", row.names = FALSE)
+
+pData1 <- (data2[1:25])
+pData2 <- (data2[30:50])
+
+mouse_pos <- capture.output(data2[27:28])
+
+write.csv(pData1, "C:\\Users\\Ryan Langridge\\Desktop\\Github\\Circle Size Experiment\\data\\P2/pData1.csv", row.names = FALSE)
+write.csv(pData2, "C:\\Users\\Ryan Langridge\\Desktop\\Github\\Circle Size Experiment\\data\\P2/pData2.csv", row.names = FALSE)
+write.csv(pData3, "C:\\Users\\Ryan Langridge\\Desktop\\Github\\Circle Size Experiment\\data\\P2/mouse-pos.csv", row.names = FALSE)
+
+
+

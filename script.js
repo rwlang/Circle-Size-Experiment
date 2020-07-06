@@ -954,7 +954,7 @@ this.options.devicePixelScaling = false
                 "height": 30.64,
                 "stroke": null,
                 "strokeWidth": 1,
-                "fill": "#0070d9"
+                "fill": "#dddddd"
               },
               {
                 "type": "aoi",
@@ -973,12 +973,12 @@ this.options.devicePixelScaling = false
                 "left": 0,
                 "top": 0,
                 "angle": 0,
-                "width": 640.41,
+                "width": 642.16,
                 "height": 36.16,
                 "stroke": null,
                 "strokeWidth": 1,
                 "fill": "black",
-                "text": "Click on the blue button to begin the next trial",
+                "text": "Click on the grey button to begin the next trial",
                 "fontStyle": "normal",
                 "fontWeight": "normal",
                 "fontSize": 32,
@@ -1262,37 +1262,37 @@ this.options.devicePixelScaling = false
                 "height": 30.64,
                 "stroke": null,
                 "strokeWidth": 1,
-                "fill": "#0070d9"
-              },
-              {
-                "type": "i-text",
-                "left": 0,
-                "top": 0,
-                "angle": 0,
-                "width": 640.41,
-                "height": 36.16,
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "black",
-                "text": "Click on the blue button to begin the next trial",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-                "fontSize": 32,
-                "fontFamily": "sans-serif",
-                "lineHeight": 1.16,
-                "textAlign": "center"
+                "fill": "#dddddd"
               },
               {
                 "type": "aoi",
                 "left": 0,
                 "top": 250,
                 "angle": 0,
-                "width": 38.48,
-                "height": 38.48,
+                "width": "20.84",
+                "height": "20.84",
                 "stroke": null,
                 "strokeWidth": 1,
                 "fill": "rgba(0, 0, 0, 0.2)",
                 "label": "Start_Button"
+              },
+              {
+                "type": "i-text",
+                "left": 0,
+                "top": 0,
+                "angle": 0,
+                "width": 642.16,
+                "height": 36.16,
+                "stroke": null,
+                "strokeWidth": 1,
+                "fill": "black",
+                "text": "Click on the grey button to begin the next trial",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+                "fontSize": 32,
+                "fontFamily": "sans-serif",
+                "lineHeight": 1.16,
+                "textAlign": "center"
               }
             ],
             "viewport": [
@@ -1511,7 +1511,7 @@ this.options.devicePixelScaling = false
       ],
       "sample": {
         "mode": "draw-shuffle",
-        "n": ""
+        "n": "50"
       },
       "files": {},
       "responses": {},
@@ -1543,6 +1543,18 @@ this.options.devicePixelScaling = false
             "type": "lab.canvas.Screen",
             "content": [
               {
+                "type": "aoi",
+                "left": 0,
+                "top": 250,
+                "angle": 0,
+                "width": 20.84,
+                "height": 20.84,
+                "stroke": null,
+                "strokeWidth": 1,
+                "fill": "rgba(0, 0, 0, 0.2)",
+                "label": "Start_Button"
+              },
+              {
                 "type": "circle",
                 "left": 0.38,
                 "top": 249.62,
@@ -1551,37 +1563,25 @@ this.options.devicePixelScaling = false
                 "height": 30.64,
                 "stroke": null,
                 "strokeWidth": 1,
-                "fill": "#0070d9"
+                "fill": "#dddddd"
               },
               {
                 "type": "i-text",
                 "left": 0,
                 "top": 0,
                 "angle": 0,
-                "width": 640.41,
+                "width": 642.16,
                 "height": 36.16,
                 "stroke": null,
                 "strokeWidth": 1,
                 "fill": "black",
-                "text": "Click on the blue button to begin the next trial",
+                "text": "Click on the grey button to begin the next trial",
                 "fontStyle": "normal",
                 "fontWeight": "normal",
                 "fontSize": 32,
                 "fontFamily": "sans-serif",
                 "lineHeight": 1.16,
                 "textAlign": "center"
-              },
-              {
-                "type": "aoi",
-                "left": 0,
-                "top": 250,
-                "angle": 0,
-                "width": 38.48,
-                "height": 38.48,
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "rgba(0, 0, 0, 0.2)",
-                "label": "Start_Button"
               }
             ],
             "viewport": [
@@ -1824,7 +1824,7 @@ this.options.devicePixelScaling = false
       ],
       "sample": {
         "mode": "draw-shuffle",
-        "n": ""
+        "n": "50"
       },
       "files": {},
       "responses": {},
@@ -1856,6 +1856,18 @@ this.options.devicePixelScaling = false
             "type": "lab.canvas.Screen",
             "content": [
               {
+                "type": "aoi",
+                "left": 0,
+                "top": 250,
+                "angle": 0,
+                "width": "20.84",
+                "height": "20.84",
+                "stroke": null,
+                "strokeWidth": 1,
+                "fill": "rgba(0, 0, 0, 0.2)",
+                "label": "Start_Button"
+              },
+              {
                 "type": "circle",
                 "left": 0.38,
                 "top": 249.62,
@@ -1864,37 +1876,25 @@ this.options.devicePixelScaling = false
                 "height": 30.64,
                 "stroke": null,
                 "strokeWidth": 1,
-                "fill": "#0070d9"
+                "fill": "#dddddd"
               },
               {
                 "type": "i-text",
                 "left": 0,
                 "top": 0,
                 "angle": 0,
-                "width": 640.41,
+                "width": 642.16,
                 "height": 36.16,
                 "stroke": null,
                 "strokeWidth": 1,
                 "fill": "black",
-                "text": "Click on the blue button to begin the next trial",
+                "text": "Click on the grey button to begin the next trial",
                 "fontStyle": "normal",
                 "fontWeight": "normal",
                 "fontSize": 32,
                 "fontFamily": "sans-serif",
                 "lineHeight": 1.16,
                 "textAlign": "center"
-              },
-              {
-                "type": "aoi",
-                "left": 0,
-                "top": 250,
-                "angle": 0,
-                "width": 38.48,
-                "height": 38.48,
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "rgba(0, 0, 0, 0.2)",
-                "label": "Start_Button"
               }
             ],
             "viewport": [
