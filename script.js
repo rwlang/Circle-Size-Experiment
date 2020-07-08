@@ -141,6 +141,67 @@ const study = lab.util.fromObject({
       "type": "lab.html.Page",
       "items": [
         {
+          "type": "text",
+          "title": "Please provide your name (first and last) and student number and click the 'Submit' button.  This information will only be used by the experimenter to ensure you are NOT penalized for ending the experiment early."
+        },
+        {
+          "required": false,
+          "type": "input",
+          "label": "First Name",
+          "name": "first-name"
+        },
+        {
+          "required": false,
+          "type": "input",
+          "label": "Last Name",
+          "name": "last-name"
+        },
+        {
+          "required": false,
+          "type": "input",
+          "label": "Student Number",
+          "name": "student-number"
+        },
+        {
+          "required": true,
+          "type": "html",
+          "content": "\u003Cbutton id=\"Submit\"\u003ESubmit\u003C\u002Fbutton\u003E",
+          "name": ""
+        }
+      ],
+      "scrollTop": true,
+      "submitButtonText": "Continue →",
+      "submitButtonPosition": "hidden",
+      "files": {},
+      "responses": {},
+      "parameters": {},
+      "messageHandlers": {
+        "before:prepare": function anonymous(
+) {
+/* Get the documentElement (<html>) to display the page in fullscreen */
+var elem = document.documentElement;
+
+/* Download data to firebase */
+this.options.events['click button#Submit'] = function sendToFirebase() {
+    const rng = new lab.util.Random();
+  
+  firebase.database().ref(rng.uuid4()).set({
+    data: this.options.datastore.exportJson()
+    });
+
+/* Continue to next screen */
+this.end()
+}
+}
+      },
+      "title": "Page",
+      "tardy": true,
+      "skip": "${this.state['Participant_Consent'] == '1'}"
+    },
+    {
+      "type": "lab.html.Page",
+      "items": [
+        {
           "required": true,
           "type": "text",
           "title": "Debriefing:",
@@ -183,11 +244,11 @@ const study = lab.util.fromObject({
         {
           "required": true,
           "type": "text",
-          "title": "You may now exit.  Thank you!"
+          "title": "You may now press ESC and exit your browser window.  Thank you!"
         }
       ],
       "scrollTop": true,
-      "submitButtonText": "Continue →",
+      "submitButtonText": "Continue",
       "submitButtonPosition": "hidden",
       "files": {},
       "responses": {},
@@ -197,12 +258,26 @@ const study = lab.util.fromObject({
 ) {
 this.options.viewportScale = 1
 this.options.devicePixelScaling = false
+
+
 }
       },
       "title": "Debrief No Consent",
       "width": "l",
       "tardy": true,
       "skip": "${this.state['Participant_Consent'] == '1'}"
+    },
+    {
+      "type": "lab.html.Form",
+      "content": "\u003Chtml\u003E\n    \u003Cbody\u003E\n\n\u003Cb\u003E Clicking the 'Continue' button below will open up a new window redirecting you to SONA, and awarding your 1 participation credit.  Once you click 'Continue', please minimize the new SONA window, and continue the experiment.   \u003C\u002Fi\u003E\u003Cbr\u002F\u003E\u003Cbr\u002F\u003E\n  \n  Reminder: You are free to withdraw from the study at any time by exiting your browser (participation is completely voluntary), and\u002For refrain from answering any questions you prefer to omit, without prejudice or consequence.  You will also still receive your participation credit if you encounter any technical difficulties, and cannot continue.  This means that should you choose to withdraw at any point from the study, you will still receive 1 participation credit.\n\n    \u003C\u002Fbody\u003E\n\u003C\u002Fhtml\u003E\n\n\u003Cbutton onclick=\"window.open('https:\u002F\u002Fumanitobapsych.sona-systems.com\u002Fwebstudy_credit.aspx?experiment_id=1313&credit_token=c84ad4dbec424d0e8a58efb46fee6848&survey_code=+SONA_ID','','width=,height=,resizeable=no');\" id=\"Continue\" class=\"float-left submit-button\" \u003EContinue\u003C\u002Fbutton\u003E\n\n\u003Cscript type=\"text\u002Fjavascript\"\u003E\n\u002F\u002F function to extract data from URL variables\n  function getUrlVars() { \u002F\u002F #SONA\n    var vars = {}; \u002F\u002F #SONA\n    var parts = window.location.href.replace(\u002F[?&]+([^=&]+)=([^&]*)\u002Fgi,function(m,key,value) { \u002F\u002F #SONA\n        vars[key] = value; \u002F\u002F #SONA\n    }); \u002F\u002F #SONA\n    return vars; \u002F\u002F #SONA\n  } \u002F\u002F #SONA\n\n\u002F\u002F function to go find data in the URL\n\u002F\u002F should be provided a defualt (e.g., \"\") so that there will be no errors thrown\n  function getUrlParam(parameter, defaultvalue){ \u002F\u002F #SONA\n    var urlparameter = defaultvalue; \u002F\u002F #SONA\n    if(window.location.href.indexOf(parameter) \u003E -1){ \u002F\u002F #SONA\n        urlparameter = getUrlVars()[parameter]; \u002F\u002F #SONA\n        } \u002F\u002F #SONA\n    return urlparameter; \u002F\u002F #SONA\n  }\n\n  \u002F\u002F get the id number for the SONA participant so that we can grant credits automatically\nvar SONA_ID = getUrlParam('id','Empty'); \u002F\u002F #SONA\n\n",
+      "scrollTop": true,
+      "files": {},
+      "responses": {
+        "click button#Continue": "Credit"
+      },
+      "parameters": {},
+      "messageHandlers": {},
+      "title": "Participation Credit"
     },
     {
       "type": "lab.html.Page",
@@ -2114,12 +2189,12 @@ this.end()
         {
           "required": true,
           "type": "text",
-          "title": "You may now exit.  Thank you!"
+          "title": "You may now press ESC and exit your browser window.  Thank you!"
         }
       ],
       "scrollTop": true,
       "submitButtonText": "Continue →",
-      "submitButtonPosition": "hidden",
+      "submitButtonPosition": "right",
       "files": {},
       "responses": {},
       "parameters": {},
