@@ -142,7 +142,7 @@ const study = lab.util.fromObject({
       "items": [
         {
           "type": "text",
-          "title": "Please provide your name (first and last) and student number and click the 'Submit' button.  This information will only be used by the experimenter to ensure you are NOT penalized for ending the experiment early."
+          "title": "Please provide your name (first and last) and student number and click the 'Continue' button.  This information will only be used by the experimenter to ensure you are NOT penalized for ending the experiment early."
         },
         {
           "required": false,
@@ -165,35 +165,17 @@ const study = lab.util.fromObject({
         {
           "required": true,
           "type": "html",
-          "content": "\u003Cbutton id=\"Submit\"\u003ESubmit\u003C\u002Fbutton\u003E",
+          "content": "",
           "name": ""
         }
       ],
       "scrollTop": true,
       "submitButtonText": "Continue →",
-      "submitButtonPosition": "hidden",
+      "submitButtonPosition": "right",
       "files": {},
       "responses": {},
       "parameters": {},
-      "messageHandlers": {
-        "before:prepare": function anonymous(
-) {
-/* Get the documentElement (<html>) to display the page in fullscreen */
-var elem = document.documentElement;
-
-/* Download data to firebase */
-this.options.events['click button#Submit'] = function sendToFirebase() {
-    const rng = new lab.util.Random();
-  
-  firebase.database().ref(rng.uuid4()).set({
-    data: this.options.datastore.exportJson()
-    });
-
-/* Continue to next screen */
-this.end()
-}
-}
-      },
+      "messageHandlers": {},
       "title": "Page",
       "tardy": true,
       "skip": "${this.state['Participant_Consent'] == '1'}"
@@ -244,7 +226,13 @@ this.end()
         {
           "required": true,
           "type": "text",
-          "title": "You may now press ESC and exit your browser window.  Thank you!"
+          "title": "Please Exit by clicking the 'Quit' button below."
+        },
+        {
+          "required": true,
+          "type": "html",
+          "content": "\u003C\u002Fi\u003E\u003Cbr\u002F\u003E\u003Cbr\u002F\u003E\r\n\r\n\u003Cbutton id=\"Submit\"\u003EQuit\u003C\u002Fbutton\u003E",
+          "name": ""
         }
       ],
       "scrollTop": true,
@@ -256,14 +244,43 @@ this.end()
       "messageHandlers": {
         "before:prepare": function anonymous(
 ) {
-this.options.viewportScale = 1
-this.options.devicePixelScaling = false
+/* Get the documentElement (<html>) to display the page in fullscreen */
+var elem = document.documentElement;
 
+/* Download data to firebase */
+this.options.events['click button#Submit'] = function sendToFirebase() {
+    const rng = new lab.util.Random();
+  
+  firebase.database().ref(rng.uuid4()).set({
+    data: this.options.datastore.exportJson()
+    });
 
+/* Continue to next screen */
+this.end()
+}
 }
       },
       "title": "Debrief No Consent",
       "width": "l",
+      "tardy": true,
+      "skip": "${this.state['Participant_Consent'] == '1'}"
+    },
+    {
+      "type": "lab.html.Page",
+      "items": [
+        {
+          "type": "text",
+          "title": "You may now exit your browser.  Thank you!"
+        }
+      ],
+      "scrollTop": true,
+      "submitButtonText": "Continue →",
+      "submitButtonPosition": "hidden",
+      "files": {},
+      "responses": {},
+      "parameters": {},
+      "messageHandlers": {},
+      "title": "Page",
       "tardy": true,
       "skip": "${this.state['Participant_Consent'] == '1'}"
     },
@@ -1022,17 +1039,6 @@ this.options.devicePixelScaling = false
             "type": "lab.canvas.Screen",
             "content": [
               {
-                "type": "circle",
-                "left": 0,
-                "top": 250,
-                "angle": 0,
-                "width": 30.64,
-                "height": 30.64,
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "#dddddd"
-              },
-              {
                 "type": "aoi",
                 "left": 0,
                 "top": 250,
@@ -1043,6 +1049,17 @@ this.options.devicePixelScaling = false
                 "strokeWidth": 1,
                 "fill": "rgba(0, 0, 0, 0.2)",
                 "label": "Start_Button"
+              },
+              {
+                "type": "circle",
+                "left": 0,
+                "top": 250,
+                "angle": 0,
+                "width": 30.64,
+                "height": 30.64,
+                "stroke": "#aaaaaa",
+                "strokeWidth": 1,
+                "fill": "#dddddd"
               },
               {
                 "type": "i-text",
@@ -1330,17 +1347,6 @@ this.options.devicePixelScaling = false
             "type": "lab.canvas.Screen",
             "content": [
               {
-                "type": "circle",
-                "left": 0.38,
-                "top": 249.62,
-                "angle": 0,
-                "width": 30.64,
-                "height": 30.64,
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "#dddddd"
-              },
-              {
                 "type": "aoi",
                 "left": 0,
                 "top": 250,
@@ -1351,6 +1357,17 @@ this.options.devicePixelScaling = false
                 "strokeWidth": 1,
                 "fill": "rgba(0, 0, 0, 0.2)",
                 "label": "Start_Button"
+              },
+              {
+                "type": "circle",
+                "left": 0.38,
+                "top": 249.62,
+                "angle": 0,
+                "width": 30.64,
+                "height": 30.64,
+                "stroke": "#aaaaaa",
+                "strokeWidth": 1,
+                "fill": "#dddddd"
               },
               {
                 "type": "i-text",
@@ -1637,7 +1654,7 @@ this.options.devicePixelScaling = false
                 "angle": 0,
                 "width": 30.64,
                 "height": 30.64,
-                "stroke": null,
+                "stroke": "#aaaaaa",
                 "strokeWidth": 1,
                 "fill": "#dddddd"
               },
@@ -1950,7 +1967,7 @@ this.options.devicePixelScaling = false
                 "angle": 0,
                 "width": 30.64,
                 "height": 30.64,
-                "stroke": null,
+                "stroke": "#aaaaaa",
                 "strokeWidth": 1,
                 "fill": "#dddddd"
               },
