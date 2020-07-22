@@ -1894,7 +1894,7 @@ this.options.devicePixelScaling = false
           "Position": "-200"
         },
         {
-          "P_Size": "Control_3 (Small).png",
+          "P_Size": "Control_3 (Big).png",
           "Position": "200"
         }
       ],
