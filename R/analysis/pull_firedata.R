@@ -24,9 +24,9 @@ library("jsonlite")
 # open the file that was just downloaded
 data<-jsonlite::fromJSON(txt = "./data/data.json")
 data$
-data1<-fromJSON(txt = data$`64de8a25-32ad-4b57-b87e-f26ea7be6270`$data,simplifyDataFrame = T,flatten = T)
-data2<-fromJSON(txt = data$`6f07d15a-b996-43e9-977a-c37ef73bfbd5`$data,simplifyDataFrame = T,flatten = T)
-data3<-fromJSON(txt = data$`71dff612-b624-4eee-895b-d6f9dad2345e`$data,simplifyDataFrame = T,flatten = T)
+#data7<-fromJSON(txt = data$`bb8c5289-c20c-4d27-aa56-5e55c36e71ab`$data,simplifyDataFrame = T,flatten = T)
+data8<-fromJSON(txt = data$`ae49931e-dd46-4dac-98ca-add4dd5ebdbf`$data,simplifyDataFrame = T,flatten = T)
+data9<-fromJSON(txt = data$`58396ba4-14ef-4e13-967a-55d06203c6f3`$data,simplifyDataFrame = T,flatten = T)
 data4<-fromJSON(txt = data$`8ca2cfa3-efd9-44af-90e5-3572d661b157`$data,simplifyDataFrame = T,flatten = T)
 data5<-fromJSON(txt = data$`a37c5ec3-8842-490f-bfef-b8f31e127c74`$data,simplifyDataFrame = T,flatten = T)
 data6<-fromJSON(txt = data$`ac704950-7bab-406e-a3be-4ad54d17ac52`$data,simplifyDataFrame = T,flatten = T)
@@ -54,21 +54,67 @@ library("plyr")
 library(data.table)
 library(dplyr)
 
-Demographics <- (data6[, -c(1:3, 6:15, 35:64)])
-Screen_Dim <- (data6[55:61])
-Condition = (data6[, -c(2:7, 9:34, 37:42, 47:64)])
-xPos <-capture.output(data6[40])
-yPos <-capture.output(data6[41])
-P_data <-(data6[, -c(39:42, 64)])
-timestamps <- capture.output(data6[39])
 
-write.csv(Demographics, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P6/Demo.csv", row.names = FALSE)
-write.csv(Condition, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P6/Conditions.csv", row.names = FALSE)
-write.csv(Screen_Dim, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P6/Screen_Dim.csv", row.names = FALSE)
-write.csv(P_data, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P6/P_data.csv", row.names = FALSE)
-write.csv(xPos, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P6/xPos.csv", row.names = FALSE)
-write.csv(yPos, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P6/yPos.csv", row.names = FALSE)
-write.csv(timestamps, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P6/timestamps.csv", row.names = FALSE)
+
+
+
+Demographics <-head(data8[c("Participant_Consent", 
+                            "if-you-would-like-to-receive-a-general-summary-of-the-results-from-this-study-when-it-is-completed-please-provide-your-email-address-below:", 
+                            "please-record-the-makemodel-and-(diagonal)-screen-size-of-the-device-you-are-using-to-complete-the-experiment-(e.g.-macbook-pro-13.3-in):", 
+                            "how-are-you-controlling-the-cursor-on-your-device-1", 
+                            "how-are-you-controlling-the-cursor-on-your-device-2", 
+                            "how-are-you-controlling-the-cursor-on-your-device-3", 
+                            "what-is-your-age-(years)", 
+                            "vision:", 
+                            "sex:",
+                            "throw-a-ball:", 
+                            "brush-your-teeth:", 
+                            "eat-soup-with-a-spoon:", 
+                            "comb-your-hair:", 
+                            "cut-bread-with-a-knife:", 
+                            "swing-a-tennisbadminton-racquet-or-bat:", 
+                            "hammer-a-nail:", 
+                            "point-to-something-accurately:", 
+                            "write-your-name:", 
+                            "control-the-cursor-when-using-a-computer:", 
+                            "do-you-play-any-eye-hand-coordination-sports", 
+                            "if-yes-which-sports-do-you-play"
+                            )], n = 1000)
+                                                         
+Screen_Dim <- head(data8[c("meta.screen_width",	
+                           "meta.screen_height",	
+                           "meta.scroll_width",	
+                           "meta.scroll_height",	
+                           "meta.window_innerWidth",	
+                           "meta.window_innerHeight",
+                           "meta.devicePixelRatio"
+                           )], n = 1000)
+
+Condition <- head(data8[c("sender",
+                          "duration",
+                          "Horizontal_Pos",
+                          "Vertical_Pos",
+                          "P_Size_L",
+                          "P_Size_R",
+                          "P_Size",
+                          "Position"
+                          )], n = 1000)
+
+xPos <-capture.output(data8["xpos"])
+yPos <-capture.output(data8["ypos"])
+
+
+
+
+
+write.csv(Demographics, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P9/Demo.csv", row.names = FALSE)
+write.csv(Condition, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P9/Conditions.csv", row.names = FALSE)
+write.csv(Screen_Dim, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P9/Screen_Dim.csv", row.names = FALSE)
+write.csv(xPos, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P9/xPos.csv", row.names = FALSE)
+write.csv(yPos, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P9/yPos.csv", row.names = FALSE)
+
+write.csv(P_data, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P9/P_data.csv", row.names = FALSE)
+write.csv(timestamps, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P9/timestamps.csv", row.names = FALSE)
 
 
 #Trying to merge data.
