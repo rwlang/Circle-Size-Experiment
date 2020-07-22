@@ -164,9 +164,8 @@ const study = lab.util.fromObject({
         },
         {
           "required": true,
-          "type": "html",
-          "content": "",
-          "name": ""
+          "type": "text",
+          "title": "Please use the 'Quit' button on the following page to ensure this information is saved."
         }
       ],
       "scrollTop": true,
