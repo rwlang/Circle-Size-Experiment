@@ -24,7 +24,8 @@ library("jsonlite")
 # open the file that was just downloaded
 data<-jsonlite::fromJSON(txt = "./data/data.json")
 data$
-#data7<-fromJSON(txt = data$`bb8c5289-c20c-4d27-aa56-5e55c36e71ab`$data,simplifyDataFrame = T,flatten = T)
+  
+data10<-fromJSON(txt = data$`a97210f6-93e6-4053-b7bf-d03116f28e09`$data,simplifyDataFrame = T,flatten = T)
 data8<-fromJSON(txt = data$`ae49931e-dd46-4dac-98ca-add4dd5ebdbf`$data,simplifyDataFrame = T,flatten = T)
 data9<-fromJSON(txt = data$`58396ba4-14ef-4e13-967a-55d06203c6f3`$data,simplifyDataFrame = T,flatten = T)
 data4<-fromJSON(txt = data$`8ca2cfa3-efd9-44af-90e5-3572d661b157`$data,simplifyDataFrame = T,flatten = T)
@@ -58,7 +59,7 @@ library(dplyr)
 
 
 
-Demographics <-head(data8[c("Participant_Consent", 
+Demographics <-head(data10[c("Participant_Consent", 
                             "if-you-would-like-to-receive-a-general-summary-of-the-results-from-this-study-when-it-is-completed-please-provide-your-email-address-below:", 
                             "please-record-the-makemodel-and-(diagonal)-screen-size-of-the-device-you-are-using-to-complete-the-experiment-(e.g.-macbook-pro-13.3-in):", 
                             "how-are-you-controlling-the-cursor-on-your-device-1", 
@@ -81,7 +82,7 @@ Demographics <-head(data8[c("Participant_Consent",
                             "if-yes-which-sports-do-you-play"
                             )], n = 1000)
                                                          
-Screen_Dim <- head(data8[c("meta.screen_width",	
+Screen_Dim <- head(data10[c("meta.screen_width",	
                            "meta.screen_height",	
                            "meta.scroll_width",	
                            "meta.scroll_height",	
@@ -90,7 +91,7 @@ Screen_Dim <- head(data8[c("meta.screen_width",
                            "meta.devicePixelRatio"
                            )], n = 1000)
 
-Condition <- head(data8[c("sender",
+Condition <- head(data10[c("sender",
                           "duration",
                           "Horizontal_Pos",
                           "Vertical_Pos",
@@ -100,18 +101,18 @@ Condition <- head(data8[c("sender",
                           "Position"
                           )], n = 1000)
 
-xPos <-capture.output(data8["xpos"])
-yPos <-capture.output(data8["ypos"])
+xPos <-capture.output(data10["xpos"])
+yPos <-capture.output(data10["ypos"])
 
 
 
 
 
-write.csv(Demographics, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P8/Demo.csv", row.names = FALSE)
-write.csv(Condition, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P8/Conditions.csv", row.names = FALSE)
-write.csv(Screen_Dim, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P8/Screen_Dim.csv", row.names = FALSE)
-write.csv(xPos, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P8/xPos.csv", row.names = FALSE)
-write.csv(yPos, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P8/yPos.csv", row.names = FALSE)
+write.csv(Demographics, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P10/Demo.csv", row.names = FALSE)
+write.csv(Condition, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P10/Conditions.csv", row.names = FALSE)
+write.csv(Screen_Dim, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P10/Screen_Dim.csv", row.names = FALSE)
+write.csv(xPos, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P10/xPos.csv", row.names = FALSE)
+write.csv(yPos, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P10/yPos.csv", row.names = FALSE)
 
 write.csv(P_data, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P9/P_data.csv", row.names = FALSE)
 write.csv(timestamps, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P9/timestamps.csv", row.names = FALSE)
