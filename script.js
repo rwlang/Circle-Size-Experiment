@@ -269,7 +269,7 @@ this.options.devicePixelScaling = false
     },
     {
       "type": "lab.html.Form",
-      "content": "\u003Chtml\u003E\n    \u003Cbody\u003E\n\n\u003Cb\u003E Clicking the 'Continue' button below will open up a new window redirecting you to SONA, and awarding your 1 participation credit.  Once you click 'Continue', please minimize the new SONA window, and continue the experiment.   \u003C\u002Fi\u003E\u003Cbr\u002F\u003E\u003Cbr\u002F\u003E\n\n    Some browsers use pop-up blockers which may prevent the new window from opening.  If for some reason the new window does not open, and you do not receive credit for your participation in this study, please email langrirw@myumanitoba.ca once you have completed the study.  \u003C\u002Fi\u003E\u003Cbr\u002F\u003E\u003Cbr\u002F\u003E\n  \n  Reminder: You are free to withdraw from the study at any time by exiting your browser (participation is completely voluntary), and\u002For refrain from answering any questions you prefer to omit, without prejudice or consequence.  You will also still receive your participation credit if you encounter any technical difficulties, and cannot continue.  This means that should you choose to withdraw at any point from the study, you will still receive 1 participation credit. \u003C\u002Fi\u003E\u003Cbr\u002F\u003E\u003Cbr\u002F\u003E\n\n    \u003C\u002Fbody\u003E\n\u003C\u002Fhtml\u003E\n\n\u003Cbutton onclick=\"window.open('https:\u002F\u002Fumanitobapsych.sona-systems.com\u002Fwebstudy_credit.aspx?experiment_id=1313&credit_token=c84ad4dbec424d0e8a58efb46fee6848&survey_code=${this.state.url.id}'\n,'','width=,height=,resizeable=no');\" id=\"Continue\" class=\"float-left submit-button\" \u003EContinue\u003C\u002Fbutton\u003E\n\n\n\n\n",
+      "content": "\u003Chtml\u003E\n    \u003Cbody\u003E\n\n\u003Cb\u003E Clicking the 'Continue' button below will open up a new window redirecting you to SONA, and awarding your 1 participation credit.  Once the new window opens, please minimize it and continue the experiment.  You may return to the new window following completion of the experiment. \u003C\u002Fi\u003E\u003Cbr\u002F\u003E\u003Cbr\u002F\u003E\n\n    Some browsers use pop-up blockers which may prevent the new window from opening.  If for some reason the new window does not open, and you do not receive credit for your participation in this study, please email langrirw@myumanitoba.ca AFTER COMPLETING THE EXPERIMENT.  \u003C\u002Fi\u003E\u003Cbr\u002F\u003E\u003Cbr\u002F\u003E\n  \n  Reminder: You are free to withdraw from the study at any time by exiting your browser (participation is completely voluntary), and\u002For refrain from answering any questions you prefer to omit, without prejudice or consequence.  You will also still receive your participation credit if you encounter any technical difficulties, and cannot continue.  This means that should you choose to withdraw at any point from the study, you will still receive 1 participation credit. \u003C\u002Fi\u003E\u003Cbr\u002F\u003E\u003Cbr\u002F\u003E\n\n    \u003C\u002Fbody\u003E\n\u003C\u002Fhtml\u003E\n\n\u003Cbutton onclick=\"window.open('https:\u002F\u002Fumanitobapsych.sona-systems.com\u002Fwebstudy_credit.aspx?experiment_id=1313&credit_token=c84ad4dbec424d0e8a58efb46fee6848&survey_code=${this.state.url.id}'\n,'','width=,height=,resizeable=no');\" id=\"Continue\" class=\"float-left submit-button\" \u003EContinue\u003C\u002Fbutton\u003E\n\n\n\n\n",
       "scrollTop": true,
       "files": {},
       "responses": {
@@ -2172,13 +2172,13 @@ this.end()
         {
           "required": true,
           "type": "text",
-          "content": "Dr. Jonathan Marotta (Professor, Psychology, University of Manitoba, Jonathan.Marotta@umanitoba.ca)",
+          "content": "Tiffany Carther-Krone (PhD Candidate, Psychology, University of Manitoba, lazart@myumanitoba.ca)",
           "title": ""
         },
         {
           "required": true,
           "type": "text",
-          "content": "Tiffany Carther-Krone (PhD Candidate, Psychology, University of Manitoba, lazart@myumanitoba.ca)",
+          "content": "Dr. Jonathan Marotta (Professor, Psychology, University of Manitoba, Jonathan.Marotta@umanitoba.ca)",
           "title": ""
         },
         {
@@ -2195,7 +2195,7 @@ this.end()
       ],
       "scrollTop": true,
       "submitButtonText": "Continue →",
-      "submitButtonPosition": "right",
+      "submitButtonPosition": "hidden",
       "files": {},
       "responses": {},
       "parameters": {},
