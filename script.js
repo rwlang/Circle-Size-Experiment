@@ -954,6 +954,18 @@ this.options.devicePixelScaling = false
           "P_Size_R": "P_Large_3.png"
         },
         {
+          "P_Size_L": "P_Small_3.png",
+          "P_Size_R": "Control_3.png"
+        },
+        {
+          "P_Size_L": "P_Small_3.png",
+          "P_Size_R": "Control_3 (Big).png"
+        },
+        {
+          "P_Size_L": "P_Small_3.png",
+          "P_Size_R": "Control_3 (Small).png"
+        },
+        {
           "P_Size_L": "P_Large_3.png",
           "P_Size_R": "P_Small_3.png"
         },
@@ -962,31 +974,39 @@ this.options.devicePixelScaling = false
           "P_Size_R": "P_Small_3.png"
         },
         {
+          "P_Size_L": "Control_3 (Big).png",
+          "P_Size_R": "P_Small_3.png"
+        },
+        {
+          "P_Size_L": "Control_3 (Small).png",
+          "P_Size_R": "P_Small_3.png"
+        },
+        {
           "P_Size_L": "P_Large_3.png",
           "P_Size_R": "Control_3.png"
         },
         {
-          "P_Size_L": "P_Small_3.png",
-          "P_Size_R": "Control_3.png"
+          "P_Size_L": "P_Large_3.png",
+          "P_Size_R": "Control_3 (Big).png"
+        },
+        {
+          "P_Size_L": "P_Large_3.png",
+          "P_Size_R": "Control_3 (Small).png"
         },
         {
           "P_Size_L": "Control_3.png",
           "P_Size_R": "P_Large_3.png"
         },
         {
-          "P_Size_L": "P_Small_3.png",
-          "P_Size_R": "Control_3 (Small).png"
+          "P_Size_L": "Control_3 (Big).png",
+          "P_Size_R": "P_Large_3.png"
         },
         {
-          "P_Size_L": "P_Small_3.png",
-          "P_Size_R": "Control_3 (Big).png"
+          "P_Size_L": "Control_3 (Small).png",
+          "P_Size_R": "P_Large_3.png"
         },
         {
-          "P_Size_L": "P_Large_3.png",
-          "P_Size_R": "Control_3 (Small).png"
-        },
-        {
-          "P_Size_L": "P_Large_3.png",
+          "P_Size_L": "Control_3.png",
           "P_Size_R": "Control_3 (Big).png"
         },
         {
@@ -994,7 +1014,19 @@ this.options.devicePixelScaling = false
           "P_Size_R": "Control_3 (Small).png"
         },
         {
-          "P_Size_L": "Control_3.png",
+          "P_Size_L": "Control_3 (Big).png",
+          "P_Size_R": "Control_3 (Small).png"
+        },
+        {
+          "P_Size_L": "Control_3 (Big).png",
+          "P_Size_R": "Control_3.png"
+        },
+        {
+          "P_Size_L": "Control_3 (Small).png",
+          "P_Size_R": "Control_3.png"
+        },
+        {
+          "P_Size_L": "Control_3 (Small).png",
           "P_Size_R": "Control_3 (Big).png"
         }
       ],
