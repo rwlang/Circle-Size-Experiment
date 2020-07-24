@@ -1849,7 +1849,7 @@ this.options.devicePixelScaling = false
         {
           "type": "text",
           "title": "You're moving a bit slow!",
-          "content": "Remember: The goal is click the center of the target circle AS QUICKLY AS POSSIBLE."
+          "content": "Remember: The goal is to click the center of the target circle AS QUICKLY AS POSSIBLE."
         },
         {
           "required": true,
@@ -1870,7 +1870,8 @@ this.options.viewportScale = 1
 this.options.devicePixelScaling = false
 }
       },
-      "title": "Speed_Manip Instructions"
+      "title": "Speed_Manip Instructions",
+      "skip": true
     },
     {
       "type": "lab.html.Page",
@@ -1878,7 +1879,7 @@ this.options.devicePixelScaling = false
         {
           "type": "text",
           "title": "Try to be a bit more accurate when clicking!",
-          "content": "Remember: The goal is click the CENTER of the target circle AS ACCURATELY AS POSSIBLE."
+          "content": "Remember: The goal is to click the CENTER of the target circle AS ACCURATELY AS POSSIBLE."
         },
         {
           "required": true,
@@ -1899,8 +1900,7 @@ this.options.viewportScale = 1
 this.options.devicePixelScaling = false
 }
       },
-      "title": "Accuracy_Manip Instructions",
-      "skip": true
+      "title": "Accuracy_Manip Instructions"
     },
     {
       "type": "lab.flow.Loop",
