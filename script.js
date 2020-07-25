@@ -1900,7 +1900,25 @@ this.options.viewportScale = 1
 this.options.devicePixelScaling = false
 }
       },
-      "title": "Accuracy_Manip Instructions"
+      "title": "Accuracy_Manip Instructions",
+      "skip": true
+    },
+    {
+      "type": "lab.html.Page",
+      "items": [
+        {
+          "type": "text",
+          "title": "Press the 'Continue' button below to proceed to the next set of trials."
+        }
+      ],
+      "scrollTop": true,
+      "submitButtonText": "Continue →",
+      "submitButtonPosition": "right",
+      "files": {},
+      "responses": {},
+      "parameters": {},
+      "messageHandlers": {},
+      "title": "Page"
     },
     {
       "type": "lab.flow.Loop",
