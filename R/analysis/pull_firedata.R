@@ -57,6 +57,30 @@ data25<-fromJSON(txt = data$`16a28954-3208-48fd-ae5f-a09f0ddfbfb0`$data,simplify
 data26<-fromJSON(txt = data$`31541db6-bcfa-4c13-83cd-d057bc412c27`$data,simplifyDataFrame = T,flatten = T)
 data27<-fromJSON(txt = data$`5fd7c543-12ec-471e-a3d2-5c24ed960764`$data,simplifyDataFrame = T,flatten = T)
 data28<-fromJSON(txt = data$`ccaaeeca-4e67-4352-a4e6-7b8d2fcee558`$data,simplifyDataFrame = T,flatten = T)
+data29<-fromJSON(txt = data$`024710f5-a199-4012-903d-b02547fb856a`$data,simplifyDataFrame = T,flatten = T)
+data30<-fromJSON(txt = data$`02ee00db-3aba-499d-8a8d-01c1df882900`$data,simplifyDataFrame = T,flatten = T)
+data31<-fromJSON(txt = data$`1b62a27f-1681-4cab-8280-c5421fc2f788`$data,simplifyDataFrame = T,flatten = T)
+data32<-fromJSON(txt = data$`40be06c7-7f7d-4048-81f9-3b173614c91b`$data,simplifyDataFrame = T,flatten = T)
+data33<-fromJSON(txt = data$`7648221a-f7ae-4419-a897-b8151de7bb6a`$data,simplifyDataFrame = T,flatten = T)
+data34<-fromJSON(txt = data$`a7d78e8c-5293-4d7c-b186-d35f25f041e4`$data,simplifyDataFrame = T,flatten = T)
+data35<-fromJSON(txt = data$`aed99492-c26a-4579-9f48-3babb662d118`$data,simplifyDataFrame = T,flatten = T)
+data36<-fromJSON(txt = data$`c1d6a7b7-42e8-478a-89a1-9672e3cfde1e`$data,simplifyDataFrame = T,flatten = T)
+data37<-fromJSON(txt = data$`f16e746f-0b44-42e3-9ad8-bafe9a69a4de`$data,simplifyDataFrame = T,flatten = T)
+data38<-fromJSON(txt = data$`025426e5-c547-47af-80a0-8303bc278b9d`$data,simplifyDataFrame = T,flatten = T)
+data39<-fromJSON(txt = data$`03acc779-64af-4064-87f7-013a1786f0df`$data,simplifyDataFrame = T,flatten = T)
+data40<-fromJSON(txt = data$`80772b07-d10a-47f9-8f5f-f2e6f9bed014`$data,simplifyDataFrame = T,flatten = T)
+data41<-fromJSON(txt = data$`e8ee0155-ac52-4bd3-a114-f5fb7bdcfa75`$data,simplifyDataFrame = T,flatten = T)
+
+data42<-fromJSON(txt = data$`1d80e8ef-5a36-4c88-8541-be6d41c4e687`$data,simplifyDataFrame = T,flatten = T)
+data43<-fromJSON(txt = data$`43307d5a-be45-4d86-aae1-2d55666c4815`$data,simplifyDataFrame = T,flatten = T)
+data44<-fromJSON(txt = data$`49516f7d-7704-437a-a2b5-c5605793d43f`$data,simplifyDataFrame = T,flatten = T)
+data45<-fromJSON(txt = data$`4d3f3f9f-9a8d-4339-aba9-42359baafb4c`$data,simplifyDataFrame = T,flatten = T)
+data46<-fromJSON(txt = data$`85782356-4dec-414f-99c8-e9eeb818e93e`$data,simplifyDataFrame = T,flatten = T)
+data47<-fromJSON(txt = data$`8fe8e276-bd24-495c-8ded-579f89f08e96`$data,simplifyDataFrame = T,flatten = T)
+data48<-fromJSON(txt = data$`a6cb0711-dc0f-44bc-88da-d611aab36ff1`$data,simplifyDataFrame = T,flatten = T)
+data49<-fromJSON(txt = data$`c0c5d4a4-ef31-4fa7-95ca-8b803b26f598`$data,simplifyDataFrame = T,flatten = T)
+data50<-fromJSON(txt = data$`c1eac32c-1395-45b2-8c2e-83ad58362c54`$data,simplifyDataFrame = T,flatten = T)
+
 
 #data3<-cbind(data1,data2)
 
@@ -85,7 +109,7 @@ library(dplyr)
 
 
 
-Demographics <-head(data28[c("Participant_Consent", 
+Demographics <-head(data50[c("Participant_Consent", 
                             "if-you-would-like-to-receive-a-general-summary-of-the-results-from-this-study-when-it-is-completed-please-provide-your-email-address-below:", 
                             "please-record-the-makemodel-and-(diagonal)-screen-size-of-the-device-you-are-using-to-complete-the-experiment-(e.g.-macbook-pro-13.3-in):", 
                             "how-are-you-controlling-the-cursor-on-your-device-1", 
@@ -108,7 +132,7 @@ Demographics <-head(data28[c("Participant_Consent",
                             "if-yes-which-sports-do-you-play"
                             )], n = 1000)
                                                          
-Screen_Dim <- head(data28[c("meta.screen_width",	
+Screen_Dim <- head(data50[c("meta.screen_width",	
                            "meta.screen_height",	
                            "meta.scroll_width",	
                            "meta.scroll_height",	
@@ -117,7 +141,7 @@ Screen_Dim <- head(data28[c("meta.screen_width",
                            "meta.devicePixelRatio"
                            )], n = 1000)
 
-Condition <- head(data28[c("sender",
+Condition <- head(data50[c("sender",
                           "duration",
                           "Horizontal_Pos",
                           "Vertical_Pos",
@@ -127,18 +151,18 @@ Condition <- head(data28[c("sender",
                           "Position"
                           )], n = 1000)
 
-xPos <-capture.output(data28["xpos"])
-yPos <-capture.output(data28["ypos"])
+xPos <-capture.output(data50["xpos"])
+yPos <-capture.output(data50["ypos"])
 
 
 
 
 
-write.csv(Demographics, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P28/Demo.csv", row.names = FALSE)
-write.csv(Condition, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P28/Conditions.csv", row.names = FALSE)
-write.csv(Screen_Dim, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P28/Screen_Dim.csv", row.names = FALSE)
-write.csv(xPos, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P28/xPos.csv", row.names = FALSE)
-write.csv(yPos, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P28/yPos.csv", row.names = FALSE)
+write.csv(Demographics, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P50/Demo.csv", row.names = FALSE)
+write.csv(Condition, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P50/Conditions.csv", row.names = FALSE)
+write.csv(Screen_Dim, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P50/Screen_Dim.csv", row.names = FALSE)
+write.csv(xPos, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P50/xPos.csv", row.names = FALSE)
+write.csv(yPos, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P50/yPos.csv", row.names = FALSE)
 
 write.csv(P_data, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P9/P_data.csv", row.names = FALSE)
 write.csv(timestamps, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P9/timestamps.csv", row.names = FALSE)
