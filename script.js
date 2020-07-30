@@ -1870,8 +1870,7 @@ this.options.viewportScale = 1
 this.options.devicePixelScaling = false
 }
       },
-      "title": "Speed_Manip Instructions",
-      "skip": true
+      "title": "Speed_Manip Instructions"
     },
     {
       "type": "lab.html.Page",
@@ -1900,7 +1899,8 @@ this.options.viewportScale = 1
 this.options.devicePixelScaling = false
 }
       },
-      "title": "Accuracy_Manip Instructions"
+      "title": "Accuracy_Manip Instructions",
+      "skip": true
     },
     {
       "type": "lab.html.Page",
