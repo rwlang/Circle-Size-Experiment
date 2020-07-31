@@ -320,15 +320,15 @@ this.end()
           "type": "checkbox",
           "options": [
             {
-              "label": "Touch pad",
+              "label": "Using your finger on a track pad",
               "coding": "1"
             },
             {
-              "label": "Mouse",
+              "label": "Using a Mouse",
               "coding": "2"
             },
             {
-              "label": "Finger (Touch screen)",
+              "label": "Using your finger on a touch screen monitor",
               "coding": "3"
             }
           ],
@@ -1870,7 +1870,8 @@ this.options.viewportScale = 1
 this.options.devicePixelScaling = false
 }
       },
-      "title": "Speed_Manip Instructions"
+      "title": "Speed_Manip Instructions",
+      "skip": true
     },
     {
       "type": "lab.html.Page",
@@ -1917,8 +1918,7 @@ this.options.devicePixelScaling = false
       "responses": {},
       "parameters": {},
       "messageHandlers": {},
-      "title": "Control Manip_Instructions",
-      "skip": true
+      "title": "Control Manip_Instructions"
     },
     {
       "type": "lab.flow.Loop",

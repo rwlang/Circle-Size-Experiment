@@ -101,6 +101,18 @@ data67<-fromJSON(txt = data$`8c75692e-1f34-45fb-9b12-a78005fa4c5d`$data,simplify
 data68<-fromJSON(txt = data$`a9b5e941-5e0d-49d7-b7d5-6fa2768240c1`$data,simplifyDataFrame = T,flatten = T)
 data69<-fromJSON(txt = data$`33aa5f23-dc4f-400c-9170-963c91943b51`$data,simplifyDataFrame = T,flatten = T)
 data70<-fromJSON(txt = data$`df448c72-9dba-401a-ae5c-3a3d74f3bfb5`$data,simplifyDataFrame = T,flatten = T)
+data71<-fromJSON(txt = data$`f02e1158-e918-4dad-bdd2-81260bc61924`$data,simplifyDataFrame = T,flatten = T)
+
+data72<-fromJSON(txt = data$`26f4fd49-ac7b-4eb7-8782-5c6a6a402a10`$data,simplifyDataFrame = T,flatten = T)
+data73<-fromJSON(txt = data$`2ffad30f-6964-4511-a724-f8565e493041`$data,simplifyDataFrame = T,flatten = T)
+data74<-fromJSON(txt = data$`4d013a1a-86d4-4d3d-854b-57a9ec36f133`$data,simplifyDataFrame = T,flatten = T)
+data75<-fromJSON(txt = data$`5dd6c30a-549e-4a08-a4cb-dded85c95a5d`$data,simplifyDataFrame = T,flatten = T)
+data76<-fromJSON(txt = data$`60c02740-b983-40cd-bd75-5e553704f09d`$data,simplifyDataFrame = T,flatten = T)
+data77<-fromJSON(txt = data$`6530278f-170c-407e-9553-1fffc53c4c84`$data,simplifyDataFrame = T,flatten = T)
+data78<-fromJSON(txt = data$`9d6f3173-fbab-41c4-a792-d4008bec6481`$data,simplifyDataFrame = T,flatten = T)
+data79<-fromJSON(txt = data$`b51d07ec-2754-420d-840e-1a5726b397cf`$data,simplifyDataFrame = T,flatten = T)
+data80<-fromJSON(txt = data$`f74b0e79-8043-41f7-a172-ce21104b2747`$data,simplifyDataFrame = T,flatten = T)
+data81<-fromJSON(txt = data$`094c1476-1f82-424e-a88e-ac1459871c6c`$data,simplifyDataFrame = T,flatten = T)
 
 #data3<-cbind(data1,data2)
 
@@ -129,7 +141,7 @@ library(dplyr)
 
 
 
-Demographics <-head(data70[c("Participant_Consent", 
+Demographics <-head(data81[c("Participant_Consent", 
                             "if-you-would-like-to-receive-a-general-summary-of-the-results-from-this-study-when-it-is-completed-please-provide-your-email-address-below:", 
                             "please-record-the-makemodel-and-(diagonal)-screen-size-of-the-device-you-are-using-to-complete-the-experiment-(e.g.-macbook-pro-13.3-in):", 
                             "how-are-you-controlling-the-cursor-on-your-device-1", 
@@ -152,7 +164,7 @@ Demographics <-head(data70[c("Participant_Consent",
                             "if-yes-which-sports-do-you-play"
                             )], n = 1000)
                                                          
-Screen_Dim <- head(data70[c("meta.screen_width",	
+Screen_Dim <- head(data81[c("meta.screen_width",	
                            "meta.screen_height",	
                            "meta.scroll_width",	
                            "meta.scroll_height",	
@@ -161,7 +173,7 @@ Screen_Dim <- head(data70[c("meta.screen_width",
                            "meta.devicePixelRatio"
                            )], n = 1000)
 
-Condition <- head(data70[c("sender",
+Condition <- head(data81[c("sender",
                           "duration",
                           "Horizontal_Pos",
                           "Vertical_Pos",
@@ -171,18 +183,18 @@ Condition <- head(data70[c("sender",
                           "Position"
                           )], n = 1000)
 
-xPos <-capture.output(data70["xpos"])
-yPos <-capture.output(data70["ypos"])
+xPos <-capture.output(data81["xpos"])
+yPos <-capture.output(data81["ypos"])
 
 
 
 
 
-write.csv(Demographics, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P70/Demo.csv", row.names = FALSE)
-write.csv(Condition, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P70/Conditions.csv", row.names = FALSE)
-write.csv(Screen_Dim, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P70/Screen_Dim.csv", row.names = FALSE)
-write.csv(xPos, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P70/xPos.csv", row.names = FALSE)
-write.csv(yPos, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P70/yPos.csv", row.names = FALSE)
+write.csv(Demographics, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P81/Demo.csv", row.names = FALSE)
+write.csv(Condition, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P81/Conditions.csv", row.names = FALSE)
+write.csv(Screen_Dim, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P81/Screen_Dim.csv", row.names = FALSE)
+write.csv(xPos, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P81/xPos.csv", row.names = FALSE)
+write.csv(yPos, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P81/yPos.csv", row.names = FALSE)
 
 write.csv(P_data, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P9/P_data.csv", row.names = FALSE)
 write.csv(timestamps, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P9/timestamps.csv", row.names = FALSE)
