@@ -160,9 +160,9 @@ data120<-fromJSON(txt = data$`e9bb639a-6bcc-4d64-b18e-d538d493f04d`$data,simplif
 data121<-fromJSON(txt = data$`fa2a8a06-7f7d-4c1c-af79-0787408f143c`$data,simplifyDataFrame = T,flatten = T)
 data122<-fromJSON(txt = data$`9a55ec77-8e40-4c64-bc52-5948300d1d03`$data,simplifyDataFrame = T,flatten = T)
 
-data123<-fromJSON(txt = data$`a3ba3a20-0c63-4aca-8eca-22874f35cc07`$data,simplifyDataFrame = T,flatten = T)
-data124<-fromJSON(txt = data$`ca82ace4-cc88-4d28-99b6-a0e797744de7`$data,simplifyDataFrame = T,flatten = T)
-data125<-fromJSON(txt = data$`b26c62d3-3ab8-4d3c-9907-8b27adbbdcce`$data,simplifyDataFrame = T,flatten = T)
+data123<-fromJSON(txt = data$`25c6b2fb-3c5e-4116-a44f-b22adfb3f61d`$data,simplifyDataFrame = T,flatten = T)
+data124<-fromJSON(txt = data$``$data,simplifyDataFrame = T,flatten = T)
+data125<-fromJSON(txt = data$``$data,simplifyDataFrame = T,flatten = T)
 
 #data3<-cbind(data1,data2)
 
@@ -188,7 +188,7 @@ library(data.table)
 library(dplyr)
 
 
-Demographics <-head(data125[c("Participant_Consent", 
+Demographics <-head(data123[c("Participant_Consent", 
                             "if-you-would-like-to-receive-a-general-summary-of-the-results-from-this-study-when-it-is-completed-please-provide-your-email-address-below:", 
                             "please-record-the-makemodel-and-(diagonal)-screen-size-of-the-device-you-are-using-to-complete-the-experiment-(e.g.-macbook-pro-13.3-in):", 
                             "how-are-you-controlling-the-cursor-on-your-device-1", 
@@ -211,7 +211,7 @@ Demographics <-head(data125[c("Participant_Consent",
                             "if-yes-which-sports-do-you-play"
                             )], n = 1000)
                                                          
-Screen_Dim <- head(data125[c("meta.screen_width",	
+Screen_Dim <- head(data123[c("meta.screen_width",	
                            "meta.screen_height",	
                            "meta.scroll_width",	
                            "meta.scroll_height",	
@@ -220,7 +220,7 @@ Screen_Dim <- head(data125[c("meta.screen_width",
                            "meta.devicePixelRatio"
                            )], n = 1000)
 
-Condition <- head(data125[c("sender",
+Condition <- head(data123[c("sender",
                           "duration",
                           "Horizontal_Pos",
                           "Vertical_Pos",
@@ -230,18 +230,18 @@ Condition <- head(data125[c("sender",
                           "Position"
                           )], n = 1000)
 
-xPos <-capture.output(data125["xpos"])
-yPos <-capture.output(data125["ypos"])
+xPos <-capture.output(data123["xpos"])
+yPos <-capture.output(data123["ypos"])
 
 
 
 
 
-write.csv(Demographics, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\Demi Test Mac Sept_11/Demo.csv", row.names = FALSE)
-write.csv(Condition, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\Demi Test Mac Sept_11/Conditions.csv", row.names = FALSE)
-write.csv(Screen_Dim, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\Demi Test Mac Sept_11/Screen_Dim.csv", row.names = FALSE)
-write.csv(xPos, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\Demi Test Mac Sept_11/xPos.csv", row.names = FALSE)
-write.csv(yPos, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\Demi Test Mac Sept_11/yPos.csv", row.names = FALSE)
+write.csv(Demographics, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P123/Demo.csv", row.names = FALSE)
+write.csv(Condition, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P123/Conditions.csv", row.names = FALSE)
+write.csv(Screen_Dim, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P123/Screen_Dim.csv", row.names = FALSE)
+write.csv(xPos, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P123/xPos.csv", row.names = FALSE)
+write.csv(yPos, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P123/yPos.csv", row.names = FALSE)
 
 
 
