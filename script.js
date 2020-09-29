@@ -1900,7 +1900,8 @@ this.options.viewportScale = 1
 this.options.devicePixelScaling = false
 }
       },
-      "title": "Accuracy_Manip Instructions"
+      "title": "Accuracy_Manip Instructions",
+      "skip": true
     },
     {
       "type": "lab.html.Page",
@@ -1917,8 +1918,7 @@ this.options.devicePixelScaling = false
       "responses": {},
       "parameters": {},
       "messageHandlers": {},
-      "title": "Control Manip_Instructions",
-      "skip": true
+      "title": "Control Manip_Instructions"
     },
     {
       "type": "lab.flow.Loop",
