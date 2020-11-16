@@ -236,7 +236,7 @@ data190<-fromJSON(txt = data$`e91167a4-0a55-4ad4-8989-04e5cada6c39`$data,simplif
 
 
 
-Ryan_T1<-fromJSON(txt = data$`a3ba3a20-0c63-4aca-8eca-22874f35cc07`$data,simplifyDataFrame = T,flatten = T)
+Nov_16<-fromJSON(txt = data$`bf7c0412-4457-4524-8b4c-f2af84dde694`$data,simplifyDataFrame = T,flatten = T)
 
 #data3<-cbind(data1,data2)
 
@@ -262,7 +262,7 @@ library(data.table)
 library(dplyr)
 
 
-Demographics <-head(data174[c("Participant_Consent", 
+Demographics <-head(data190[c("Participant_Consent", 
                             "if-you-would-like-to-receive-a-general-summary-of-the-results-from-this-study-when-it-is-completed-please-provide-your-email-address-below:", 
                             "please-record-the-makemodel-and-(diagonal)-screen-size-of-the-device-you-are-using-to-complete-the-experiment-(e.g.-macbook-pro-13.3-in):", 
                             "how-are-you-controlling-the-cursor-on-your-device-1", 
@@ -285,7 +285,7 @@ Demographics <-head(data174[c("Participant_Consent",
                             "if-yes-which-sports-do-you-play"
                             )], n = 1000)
                                                          
-Screen_Dim <- head(data174[c("meta.screen_width",	
+Screen_Dim <- head(data190[c("meta.screen_width",	
                            "meta.screen_height",	
                            "meta.scroll_width",	
                            "meta.scroll_height",	
@@ -294,7 +294,7 @@ Screen_Dim <- head(data174[c("meta.screen_width",
                            "meta.devicePixelRatio"
                            )], n = 1000)
 
-Condition <- head(data174[c("sender",
+Condition <- head(data190[c("sender",
                           "duration",
                           "Horizontal_Pos",
                           "Vertical_Pos",
@@ -304,18 +304,18 @@ Condition <- head(data174[c("sender",
                           "Position"
                           )], n = 1000)
 
-xPos <-capture.output(data174["xpos"])
-yPos <-capture.output(data174["ypos"])
+xPos <-capture.output(data190["xpos"])
+yPos <-capture.output(data190["ypos"])
 
 
 
 
 
-write.csv(Demographics, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\Speed Manipulation\\P174/Demo.csv", row.names = FALSE)
-write.csv(Condition, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\Speed Manipulation\\P174/Conditions.csv", row.names = FALSE)
-write.csv(Screen_Dim, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\Speed Manipulation\\P174/Screen_Dim.csv", row.names = FALSE)
-write.csv(xPos, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\Speed Manipulation\\P174/xPos.csv", row.names = FALSE)
-write.csv(yPos, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\Speed Manipulation\\P174/yPos.csv", row.names = FALSE)
+write.csv(Demographics, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\Accuracy Manipulation\\P190/Demo.csv", row.names = FALSE)
+write.csv(Condition, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\Accuracy Manipulation\\P190/Conditions.csv", row.names = FALSE)
+write.csv(Screen_Dim, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\Accuracy Manipulation\\P190/Screen_Dim.csv", row.names = FALSE)
+write.csv(xPos, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\Accuracy Manipulation\\P190/xPos.csv", row.names = FALSE)
+write.csv(yPos, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\Accuracy Manipulation\\P190/yPos.csv", row.names = FALSE)
 
 
 
