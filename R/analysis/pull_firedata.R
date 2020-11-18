@@ -7,11 +7,12 @@ if (!require("fireData")) devtools::install_github("Kohze/fireData")
 library(fireData) # https://github.com/Kohze/fireData
 
 
-# secret key = QQwfjvlOXolwiMLsf2SleKPuo7D2IZn3WO7i8SS1
+# secret key 1 = QQwfjvlOXolwiMLsf2SleKPuo7D2IZn3WO7i8SS1
+# secret key 2 = gA5OmNBFdB98HlrMJXpBFc7uQPQTlG9Ml77UkZGW
 
 # download all files from database
-dataBackup(projectURL = "https://circle-size-experiment.firebaseio.com", #databaseURL
-           secretKey = "QQwfjvlOXolwiMLsf2SleKPuo7D2IZn3WO7i8SS1", #Secret Key of the database
+dataBackup(projectURL = "https://circle-size-experiment-2.firebaseio.com", #databaseURL
+           secretKey = "gA5OmNBFdB98HlrMJXpBFc7uQPQTlG9Ml77UkZGW", #Secret Key of the database
            "./data/data.json") # file path of where to save the data (out default assumes cloning the GitHub repo)
 
 
@@ -234,9 +235,20 @@ data188<-fromJSON(txt = data$`daadb4eb-a77d-4426-81a9-c727c5aa8caa`$data,simplif
 data189<-fromJSON(txt = data$`e8f330fd-6ed1-4e74-8392-51f04b0d496c`$data,simplifyDataFrame = T,flatten = T)
 data190<-fromJSON(txt = data$`e91167a4-0a55-4ad4-8989-04e5cada6c39`$data,simplifyDataFrame = T,flatten = T)
 
+#********************************************************Circle-Size-Experiment-2***************************#
+
+data191<-fromJSON(txt = data$`2502899f-2a90-44cd-89ee-dd05e152085b`$data,simplifyDataFrame = T,flatten = T)
+data192<-fromJSON(txt = data$`32f41e91-2e87-4c66-95ed-19d42890e3cc`$data,simplifyDataFrame = T,flatten = T)
+data193<-fromJSON(txt = data$`423b53dd-ed45-4cfd-b5e6-7dd99be9cb70`$data,simplifyDataFrame = T,flatten = T)
+data194<-fromJSON(txt = data$`603ab11e-d511-463f-a086-fea0d9500082`$data,simplifyDataFrame = T,flatten = T)
+data195<-fromJSON(txt = data$`85cbfc54-82df-4de8-8c16-8f652e899520`$data,simplifyDataFrame = T,flatten = T)
+data196<-fromJSON(txt = data$`8bd14a69-94b7-416f-8c54-6870b2fb3965`$data,simplifyDataFrame = T,flatten = T)
+data197<-fromJSON(txt = data$`bedd021b-3b17-4c21-8d07-83d1126c9d9b`$data,simplifyDataFrame = T,flatten = T)
+data198<-fromJSON(txt = data$`c0c8c3d8-42b3-4192-8b0b-5b4d228e6d66`$data,simplifyDataFrame = T,flatten = T)
+data199<-fromJSON(txt = data$`ca448e46-8342-4b56-8061-ab3cee5910bb`$data,simplifyDataFrame = T,flatten = T)
 
 
-Nov_16<-fromJSON(txt = data$`bf7c0412-4457-4524-8b4c-f2af84dde694`$data,simplifyDataFrame = T,flatten = T)
+#********************************************************Circle-Size-Experiment-2***************************#
 
 #data3<-cbind(data1,data2)
 
@@ -262,7 +274,7 @@ library(data.table)
 library(dplyr)
 
 
-Demographics <-head(data190[c("Participant_Consent", 
+Demographics <-head(data191[c("Participant_Consent", 
                             "if-you-would-like-to-receive-a-general-summary-of-the-results-from-this-study-when-it-is-completed-please-provide-your-email-address-below:", 
                             "please-record-the-makemodel-and-(diagonal)-screen-size-of-the-device-you-are-using-to-complete-the-experiment-(e.g.-macbook-pro-13.3-in):", 
                             "how-are-you-controlling-the-cursor-on-your-device-1", 
@@ -285,7 +297,7 @@ Demographics <-head(data190[c("Participant_Consent",
                             "if-yes-which-sports-do-you-play"
                             )], n = 1000)
                                                          
-Screen_Dim <- head(data190[c("meta.screen_width",	
+Screen_Dim <- head(data191[c("meta.screen_width",	
                            "meta.screen_height",	
                            "meta.scroll_width",	
                            "meta.scroll_height",	
@@ -294,7 +306,7 @@ Screen_Dim <- head(data190[c("meta.screen_width",
                            "meta.devicePixelRatio"
                            )], n = 1000)
 
-Condition <- head(data190[c("sender",
+Condition <- head(data191[c("sender",
                           "duration",
                           "Horizontal_Pos",
                           "Vertical_Pos",
@@ -304,18 +316,18 @@ Condition <- head(data190[c("sender",
                           "Position"
                           )], n = 1000)
 
-xPos <-capture.output(data190["xpos"])
-yPos <-capture.output(data190["ypos"])
+xPos <-capture.output(data191["xpos"])
+yPos <-capture.output(data191["ypos"])
 
 
 
 
 
-write.csv(Demographics, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\Accuracy Manipulation\\P190/Demo.csv", row.names = FALSE)
-write.csv(Condition, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\Accuracy Manipulation\\P190/Conditions.csv", row.names = FALSE)
-write.csv(Screen_Dim, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\Accuracy Manipulation\\P190/Screen_Dim.csv", row.names = FALSE)
-write.csv(xPos, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\Accuracy Manipulation\\P190/xPos.csv", row.names = FALSE)
-write.csv(yPos, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\Accuracy Manipulation\\P190/yPos.csv", row.names = FALSE)
+write.csv(Demographics, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\Control\\P191/Demo.csv", row.names = FALSE)
+write.csv(Condition, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\Control\\P191/Conditions.csv", row.names = FALSE)
+write.csv(Screen_Dim, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\Control\\P191/Screen_Dim.csv", row.names = FALSE)
+write.csv(xPos, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\Control\\P191/xPos.csv", row.names = FALSE)
+write.csv(yPos, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\Control\\P191/yPos.csv", row.names = FALSE)
 
 
 
