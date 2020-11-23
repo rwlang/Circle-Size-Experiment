@@ -27,6 +27,25 @@ const study = lab.util.fromObject({
       "type": "lab.html.Page",
       "items": [
         {
+          "required": true,
+          "type": "html",
+          "content": "\u003Cbutton id=\"Start\"\u003EContinue to experiment\u003C\u002Fbutton\u003E",
+          "name": ""
+        }
+      ],
+      "scrollTop": true,
+      "submitButtonText": "Continue →",
+      "submitButtonPosition": "hidden",
+      "files": {},
+      "responses": {},
+      "parameters": {},
+      "messageHandlers": {},
+      "title": "Continue to Experiment"
+    },
+    {
+      "type": "lab.html.Page",
+      "items": [
+        {
           "type": "text",
           "title": "BEFORE YOU CONTINUE TO THE EXPERIMENT:",
           "content": "This experiment must be completed using the touchpad or trackpad of a laptop computer to control the on-screen cursor.  Please do not participate if using a physical mouse or touchscreen device to control the cursor.  "
@@ -42,13 +61,19 @@ const study = lab.util.fromObject({
         {
           "required": true,
           "type": "text",
-          "title": "  Please answer the following:",
+          "title": "  Please select one of the following:",
           "content": "Are you using the touchpad or trackpad of a laptop computer to control the on-screen cursor?"
         },
         {
           "required": true,
           "type": "html",
-          "content": "\u003Cbutton id=\"Yes\"\u003EYes, I can participate\u003C\u002Fbutton\u003E\r\n\r\n\u003Cbutton id=\"No\"\u003ENo, I would like to exit without penalty\u003C\u002Fbutton\u003E",
+          "content": "\u003Cbutton id=\"Yes\"\u003EYes, I can participate\u003C\u002Fbutton\u003E\r\n",
+          "name": ""
+        },
+        {
+          "required": true,
+          "type": "html",
+          "content": "\u003Cbutton id=\"No\"\u003ENo, I would like to exit without penalty\u003C\u002Fbutton\u003E",
           "name": ""
         }
       ],
@@ -91,7 +116,7 @@ this.end()
 
 }
       },
-      "title": "Page"
+      "title": "TP Check"
     },
     {
       "type": "lab.html.Page",
@@ -108,7 +133,7 @@ this.end()
       "responses": {},
       "parameters": {},
       "messageHandlers": {},
-      "title": "Page",
+      "title": "No TP exit",
       "tardy": true,
       "skip": "${this.state['response'] == 'Yes'}"
     },
