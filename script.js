@@ -436,14 +436,6 @@ this.end()
             {
               "label": "Using your finger on a touch\u002Ftrack pad",
               "coding": "1"
-            },
-            {
-              "label": "",
-              "coding": "2"
-            },
-            {
-              "label": "",
-              "coding": "3"
             }
           ],
           "label": "How are you controlling the cursor on your device?",
