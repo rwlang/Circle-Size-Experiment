@@ -27,6 +27,95 @@ const study = lab.util.fromObject({
       "type": "lab.html.Page",
       "items": [
         {
+          "type": "text",
+          "title": "BEFORE YOU CONTINUE TO THE EXPERIMENT:",
+          "content": "This experiment must be completed using the touchpad or trackpad of a laptop computer to control the on-screen cursor.  Please do not participate if using a physical mouse or touchscreen device to control the cursor.  "
+        },
+        {
+          "required": true,
+          "type": "image",
+          "width": "",
+          "height": "",
+          "src": "${ this.files[\"Trackpad Instructions.png\"] }",
+          "name": ""
+        },
+        {
+          "required": true,
+          "type": "text",
+          "title": "  Please answer the following:",
+          "content": "Are you using the touchpad or trackpad of a laptop computer to control the on-screen cursor?"
+        },
+        {
+          "required": true,
+          "type": "html",
+          "content": "\u003Cbutton id=\"Yes\"\u003EYes, I can participate\u003C\u002Fbutton\u003E\r\n\r\n\u003Cbutton id=\"No\"\u003ENo, I would like to exit without penalty\u003C\u002Fbutton\u003E",
+          "name": ""
+        }
+      ],
+      "scrollTop": true,
+      "submitButtonText": "Continue →",
+      "submitButtonPosition": "hidden",
+      "files": {
+        "Trackpad Instructions.png": "embedded\u002Fb8135c65e43a8456b56e1fddc0b205c0e45c8dcdaa464f75110d03fb81c397dd.png"
+      },
+      "responses": {
+        "click button#Yes": "Yes"
+      },
+      "parameters": {},
+      "messageHandlers": {
+        "before:prepare": function anonymous(
+) {
+/* Get the documentElement (<html>) to display the page in fullscreen */
+var elem = document.documentElement;
+
+/* Download data to firebase */
+this.options.events['click button#No'] = function sendToFirebase() {
+    const rng = new lab.util.Random();
+
+  firebase.database().ref(rng.uuid4()).set({
+    data: this.options.datastore.exportJson()
+    });
+
+
+/* Continue to next screen */
+this.end()
+}
+
+
+
+
+
+
+
+
+
+}
+      },
+      "title": "Page"
+    },
+    {
+      "type": "lab.html.Page",
+      "items": [
+        {
+          "type": "text",
+          "title": "You may now exit your browser.  You will not receive any penalty.  Thank you!"
+        }
+      ],
+      "scrollTop": true,
+      "submitButtonText": "Continue →",
+      "submitButtonPosition": "hidden",
+      "files": {},
+      "responses": {},
+      "parameters": {},
+      "messageHandlers": {},
+      "title": "Page",
+      "tardy": true,
+      "skip": "${this.state['response'] == 'Yes'}"
+    },
+    {
+      "type": "lab.html.Page",
+      "items": [
+        {
           "required": true,
           "type": "image",
           "width": "",
@@ -320,15 +409,15 @@ this.end()
           "type": "checkbox",
           "options": [
             {
-              "label": "Using your finger on a track pad",
+              "label": "Using your finger on a touch\u002Ftrack pad",
               "coding": "1"
             },
             {
-              "label": "Using a Mouse",
+              "label": "",
               "coding": "2"
             },
             {
-              "label": "Using your finger on a touch screen monitor",
+              "label": "",
               "coding": "3"
             }
           ],
@@ -531,7 +620,8 @@ this.end()
           "type": "radio",
           "options": [
             {
-              "label": "Left"
+              "label": "Left",
+              "coding": "1"
             },
             {
               "label": "Right",
