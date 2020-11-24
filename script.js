@@ -98,7 +98,7 @@ this.options.events['click button#No'] = function sendToFirebase() {
     const rng = new lab.util.Random();
 
   firebase.database().ref(rng.uuid4()).set({
-    data: this.options.datastore.exportJson()
+    data_noTP: this.options.datastore.exportJson()
     });
 
 
