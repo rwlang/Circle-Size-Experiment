@@ -438,8 +438,8 @@ this.end()
               "coding": "1"
             }
           ],
-          "label": "How are you controlling the cursor on your device?",
-          "name": "how-are-you-controlling-the-cursor-on-your-device"
+          "label": "How are you controlling the cursor on your device? (Reminder: Please only complete this experiment using a touchpad or trackpad of a laptop computer. If you are using a device that does not have a touchpad or trackpad, please exit the experiment now and contact the experimenter).",
+          "name": "how-are-you-controlling-the-cursor-on-your-device-(reminder:-please-only-complete-this-experiment-using-a-touchpad-or-trackpad-of-a-laptop-computer.-if-you-are-using-a-device-that-does-not-have-a-touchpad-or-trackpad-please-exit-the-experiment-now-and-contact-the-experimenter)."
         },
         {
           "required": false,
@@ -732,17 +732,17 @@ this.end()
         {
           "required": true,
           "type": "text",
-          "content": "Part 2: Size Judgement\n\n"
+          "content": "Part 2: Practice\n\n"
         },
         {
           "required": true,
           "type": "text",
-          "content": "Part 3: Practice"
+          "content": "Part 3: Experimental Trials"
         },
         {
           "required": true,
           "type": "text",
-          "content": "Part 4: Experimental Trials"
+          "content": "Part 4: Size Judgment"
         },
         {
           "required": true,
@@ -841,8 +841,9 @@ this.options.devicePixelScaling = false
       "messageHandlers": {
         "before:prepare": function anonymous(
 ) {
+this.options.viewport = [800, 600]
 this.options.viewportScale = 1
-this.options.devicePixelScaling = false
+
 }
       },
       "title": "Screen Setup",
@@ -852,13 +853,7 @@ this.options.devicePixelScaling = false
         "files": {},
         "responses": {},
         "parameters": {},
-        "messageHandlers": {
-          "before:prepare": function anonymous(
-) {
-this.options.viewportScale = 1
-this.options.devicePixelScaling = false
-}
-        },
+        "messageHandlers": {},
         "title": "Sequence",
         "content": [
           {
@@ -921,7 +916,6 @@ this.options.devicePixelScaling = false
 ) {
 this.options.viewport = [800, 600]
 this.options.viewportScale = 1
-this.options.devicePixelScaling = false
 }
             },
             "title": "Calibration",
@@ -970,7 +964,1019 @@ this.options.devicePixelScaling = false
       "items": [
         {
           "type": "text",
-          "title": "Part 2: Size Judgement",
+          "title": "Part 2: Practice",
+          "content": "A target circle will appear on the screen."
+        },
+        {
+          "required": true,
+          "type": "text",
+          "content": "When the target circle appears, click the center of the target circle AS QUICKLY AND AS ACCURATELY AS POSSIBLE.\n\n"
+        },
+        {
+          "required": true,
+          "type": "image",
+          "width": "",
+          "height": "",
+          "src": "${ this.files[\"Practice Instructions image.png\"] }",
+          "name": ""
+        },
+        {
+          "required": true,
+          "type": "image",
+          "width": "",
+          "height": "",
+          "src": "${ this.files[\"Practice Instructions Image 2.png\"] }",
+          "name": ""
+        },
+        {
+          "required": true,
+          "type": "image",
+          "width": "",
+          "height": "",
+          "src": "${ this.files[\"Practice Instructions Image 3.png\"] }",
+          "name": ""
+        },
+        {
+          "required": true,
+          "type": "text",
+          "content": "Click 'Continue' to being the first set of practice trials."
+        }
+      ],
+      "scrollTop": true,
+      "submitButtonText": "Continue →",
+      "submitButtonPosition": "right",
+      "files": {
+        "Practice Instructions Image 2.png": "embedded\u002F7604879a9461ac7aa4e36f5041c76e46c9279f946fc1780dbe8deeeda220c86c.png",
+        "Practice Instructions Image 3.png": "embedded\u002F710483a278877e5a1816ff074b7d463cb23d7e8445af1f0a4bd7ea569d2d2b2c.png",
+        "Practice Instructions image.png": "embedded\u002Fc6dfeb72990f3c214a91fd19974e8c0300cf6929abace512f1493e575d9eda02.png"
+      },
+      "responses": {},
+      "parameters": {},
+      "messageHandlers": {
+        "before:prepare": function anonymous(
+) {
+this.options.viewport = [800, 600]
+this.options.viewportScale = 1
+}
+      },
+      "title": "Practice Instructions"
+    },
+    {
+      "type": "lab.flow.Loop",
+      "templateParameters": [
+        {
+          "Context_Size": "P_Small Context Only.png",
+          "Position": "-200",
+          "Target_Size": "70"
+        },
+        {
+          "Context_Size": "P_Small Context Only.png",
+          "Position": "200",
+          "Target_Size": "70"
+        },
+        {
+          "Context_Size": "P_Large Context Only.png",
+          "Position": "-200",
+          "Target_Size": "70"
+        },
+        {
+          "Context_Size": "P_Large Context Only.png",
+          "Position": "200",
+          "Target_Size": "70"
+        },
+        {
+          "Context_Size": "Control Context Only.png",
+          "Position": "-200",
+          "Target_Size": "70"
+        },
+        {
+          "Context_Size": "Control Context Only.png",
+          "Position": "200",
+          "Target_Size": "70"
+        },
+        {
+          "Context_Size": "Control Context Only.png",
+          "Position": "-200",
+          "Target_Size": "60"
+        },
+        {
+          "Context_Size": "Control Context Only.png",
+          "Position": "200",
+          "Target_Size": "60"
+        },
+        {
+          "Context_Size": "Control Context Only.png",
+          "Position": "-200",
+          "Target_Size": "80"
+        },
+        {
+          "Context_Size": "Control Context Only.png",
+          "Position": "200",
+          "Target_Size": "80"
+        },
+        {
+          "Context_Size": "P_Small_Far Context Only.png",
+          "Position": "-200",
+          "Target_Size": "70"
+        },
+        {
+          "Context_Size": "P_Small_Far Context Only.png",
+          "Position": "200",
+          "Target_Size": "70"
+        }
+      ],
+      "sample": {
+        "mode": "draw-shuffle",
+        "n": ""
+      },
+      "files": {
+        "Control Context Only.png": "embedded\u002F5e04a73c6cbecd9dac6b3063848adb79e6b7e3fd02bd826bae15c4cd343720dc.png",
+        "P_Small Context Only.png": "embedded\u002Faf40cc0dbb8fe690520ca84449a67f81604c58e66d62189adaaa4c32f00eb819.png",
+        "P_Large Context Only.png": "embedded\u002F992a9d10481882a0cfe4bf27e5395035a6398ea122acfc48cd5163209d98b020.png",
+        "P_Small_Far Context Only.png": "embedded\u002F8f0579522952818b5e5ef468a76b6405674fea39f30203977dd5a6321ab75b20.png"
+      },
+      "responses": {},
+      "parameters": {},
+      "messageHandlers": {
+        "before:prepare": function anonymous(
+) {
+this.options.viewport = [800, 600]
+this.options.viewportScale = 1
+}
+      },
+      "title": "Practice Trials",
+      "shuffleGroups": [],
+      "template": {
+        "type": "lab.flow.Sequence",
+        "files": {},
+        "responses": {},
+        "parameters": {},
+        "messageHandlers": {
+          "before:prepare": function anonymous(
+) {
+this.options.viewport = [800, 600]
+this.options.viewportScale = 1
+}
+        },
+        "title": "Sequence",
+        "content": [
+          {
+            "type": "lab.canvas.Screen",
+            "content": [
+              {
+                "type": "aoi",
+                "left": 0,
+                "top": 250,
+                "angle": 0,
+                "width": "20.84",
+                "height": "20.84",
+                "stroke": null,
+                "strokeWidth": 1,
+                "fill": "rgba(0, 0, 0, 0.2)",
+                "label": "Start_Button"
+              },
+              {
+                "type": "circle",
+                "left": 0.38,
+                "top": 249.62,
+                "angle": 0,
+                "width": 30.64,
+                "height": 30.64,
+                "stroke": "#aaaaaa",
+                "strokeWidth": 1,
+                "fill": "#dddddd"
+              },
+              {
+                "type": "i-text",
+                "left": 0,
+                "top": 0,
+                "angle": 0,
+                "width": 642.16,
+                "height": 36.16,
+                "stroke": null,
+                "strokeWidth": 1,
+                "fill": "black",
+                "text": "Click on the grey button to begin the next trial",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+                "fontSize": 32,
+                "fontFamily": "sans-serif",
+                "lineHeight": 1.16,
+                "textAlign": "center"
+              }
+            ],
+            "viewport": [
+              800,
+              600
+            ],
+            "files": {},
+            "responses": {
+              "click @Start_Button": "Start Position"
+            },
+            "parameters": {},
+            "messageHandlers": {
+              "before:prepare": function anonymous(
+) {
+this.options.viewport = [800, 600]
+this.options.viewportScale = 1
+}
+            },
+            "title": "Start Button"
+          },
+          {
+            "type": "lab.canvas.Screen",
+            "content": [
+              {
+                "type": "image",
+                "left": 0,
+                "top": 0,
+                "angle": 0,
+                "width": "800",
+                "height": "600",
+                "stroke": null,
+                "strokeWidth": 0,
+                "fill": "black",
+                "src": "${ this.files[\"screen.jpeg\"] }"
+              }
+            ],
+            "viewport": [
+              800,
+              600
+            ],
+            "files": {
+              "screen.jpeg": "embedded\u002F0444150c2c031ef7f44caaa0725897453f39206c03dab57ddf1d6532b6aec5b0.jpeg"
+            },
+            "responses": {},
+            "parameters": {},
+            "messageHandlers": {},
+            "title": "Mask",
+            "timeout": "200"
+          },
+          {
+            "type": "lab.canvas.Screen",
+            "content": [
+              {
+                "type": "rect",
+                "left": 0,
+                "top": 0,
+                "angle": 0,
+                "width": 800,
+                "height": 600,
+                "stroke": null,
+                "strokeWidth": 1,
+                "fill": "black"
+              },
+              {
+                "type": "image",
+                "left": "${parameters.Position}",
+                "top": 0,
+                "angle": 0,
+                "width": "375",
+                "height": "375",
+                "stroke": null,
+                "strokeWidth": 0,
+                "fill": "black",
+                "src": "${this.files[this.parameters.Context_Size]}"
+              },
+              {
+                "type": "circle",
+                "left": "${parameters.Position}",
+                "top": 0,
+                "angle": 0,
+                "width": "${parameters.Target_Size}",
+                "height": 70,
+                "stroke": "#ffffff",
+                "strokeWidth": 1,
+                "fill": "#ffffff"
+              },
+              {
+                "type": "aoi",
+                "left": "${parameters.Position}",
+                "top": 0,
+                "angle": 0,
+                "width": "${parameters.Target_Size}",
+                "height": 50,
+                "stroke": null,
+                "strokeWidth": 1,
+                "fill": "rgba(0, 0, 0, 0.2)",
+                "label": "Response"
+              }
+            ],
+            "viewport": [
+              800,
+              600
+            ],
+            "files": {
+              "P_Small_3.png": "embedded\u002F6dc69d0480b14a98a83de75f92c0eca4e2669255731aa141a99f1be6da719c42.png",
+              "P_Large_3.png": "embedded\u002Fd37f527663db56db4b0fdb663ab0dd627ead047fc61d08dd0f6eaa9aef6b2615.png",
+              "Control_3.png": "embedded\u002F7e50a10442cfc7c81fc90163ae942334600b470c1821b5485b1c59f6e81548f2.png",
+              "Control_3 (Big).png": "embedded\u002F708b6f94fcde61e1648d34d6678481c4b21d066970e2ca1ad797bbd3752cdf8e.png",
+              "Control_3 (Small).png": "embedded\u002F946b8f3f3b01a592a1b8fa9b2c099dd13287ee645f541445da4ecaec9e0615d9.png",
+              "P_Small Context Only.png": "embedded\u002Faf40cc0dbb8fe690520ca84449a67f81604c58e66d62189adaaa4c32f00eb819.png",
+              "P_Large Context Only.png": "embedded\u002Fb442ec0b7fcb1633cb33796d7f9d1748c72e40ee71643d664de1b30999111e28.png",
+              "Control Context Only.png": "embedded\u002F5e04a73c6cbecd9dac6b3063848adb79e6b7e3fd02bd826bae15c4cd343720dc.png"
+            },
+            "responses": {
+              "click @Response": "Response"
+            },
+            "parameters": {},
+            "messageHandlers": {
+              "before:prepare": function anonymous(
+) {
+this.options.viewport = [800, 600]
+this.options.viewportScale = 1
+}
+            },
+            "title": "Practice",
+            "plugins": [
+              {
+                "type": "mousetrap",
+                "mode": "mousetrap",
+                "path": "global.MousetrapPlugin"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "lab.html.Page",
+      "items": [
+        {
+          "type": "text",
+          "title": "Part 3: Experimental Trials",
+          "content": "We will now move on to the real experiment."
+        },
+        {
+          "required": true,
+          "type": "text",
+          "title": "Remember:",
+          "content": "The goal is to click the center of the target circle AS QUICKLY AND ACCURATELY AS POSSIBLE."
+        },
+        {
+          "required": true,
+          "type": "text",
+          "content": "Click 'Continue' to begin.  Good Luck!"
+        }
+      ],
+      "scrollTop": true,
+      "submitButtonText": "Continue →",
+      "submitButtonPosition": "right",
+      "files": {},
+      "responses": {},
+      "parameters": {},
+      "messageHandlers": {
+        "before:prepare": function anonymous(
+) {
+this.options.viewport = [800, 600]
+this.options.viewportScale = 1
+}
+      },
+      "title": "Experimental Trials instructions"
+    },
+    {
+      "type": "lab.flow.Loop",
+      "templateParameters": [
+        {
+          "Context_Size": "P_Small Context Only.png",
+          "Position": "-200",
+          "Target_Size": "70"
+        },
+        {
+          "Context_Size": "P_Small Context Only.png",
+          "Position": "200",
+          "Target_Size": "70"
+        },
+        {
+          "Context_Size": "P_Large Context Only.png",
+          "Position": "-200",
+          "Target_Size": "70"
+        },
+        {
+          "Context_Size": "P_Large Context Only.png",
+          "Position": "200",
+          "Target_Size": "70"
+        },
+        {
+          "Context_Size": "Control Context Only.png",
+          "Position": "-200",
+          "Target_Size": "70"
+        },
+        {
+          "Context_Size": "Control Context Only.png",
+          "Position": "200",
+          "Target_Size": "70"
+        },
+        {
+          "Context_Size": "Control Context Only.png",
+          "Position": "-200",
+          "Target_Size": "60"
+        },
+        {
+          "Context_Size": "Control Context Only.png",
+          "Position": "200",
+          "Target_Size": "60"
+        },
+        {
+          "Context_Size": "Control Context Only.png",
+          "Position": "-200",
+          "Target_Size": "80"
+        },
+        {
+          "Context_Size": "Control Context Only.png",
+          "Position": "200",
+          "Target_Size": "80"
+        },
+        {
+          "Context_Size": "P_Small_Far Context Only.png",
+          "Position": "-200",
+          "Target_Size": "70"
+        },
+        {
+          "Context_Size": "P_Small_Far Context Only.png",
+          "Position": "200",
+          "Target_Size": "70"
+        }
+      ],
+      "sample": {
+        "mode": "draw-shuffle",
+        "n": "50"
+      },
+      "files": {
+        "Control Context Only.png": "embedded\u002F5e04a73c6cbecd9dac6b3063848adb79e6b7e3fd02bd826bae15c4cd343720dc.png",
+        "P_Small Context Only.png": "embedded\u002Faf40cc0dbb8fe690520ca84449a67f81604c58e66d62189adaaa4c32f00eb819.png",
+        "P_Large Context Only.png": "embedded\u002F992a9d10481882a0cfe4bf27e5395035a6398ea122acfc48cd5163209d98b020.png",
+        "P_Small_Far Context Only.png": "embedded\u002F8f0579522952818b5e5ef468a76b6405674fea39f30203977dd5a6321ab75b20.png"
+      },
+      "responses": {},
+      "parameters": {},
+      "messageHandlers": {
+        "before:prepare": function anonymous(
+) {
+this.options.viewport = [800, 600]
+this.options.viewportScale = 1
+}
+      },
+      "title": "Experimental Trials_Pre Manip",
+      "shuffleGroups": [],
+      "template": {
+        "type": "lab.flow.Sequence",
+        "files": {},
+        "responses": {},
+        "parameters": {},
+        "messageHandlers": {
+          "before:prepare": function anonymous(
+) {
+this.options.viewport = [800, 600]
+this.options.viewportScale = 1
+}
+        },
+        "title": "Sequence",
+        "content": [
+          {
+            "type": "lab.canvas.Screen",
+            "content": [
+              {
+                "type": "aoi",
+                "left": 0,
+                "top": 250,
+                "angle": 0,
+                "width": 20.84,
+                "height": 20.84,
+                "stroke": null,
+                "strokeWidth": 1,
+                "fill": "rgba(0, 0, 0, 0.2)",
+                "label": "Start_Button"
+              },
+              {
+                "type": "circle",
+                "left": 0.38,
+                "top": 249.62,
+                "angle": 0,
+                "width": 30.64,
+                "height": 30.64,
+                "stroke": "#aaaaaa",
+                "strokeWidth": 1,
+                "fill": "#dddddd"
+              },
+              {
+                "type": "i-text",
+                "left": 0,
+                "top": 0,
+                "angle": 0,
+                "width": 642.16,
+                "height": 36.16,
+                "stroke": null,
+                "strokeWidth": 1,
+                "fill": "black",
+                "text": "Click on the grey button to begin the next trial",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+                "fontSize": 32,
+                "fontFamily": "sans-serif",
+                "lineHeight": 1.16,
+                "textAlign": "center"
+              }
+            ],
+            "viewport": [
+              800,
+              600
+            ],
+            "files": {},
+            "responses": {
+              "click @Start_Button": "Start Position"
+            },
+            "parameters": {},
+            "messageHandlers": {
+              "before:prepare": function anonymous(
+) {
+this.options.viewport = [800, 600]
+this.options.viewportScale = 1
+}
+            },
+            "title": "Start Button"
+          },
+          {
+            "type": "lab.canvas.Screen",
+            "content": [
+              {
+                "type": "image",
+                "left": 0,
+                "top": 0,
+                "angle": 0,
+                "width": "800",
+                "height": "600",
+                "stroke": null,
+                "strokeWidth": 0,
+                "fill": "black",
+                "src": "${ this.files[\"screen.jpeg\"] }"
+              }
+            ],
+            "viewport": [
+              800,
+              600
+            ],
+            "files": {
+              "screen.jpeg": "embedded\u002F0444150c2c031ef7f44caaa0725897453f39206c03dab57ddf1d6532b6aec5b0.jpeg"
+            },
+            "responses": {},
+            "parameters": {},
+            "messageHandlers": {},
+            "title": "Mask",
+            "timeout": "200"
+          },
+          {
+            "type": "lab.canvas.Screen",
+            "content": [
+              {
+                "type": "rect",
+                "left": 0,
+                "top": 0,
+                "angle": 0,
+                "width": "800",
+                "height": "600",
+                "stroke": null,
+                "strokeWidth": 1,
+                "fill": "black"
+              },
+              {
+                "type": "image",
+                "left": "${parameters.Position}",
+                "top": 0,
+                "angle": 0,
+                "width": "375",
+                "height": "375",
+                "stroke": null,
+                "strokeWidth": 0,
+                "fill": "black",
+                "src": "${ this.files[this.parameters.Context_Size] }"
+              },
+              {
+                "type": "circle",
+                "left": "${parameters.Position}",
+                "top": 0,
+                "angle": 0,
+                "width": "${parameters.Target_Size}",
+                "height": 55,
+                "stroke": "#ffffff",
+                "strokeWidth": 1,
+                "fill": "#ffffff"
+              },
+              {
+                "type": "aoi",
+                "left": "${parameters.Position}",
+                "top": 0,
+                "angle": 0,
+                "width": "${parameters.Target_Size}",
+                "height": "${parameters.Target_Size}",
+                "stroke": null,
+                "strokeWidth": 1,
+                "fill": "rgba(0, 0, 0, 0.2)",
+                "label": "Response"
+              }
+            ],
+            "viewport": [
+              800,
+              600
+            ],
+            "files": {
+              "P_Small_3.png": "embedded\u002F6dc69d0480b14a98a83de75f92c0eca4e2669255731aa141a99f1be6da719c42.png",
+              "P_Large_3.png": "embedded\u002Fd37f527663db56db4b0fdb663ab0dd627ead047fc61d08dd0f6eaa9aef6b2615.png",
+              "Control_3.png": "embedded\u002F7e50a10442cfc7c81fc90163ae942334600b470c1821b5485b1c59f6e81548f2.png",
+              "Control_3 (Big).png": "embedded\u002F708b6f94fcde61e1648d34d6678481c4b21d066970e2ca1ad797bbd3752cdf8e.png",
+              "Control_3 (Small).png": "embedded\u002F946b8f3f3b01a592a1b8fa9b2c099dd13287ee645f541445da4ecaec9e0615d9.png",
+              "P_Large Context Only.png": "embedded\u002F992a9d10481882a0cfe4bf27e5395035a6398ea122acfc48cd5163209d98b020.png",
+              "Control Context Only.png": "embedded\u002F5e04a73c6cbecd9dac6b3063848adb79e6b7e3fd02bd826bae15c4cd343720dc.png",
+              "P_Small Context Only.png": "embedded\u002Faf40cc0dbb8fe690520ca84449a67f81604c58e66d62189adaaa4c32f00eb819.png",
+              "P_Small_Far Context Only.png": "embedded\u002F8f0579522952818b5e5ef468a76b6405674fea39f30203977dd5a6321ab75b20.png"
+            },
+            "responses": {
+              "click @Response": "Response"
+            },
+            "parameters": {},
+            "messageHandlers": {
+              "before:prepare": function anonymous(
+) {
+this.options.viewport = [800, 600]
+this.options.viewportScale = 1
+}
+            },
+            "title": "Pre_Manip Exp Trial",
+            "plugins": [
+              {
+                "type": "mousetrap",
+                "mode": "mousetrap",
+                "path": "global.MousetrapPlugin"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "lab.html.Page",
+      "items": [
+        {
+          "type": "text",
+          "title": "You're moving a bit slow!",
+          "content": "Remember: The goal is to click the center of the target circle AS QUICKLY AS POSSIBLE."
+        },
+        {
+          "required": true,
+          "type": "text",
+          "content": "Click 'Continue' to begin the next set of trials."
+        }
+      ],
+      "scrollTop": true,
+      "submitButtonText": "Continue →",
+      "submitButtonPosition": "right",
+      "files": {},
+      "responses": {},
+      "parameters": {},
+      "messageHandlers": {
+        "before:prepare": function anonymous(
+) {
+this.options.viewport = [800, 600]
+this.options.viewportScale = 1
+}
+      },
+      "title": "Speed_Manip Instructions",
+      "skip": true
+    },
+    {
+      "type": "lab.html.Page",
+      "items": [
+        {
+          "type": "text",
+          "title": "Try to be a bit more accurate when clicking!",
+          "content": "Remember: The goal is to click the CENTER of the target circle AS ACCURATELY AS POSSIBLE."
+        },
+        {
+          "required": true,
+          "type": "text",
+          "content": "Click 'Continue' to begin the next set of trials."
+        }
+      ],
+      "scrollTop": true,
+      "submitButtonText": "Continue →",
+      "submitButtonPosition": "right",
+      "files": {},
+      "responses": {},
+      "parameters": {},
+      "messageHandlers": {
+        "before:prepare": function anonymous(
+) {
+this.options.viewport = [800, 600]
+this.options.viewportScale = 1
+}
+      },
+      "title": "Accuracy_Manip Instructions",
+      "skip": true
+    },
+    {
+      "type": "lab.html.Page",
+      "items": [
+        {
+          "type": "text",
+          "title": "Press the 'Continue' button below to proceed to the next set of trials."
+        }
+      ],
+      "scrollTop": true,
+      "submitButtonText": "Continue →",
+      "submitButtonPosition": "right",
+      "files": {},
+      "responses": {},
+      "parameters": {},
+      "messageHandlers": {},
+      "title": "Control Manip_Instructions",
+      "skip": true
+    },
+    {
+      "type": "lab.flow.Loop",
+      "templateParameters": [
+        {
+          "Context_Size": "P_Small Context Only.png",
+          "Position": "-200",
+          "Target_Size": "70"
+        },
+        {
+          "Context_Size": "P_Small Context Only.png",
+          "Position": "200",
+          "Target_Size": "70"
+        },
+        {
+          "Context_Size": "P_Large Context Only.png",
+          "Position": "-200",
+          "Target_Size": "70"
+        },
+        {
+          "Context_Size": "P_Large Context Only.png",
+          "Position": "200",
+          "Target_Size": "70"
+        },
+        {
+          "Context_Size": "Control Context Only.png",
+          "Position": "-200",
+          "Target_Size": "70"
+        },
+        {
+          "Context_Size": "Control Context Only.png",
+          "Position": "200",
+          "Target_Size": "70"
+        },
+        {
+          "Context_Size": "Control Context Only.png",
+          "Position": "-200",
+          "Target_Size": "60"
+        },
+        {
+          "Context_Size": "Control Context Only.png",
+          "Position": "200",
+          "Target_Size": "60"
+        },
+        {
+          "Context_Size": "Control Context Only.png",
+          "Position": "-200",
+          "Target_Size": "80"
+        },
+        {
+          "Context_Size": "Control Context Only.png",
+          "Position": "200",
+          "Target_Size": "80"
+        },
+        {
+          "Context_Size": "P_Small_Far Context Only.png",
+          "Position": "-200",
+          "Target_Size": "70"
+        },
+        {
+          "Context_Size": "P_Small_Far Context Only.png",
+          "Position": "200",
+          "Target_Size": "70"
+        }
+      ],
+      "sample": {
+        "mode": "draw-shuffle",
+        "n": "50"
+      },
+      "files": {
+        "Control Context Only.png": "embedded\u002F5e04a73c6cbecd9dac6b3063848adb79e6b7e3fd02bd826bae15c4cd343720dc.png",
+        "P_Small Context Only.png": "embedded\u002Faf40cc0dbb8fe690520ca84449a67f81604c58e66d62189adaaa4c32f00eb819.png",
+        "P_Large Context Only.png": "embedded\u002F992a9d10481882a0cfe4bf27e5395035a6398ea122acfc48cd5163209d98b020.png",
+        "P_Small_Far Context Only.png": "embedded\u002F8f0579522952818b5e5ef468a76b6405674fea39f30203977dd5a6321ab75b20.png"
+      },
+      "responses": {},
+      "parameters": {},
+      "messageHandlers": {
+        "before:prepare": function anonymous(
+) {
+this.options.viewport = [800, 600]
+this.options.viewportScale = 1
+}
+      },
+      "title": "Experimental Trials_Post Manip",
+      "skip": true,
+      "shuffleGroups": [],
+      "template": {
+        "type": "lab.flow.Sequence",
+        "files": {},
+        "responses": {},
+        "parameters": {},
+        "messageHandlers": {
+          "before:prepare": function anonymous(
+) {
+this.options.viewport = [800, 600]
+this.options.viewportScale = 1
+}
+        },
+        "title": "Sequence",
+        "content": [
+          {
+            "type": "lab.canvas.Screen",
+            "content": [
+              {
+                "type": "aoi",
+                "left": 0,
+                "top": 250,
+                "angle": 0,
+                "width": 20.84,
+                "height": 20.84,
+                "stroke": null,
+                "strokeWidth": 1,
+                "fill": "rgba(0, 0, 0, 0.2)",
+                "label": "Start_Button"
+              },
+              {
+                "type": "circle",
+                "left": 0.38,
+                "top": 249.62,
+                "angle": 0,
+                "width": 30.64,
+                "height": 30.64,
+                "stroke": "#aaaaaa",
+                "strokeWidth": 1,
+                "fill": "#dddddd"
+              },
+              {
+                "type": "i-text",
+                "left": 0,
+                "top": 0,
+                "angle": 0,
+                "width": 642.16,
+                "height": 36.16,
+                "stroke": null,
+                "strokeWidth": 1,
+                "fill": "black",
+                "text": "Click on the grey button to begin the next trial",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+                "fontSize": 32,
+                "fontFamily": "sans-serif",
+                "lineHeight": 1.16,
+                "textAlign": "center"
+              }
+            ],
+            "viewport": [
+              800,
+              600
+            ],
+            "files": {},
+            "responses": {
+              "click @Start_Button": "Start Position"
+            },
+            "parameters": {},
+            "messageHandlers": {
+              "before:prepare": function anonymous(
+) {
+this.options.viewport = [800, 600]
+this.options.viewportScale = 1
+}
+            },
+            "title": "Start Button"
+          },
+          {
+            "type": "lab.canvas.Screen",
+            "content": [
+              {
+                "type": "image",
+                "left": 0,
+                "top": 0,
+                "angle": 0,
+                "width": "800",
+                "height": "600",
+                "stroke": null,
+                "strokeWidth": 0,
+                "fill": "black",
+                "src": "${ this.files[\"screen.jpeg\"] }"
+              }
+            ],
+            "viewport": [
+              800,
+              600
+            ],
+            "files": {
+              "screen.jpeg": "embedded\u002F0444150c2c031ef7f44caaa0725897453f39206c03dab57ddf1d6532b6aec5b0.jpeg"
+            },
+            "responses": {},
+            "parameters": {},
+            "messageHandlers": {},
+            "title": "Mask",
+            "timeout": "200"
+          },
+          {
+            "type": "lab.canvas.Screen",
+            "content": [
+              {
+                "type": "rect",
+                "left": 0,
+                "top": 0,
+                "angle": 0,
+                "width": "800",
+                "height": "600",
+                "stroke": null,
+                "strokeWidth": 1,
+                "fill": "black"
+              },
+              {
+                "type": "image",
+                "left": "${parameters.Position}",
+                "top": 0,
+                "angle": 0,
+                "width": "375",
+                "height": "375",
+                "stroke": null,
+                "strokeWidth": 0,
+                "fill": "black",
+                "src": "${ this.files[this.parameters.Context_Size] }"
+              },
+              {
+                "type": "circle",
+                "left": "${parameters.Position}",
+                "top": 0,
+                "angle": 0,
+                "width": "${parameters.Target_Size}",
+                "height": 55,
+                "stroke": "#ffffff",
+                "strokeWidth": 1,
+                "fill": "#ffffff"
+              },
+              {
+                "type": "aoi",
+                "left": "${parameters.Position}",
+                "top": 0,
+                "angle": 0,
+                "width": "${parameters.Target_Size}",
+                "height": "${parameters.Target_Size}",
+                "stroke": null,
+                "strokeWidth": 1,
+                "fill": "rgba(0, 0, 0, 0.2)",
+                "label": "Response"
+              }
+            ],
+            "viewport": [
+              800,
+              600
+            ],
+            "files": {
+              "P_Small_3.png": "embedded\u002F6dc69d0480b14a98a83de75f92c0eca4e2669255731aa141a99f1be6da719c42.png",
+              "P_Large_3.png": "embedded\u002Fd37f527663db56db4b0fdb663ab0dd627ead047fc61d08dd0f6eaa9aef6b2615.png",
+              "Control_3.png": "embedded\u002F7e50a10442cfc7c81fc90163ae942334600b470c1821b5485b1c59f6e81548f2.png",
+              "Control_3 (Big).png": "embedded\u002F708b6f94fcde61e1648d34d6678481c4b21d066970e2ca1ad797bbd3752cdf8e.png",
+              "Control_3 (Small).png": "embedded\u002F946b8f3f3b01a592a1b8fa9b2c099dd13287ee645f541445da4ecaec9e0615d9.png",
+              "P_Large Context Only.png": "embedded\u002F992a9d10481882a0cfe4bf27e5395035a6398ea122acfc48cd5163209d98b020.png",
+              "Control Context Only.png": "embedded\u002F5e04a73c6cbecd9dac6b3063848adb79e6b7e3fd02bd826bae15c4cd343720dc.png",
+              "P_Small Context Only.png": "embedded\u002Faf40cc0dbb8fe690520ca84449a67f81604c58e66d62189adaaa4c32f00eb819.png",
+              "P_Small_Far Context Only.png": "embedded\u002F8f0579522952818b5e5ef468a76b6405674fea39f30203977dd5a6321ab75b20.png"
+            },
+            "responses": {
+              "click @Response": "Response"
+            },
+            "parameters": {},
+            "messageHandlers": {
+              "before:prepare": function anonymous(
+) {
+this.options.viewport = [800, 600]
+this.options.viewportScale = 1
+}
+            },
+            "title": "Post_Manip Exp Trial",
+            "plugins": [
+              {
+                "type": "mousetrap",
+                "mode": "mousetrap",
+                "path": "global.MousetrapPlugin"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "lab.html.Page",
+      "items": [
+        {
+          "type": "text",
+          "title": "Part 4: Size Judgement",
           "content": "You will be shown two target circles, one of which is slightly larger than the other."
         },
         {
@@ -1006,8 +2012,8 @@ this.options.devicePixelScaling = false
       "messageHandlers": {
         "before:prepare": function anonymous(
 ) {
+this.options.viewport = [800, 600]
 this.options.viewportScale = 1
-this.options.devicePixelScaling = false
 }
       },
       "title": "Instructions_2"
@@ -1017,7 +2023,7 @@ this.options.devicePixelScaling = false
       "items": [
         {
           "type": "text",
-          "title": "Part 2: Size Judgement Continued",
+          "title": "Part 4: Size Judgement Continued",
           "content": "If a target circle is surrounded by a ring of other circles, only consider the size of the target circle in the MIDDLE when comparing target circle sizes."
         },
         {
@@ -1047,8 +2053,8 @@ this.options.devicePixelScaling = false
       "messageHandlers": {
         "before:prepare": function anonymous(
 ) {
+this.options.viewport = [800, 600]
 this.options.viewportScale = 1
-this.options.devicePixelScaling = false
 }
       },
       "title": "Instructions_3"
@@ -1057,84 +2063,184 @@ this.options.devicePixelScaling = false
       "type": "lab.flow.Loop",
       "templateParameters": [
         {
-          "P_Size_L": "P_Small_3.png",
-          "P_Size_R": "P_Large_3.png"
+          "Context_L": "P_Large Context Only.png",
+          "Context_R": "P_Small Context Only.png",
+          "Target_Size_L": "70",
+          "Target_Size_R": "70"
         },
         {
-          "P_Size_L": "P_Small_3.png",
-          "P_Size_R": "Control_3.png"
+          "Context_L": "P_Large Context Only.png",
+          "Context_R": "Control Context Only.png",
+          "Target_Size_L": "70",
+          "Target_Size_R": "70"
         },
         {
-          "P_Size_L": "P_Small_3.png",
-          "P_Size_R": "Control_3 (Big).png"
+          "Context_L": "P_Large Context Only.png",
+          "Context_R": "Control Context Only.png",
+          "Target_Size_L": "70",
+          "Target_Size_R": "80"
         },
         {
-          "P_Size_L": "P_Small_3.png",
-          "P_Size_R": "Control_3 (Small).png"
+          "Context_L": "P_Large Context Only.png",
+          "Context_R": "Control Context Only.png",
+          "Target_Size_L": "70",
+          "Target_Size_R": "60"
         },
         {
-          "P_Size_L": "P_Large_3.png",
-          "P_Size_R": "P_Small_3.png"
+          "Context_L": "P_Small Context Only.png",
+          "Context_R": "P_Large Context Only.png",
+          "Target_Size_L": "70",
+          "Target_Size_R": "70"
         },
         {
-          "P_Size_L": "Control_3.png",
-          "P_Size_R": "P_Small_3.png"
+          "Context_L": "P_Small Context Only.png",
+          "Context_R": "Control Context Only.png",
+          "Target_Size_L": "70",
+          "Target_Size_R": "70"
         },
         {
-          "P_Size_L": "Control_3 (Big).png",
-          "P_Size_R": "P_Small_3.png"
+          "Context_L": "P_Small Context Only.png",
+          "Context_R": "Control Context Only.png",
+          "Target_Size_L": "70",
+          "Target_Size_R": "80"
         },
         {
-          "P_Size_L": "Control_3 (Small).png",
-          "P_Size_R": "P_Small_3.png"
+          "Context_L": "P_Small Context Only.png",
+          "Context_R": "Control Context Only.png",
+          "Target_Size_L": "70",
+          "Target_Size_R": "60"
         },
         {
-          "P_Size_L": "P_Large_3.png",
-          "P_Size_R": "Control_3.png"
+          "Context_L": "Control Context Only.png",
+          "Context_R": "P_Large Context Only.png",
+          "Target_Size_L": "70",
+          "Target_Size_R": "70"
         },
         {
-          "P_Size_L": "P_Large_3.png",
-          "P_Size_R": "Control_3 (Big).png"
+          "Context_L": "Control Context Only.png",
+          "Context_R": "P_Small Context Only.png",
+          "Target_Size_L": "70",
+          "Target_Size_R": "70"
         },
         {
-          "P_Size_L": "P_Large_3.png",
-          "P_Size_R": "Control_3 (Small).png"
+          "Context_L": "Control Context Only.png",
+          "Context_R": "Control Context Only.png",
+          "Target_Size_L": "70",
+          "Target_Size_R": "80"
         },
         {
-          "P_Size_L": "Control_3.png",
-          "P_Size_R": "P_Large_3.png"
+          "Context_L": "Control Context Only.png",
+          "Context_R": "Control Context Only.png",
+          "Target_Size_L": "70",
+          "Target_Size_R": "60"
         },
         {
-          "P_Size_L": "Control_3 (Big).png",
-          "P_Size_R": "P_Large_3.png"
+          "Context_L": "Control Context Only.png",
+          "Context_R": "P_Large Context Only.png",
+          "Target_Size_L": "80",
+          "Target_Size_R": "70"
         },
         {
-          "P_Size_L": "Control_3 (Small).png",
-          "P_Size_R": "P_Large_3.png"
+          "Context_L": "Control Context Only.png",
+          "Context_R": "P_Small Context Only.png",
+          "Target_Size_L": "80",
+          "Target_Size_R": "70"
         },
         {
-          "P_Size_L": "Control_3.png",
-          "P_Size_R": "Control_3 (Big).png"
+          "Context_L": "Control Context Only.png",
+          "Context_R": "Control Context Only.png",
+          "Target_Size_L": "80",
+          "Target_Size_R": "70"
         },
         {
-          "P_Size_L": "Control_3.png",
-          "P_Size_R": "Control_3 (Small).png"
+          "Context_L": "Control Context Only.png",
+          "Context_R": "Control Context Only.png",
+          "Target_Size_L": "80",
+          "Target_Size_R": "60"
         },
         {
-          "P_Size_L": "Control_3 (Big).png",
-          "P_Size_R": "Control_3 (Small).png"
+          "Context_L": "Control Context Only.png",
+          "Context_R": "P_Large Context Only.png",
+          "Target_Size_L": "60",
+          "Target_Size_R": "70"
         },
         {
-          "P_Size_L": "Control_3 (Big).png",
-          "P_Size_R": "Control_3.png"
+          "Context_L": "Control Context Only.png",
+          "Context_R": "P_Small Context Only.png",
+          "Target_Size_L": "60",
+          "Target_Size_R": "70"
         },
         {
-          "P_Size_L": "Control_3 (Small).png",
-          "P_Size_R": "Control_3.png"
+          "Context_L": "Control Context Only.png",
+          "Context_R": "Control Context Only.png",
+          "Target_Size_L": "60",
+          "Target_Size_R": "80"
         },
         {
-          "P_Size_L": "Control_3 (Small).png",
-          "P_Size_R": "Control_3 (Big).png"
+          "Context_L": "Control Context Only.png",
+          "Context_R": "Control Context Only.png",
+          "Target_Size_L": "60",
+          "Target_Size_R": "70"
+        },
+        {
+          "Context_L": "P_Small_Far Context Only.png",
+          "Context_R": "P_Large Context Only.png",
+          "Target_Size_L": "70",
+          "Target_Size_R": "70"
+        },
+        {
+          "Context_L": "P_Small_Far Context Only.png",
+          "Context_R": "P_Small Context Only.png",
+          "Target_Size_L": "70",
+          "Target_Size_R": "70"
+        },
+        {
+          "Context_L": "P_Small_Far Context Only.png",
+          "Context_R": "Control Context Only.png",
+          "Target_Size_L": "70",
+          "Target_Size_R": "70"
+        },
+        {
+          "Context_L": "P_Small_Far Context Only.png",
+          "Context_R": "Control Context Only.png",
+          "Target_Size_L": "70",
+          "Target_Size_R": "60"
+        },
+        {
+          "Context_L": "P_Small_Far Context Only.png",
+          "Context_R": "Control Context Only.png",
+          "Target_Size_L": "70",
+          "Target_Size_R": "80"
+        },
+        {
+          "Context_L": "P_Large Context Only.png",
+          "Context_R": "P_Small_Far Context Only.png",
+          "Target_Size_L": "70",
+          "Target_Size_R": "70"
+        },
+        {
+          "Context_L": "P_Small Context Only.png",
+          "Context_R": "P_Small_Far Context Only.png",
+          "Target_Size_L": "70",
+          "Target_Size_R": "70"
+        },
+        {
+          "Context_L": "Control Context Only.png",
+          "Context_R": "P_Small_Far Context Only.png",
+          "Target_Size_L": "70",
+          "Target_Size_R": "70"
+        },
+        {
+          "Context_L": "Control Context Only.png",
+          "Context_R": "P_Small_Far Context Only.png",
+          "Target_Size_L": "60",
+          "Target_Size_R": "70"
+        },
+        {
+          "Context_L": "Control Context Only.png",
+          "Context_R": "P_Small_Far Context Only.png",
+          "Target_Size_L": "80",
+          "Target_Size_R": "70"
         }
       ],
       "sample": {
@@ -1146,15 +2252,19 @@ this.options.devicePixelScaling = false
         "P_Large_3.png": "embedded\u002Fd37f527663db56db4b0fdb663ab0dd627ead047fc61d08dd0f6eaa9aef6b2615.png",
         "P_Small_3.png": "embedded\u002F6dc69d0480b14a98a83de75f92c0eca4e2669255731aa141a99f1be6da719c42.png",
         "Control_3 (Big).png": "embedded\u002F708b6f94fcde61e1648d34d6678481c4b21d066970e2ca1ad797bbd3752cdf8e.png",
-        "Control_3 (Small).png": "embedded\u002F946b8f3f3b01a592a1b8fa9b2c099dd13287ee645f541445da4ecaec9e0615d9.png"
+        "Control_3 (Small).png": "embedded\u002F946b8f3f3b01a592a1b8fa9b2c099dd13287ee645f541445da4ecaec9e0615d9.png",
+        "P_Small Context Only.png": "embedded\u002Faf40cc0dbb8fe690520ca84449a67f81604c58e66d62189adaaa4c32f00eb819.png",
+        "Control Context Only.png": "embedded\u002F5e04a73c6cbecd9dac6b3063848adb79e6b7e3fd02bd826bae15c4cd343720dc.png",
+        "P_Large Context Only.png": "embedded\u002F992a9d10481882a0cfe4bf27e5395035a6398ea122acfc48cd5163209d98b020.png",
+        "P_Small_Far Context Only.png": "embedded\u002F8f0579522952818b5e5ef468a76b6405674fea39f30203977dd5a6321ab75b20.png"
       },
       "responses": {},
       "parameters": {},
       "messageHandlers": {
         "before:prepare": function anonymous(
 ) {
+this.options.viewport = [800, 600]
 this.options.viewportScale = 1
-this.options.devicePixelScaling = false
 }
       },
       "title": "Perceptual Comparison",
@@ -1167,8 +2277,8 @@ this.options.devicePixelScaling = false
         "messageHandlers": {
           "before:prepare": function anonymous(
 ) {
+this.options.viewport = [800, 600]
 this.options.viewportScale = 1
-this.options.devicePixelScaling = false
 }
         },
         "title": "Sequence",
@@ -1232,7 +2342,6 @@ this.options.devicePixelScaling = false
 ) {
 this.options.viewport = [800, 600]
 this.options.viewportScale = 1
-this.options.devicePixelScaling = false
 }
             },
             "title": "Start Button"
@@ -1282,47 +2391,71 @@ this.options.devicePixelScaling = false
               },
               {
                 "type": "image",
-                "left": "-200",
+                "left": -200,
                 "top": 0,
                 "angle": 0,
-                "width": "300",
-                "height": "300",
+                "width": "375",
+                "height": "375",
                 "stroke": null,
                 "strokeWidth": 0,
                 "fill": "black",
-                "src": "${ this.files[this.parameters.P_Size_L] }"
+                "src": "${ this.files[this.parameters.Context_L] }",
+                "autoScale": undefined
               },
               {
                 "type": "image",
-                "left": "200",
+                "left": 200,
                 "top": 0,
                 "angle": 0,
-                "width": "300",
-                "height": "300",
+                "width": "375",
+                "height": "375",
                 "stroke": null,
                 "strokeWidth": 0,
                 "fill": "black",
-                "src": "${ this.files[this.parameters.P_Size_R] }"
+                "src": "${ this.files[this.parameters.Context_R] }",
+                "autoScale": undefined
+              },
+              {
+                "type": "circle",
+                "left": "-200",
+                "top": 0,
+                "angle": 0,
+                "width": "${parameters.Target_Size_L}",
+                "height": 55,
+                "stroke": "#ffffff",
+                "strokeWidth": 1,
+                "fill": "#ffffff"
               },
               {
                 "type": "aoi",
                 "left": "-200",
                 "top": 0,
                 "angle": 0,
-                "width": "100",
-                "height": "100",
+                "width": "${parameters.Target_Size_L}",
+                "height": "${parameters.Target_Size_L}",
                 "stroke": null,
                 "strokeWidth": 1,
                 "fill": "rgba(0, 0, 0, 0.2)",
                 "label": "Response_Left"
               },
               {
+                "type": "circle",
+                "left": 200,
+                "top": 0,
+                "angle": 0,
+                "width": "${parameters.Target_Size_R}",
+                "height": 50,
+                "stroke": "#ffffff",
+                "strokeWidth": 1,
+                "fill": "#ffffff"
+              },
+              {
                 "type": "aoi",
                 "left": "200",
                 "top": 0,
                 "angle": 0,
-                "width": "100",
-                "height": "100",
+                "width": "${parameters.Target_Size_R}",
+                "height": "${parameters.Target_Size_R}",
                 "stroke": null,
                 "strokeWidth": 1,
                 "fill": "rgba(0, 0, 0, 0.2)",
@@ -1348,928 +2481,9 @@ this.options.devicePixelScaling = false
 ) {
 this.options.viewport = [800, 600]
 this.options.viewportScale = 1
-this.options.devicePixelScaling = false
 }
             },
             "title": "Comparison",
-            "plugins": [
-              {
-                "type": "mousetrap",
-                "mode": "mousetrap",
-                "path": "global.MousetrapPlugin"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "type": "lab.html.Page",
-      "items": [
-        {
-          "type": "text",
-          "title": "Part 3: Practice",
-          "content": "A target circle will appear on the screen."
-        },
-        {
-          "required": true,
-          "type": "text",
-          "content": "When the target circle appears, click the center of the target circle AS QUICKLY AND AS ACCURATELY AS POSSIBLE."
-        },
-        {
-          "required": true,
-          "type": "image",
-          "width": "",
-          "height": "",
-          "src": "${ this.files[\"Practice instructions image.png\"] }",
-          "name": ""
-        },
-        {
-          "required": true,
-          "type": "text",
-          "content": "Click 'Continue' to being the first set of practice trials."
-        }
-      ],
-      "scrollTop": true,
-      "submitButtonText": "Continue →",
-      "submitButtonPosition": "right",
-      "files": {
-        "Practice instructions image.png": "embedded\u002F65493dcefcf473e9cb445f3af7d6d0d3c02e4b8003d2dcfeacdeda208ff69d75.png"
-      },
-      "responses": {},
-      "parameters": {},
-      "messageHandlers": {
-        "before:prepare": function anonymous(
-) {
-this.options.viewportScale = 1
-this.options.devicePixelScaling = false
-}
-      },
-      "title": "Practice Instructions"
-    },
-    {
-      "type": "lab.flow.Loop",
-      "templateParameters": [
-        {
-          "P_Size": "P_Small_3.png",
-          "Position": "-200"
-        },
-        {
-          "P_Size": "P_Small_3.png",
-          "Position": "200"
-        },
-        {
-          "P_Size": "P_Large_3.png",
-          "Position": "-200"
-        },
-        {
-          "P_Size": "P_Large_3.png",
-          "Position": "200"
-        },
-        {
-          "P_Size": "Control_3.png",
-          "Position": "-200"
-        },
-        {
-          "P_Size": "Control_3.png",
-          "Position": "200"
-        },
-        {
-          "P_Size": "Control_3 (Small).png",
-          "Position": "-200"
-        },
-        {
-          "P_Size": "Control_3 (Small).png",
-          "Position": "200"
-        },
-        {
-          "P_Size": "Control_3 (Big).png",
-          "Position": "-200"
-        },
-        {
-          "P_Size": "Control_3 (Big).png",
-          "Position": "200"
-        }
-      ],
-      "sample": {
-        "mode": "draw-shuffle",
-        "n": ""
-      },
-      "files": {},
-      "responses": {},
-      "parameters": {},
-      "messageHandlers": {
-        "before:prepare": function anonymous(
-) {
-this.options.viewportScale = 1
-this.options.devicePixelScaling = false
-}
-      },
-      "title": "Practice Trials",
-      "shuffleGroups": [],
-      "template": {
-        "type": "lab.flow.Sequence",
-        "files": {},
-        "responses": {},
-        "parameters": {},
-        "messageHandlers": {
-          "before:prepare": function anonymous(
-) {
-this.options.viewportScale = 1
-this.options.devicePixelScaling = false
-}
-        },
-        "title": "Sequence",
-        "content": [
-          {
-            "type": "lab.canvas.Screen",
-            "content": [
-              {
-                "type": "aoi",
-                "left": 0,
-                "top": 250,
-                "angle": 0,
-                "width": "20.84",
-                "height": "20.84",
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "rgba(0, 0, 0, 0.2)",
-                "label": "Start_Button"
-              },
-              {
-                "type": "circle",
-                "left": 0.38,
-                "top": 249.62,
-                "angle": 0,
-                "width": 30.64,
-                "height": 30.64,
-                "stroke": "#aaaaaa",
-                "strokeWidth": 1,
-                "fill": "#dddddd"
-              },
-              {
-                "type": "i-text",
-                "left": 0,
-                "top": 0,
-                "angle": 0,
-                "width": 642.16,
-                "height": 36.16,
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "black",
-                "text": "Click on the grey button to begin the next trial",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-                "fontSize": 32,
-                "fontFamily": "sans-serif",
-                "lineHeight": 1.16,
-                "textAlign": "center"
-              }
-            ],
-            "viewport": [
-              800,
-              600
-            ],
-            "files": {},
-            "responses": {
-              "click @Start_Button": "Start Position"
-            },
-            "parameters": {},
-            "messageHandlers": {
-              "before:prepare": function anonymous(
-) {
-this.options.viewport = [800, 600]
-this.options.viewportScale = 1
-this.options.devicePixelScaling = false
-}
-            },
-            "title": "Start Button"
-          },
-          {
-            "type": "lab.canvas.Screen",
-            "content": [
-              {
-                "type": "image",
-                "left": 0,
-                "top": 0,
-                "angle": 0,
-                "width": "800",
-                "height": "600",
-                "stroke": null,
-                "strokeWidth": 0,
-                "fill": "black",
-                "src": "${ this.files[\"screen.jpeg\"] }"
-              }
-            ],
-            "viewport": [
-              800,
-              600
-            ],
-            "files": {
-              "screen.jpeg": "embedded\u002F0444150c2c031ef7f44caaa0725897453f39206c03dab57ddf1d6532b6aec5b0.jpeg"
-            },
-            "responses": {},
-            "parameters": {},
-            "messageHandlers": {},
-            "title": "Mask",
-            "timeout": "200"
-          },
-          {
-            "type": "lab.canvas.Screen",
-            "content": [
-              {
-                "type": "rect",
-                "left": 0,
-                "top": 0,
-                "angle": 0,
-                "width": 800,
-                "height": "600",
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "black"
-              },
-              {
-                "type": "image",
-                "left": "${parameters.Position}",
-                "top": 0,
-                "angle": 0,
-                "width": "300",
-                "height": "300",
-                "stroke": null,
-                "strokeWidth": 0,
-                "fill": "black",
-                "src": "${ this.files[this.parameters.P_Size] }"
-              },
-              {
-                "type": "aoi",
-                "left": "-200",
-                "top": 0,
-                "angle": 0,
-                "width": "100",
-                "height": "100",
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "rgba(0, 0, 0, 0.2)",
-                "label": "Response_Left"
-              },
-              {
-                "type": "aoi",
-                "left": "200",
-                "top": 0,
-                "angle": 0,
-                "width": "100",
-                "height": "100",
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "rgba(0, 0, 0, 0.2)",
-                "label": "Response_Right"
-              }
-            ],
-            "viewport": [
-              800,
-              600
-            ],
-            "files": {
-              "P_Small_3.png": "embedded\u002F6dc69d0480b14a98a83de75f92c0eca4e2669255731aa141a99f1be6da719c42.png",
-              "P_Large_3.png": "embedded\u002Fd37f527663db56db4b0fdb663ab0dd627ead047fc61d08dd0f6eaa9aef6b2615.png",
-              "Control_3.png": "embedded\u002F7e50a10442cfc7c81fc90163ae942334600b470c1821b5485b1c59f6e81548f2.png",
-              "Control_3 (Big).png": "embedded\u002F708b6f94fcde61e1648d34d6678481c4b21d066970e2ca1ad797bbd3752cdf8e.png",
-              "Control_3 (Small).png": "embedded\u002F946b8f3f3b01a592a1b8fa9b2c099dd13287ee645f541445da4ecaec9e0615d9.png"
-            },
-            "responses": {
-              "click @Response_Left": "Respond_Left",
-              "click @Response_Right": "Respond_Right"
-            },
-            "parameters": {},
-            "messageHandlers": {
-              "before:prepare": function anonymous(
-) {
-this.options.viewport = [800, 600]
-this.options.viewportScale = 1
-this.options.devicePixelScaling = false
-}
-            },
-            "title": "Practice",
-            "plugins": [
-              {
-                "type": "mousetrap",
-                "mode": "mousetrap",
-                "path": "global.MousetrapPlugin"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "type": "lab.html.Page",
-      "items": [
-        {
-          "type": "text",
-          "title": "Part 4: Experimental Trials",
-          "content": "We will now move on to the real experiment."
-        },
-        {
-          "required": true,
-          "type": "text",
-          "title": "Remember:",
-          "content": "The goal is to click the center of the target circle AS QUICKLY AND ACCURATELY AS POSSIBLE."
-        },
-        {
-          "required": true,
-          "type": "text",
-          "content": "Click 'Continue' to begin.  Good Luck!"
-        }
-      ],
-      "scrollTop": true,
-      "submitButtonText": "Continue →",
-      "submitButtonPosition": "right",
-      "files": {},
-      "responses": {},
-      "parameters": {},
-      "messageHandlers": {
-        "before:prepare": function anonymous(
-) {
-this.options.viewportScale = 1
-this.options.devicePixelScaling = false
-}
-      },
-      "title": "Experimental Trials instructions"
-    },
-    {
-      "type": "lab.flow.Loop",
-      "templateParameters": [
-        {
-          "P_Size": "P_Small_3.png",
-          "Position": "-200"
-        },
-        {
-          "P_Size": "P_Small_3.png",
-          "Position": "200"
-        },
-        {
-          "P_Size": "P_Large_3.png",
-          "Position": "-200"
-        },
-        {
-          "P_Size": "P_Large_3.png",
-          "Position": "200"
-        },
-        {
-          "P_Size": "Control_3.png",
-          "Position": "-200"
-        },
-        {
-          "P_Size": "Control_3.png",
-          "Position": "200"
-        },
-        {
-          "P_Size": "Control_3 (Small).png",
-          "Position": "-200"
-        },
-        {
-          "P_Size": "Control_3 (Small).png",
-          "Position": "200"
-        },
-        {
-          "P_Size": "Control_3 (Big).png",
-          "Position": "-200"
-        },
-        {
-          "P_Size": "Control_3 (Big).png",
-          "Position": "200"
-        }
-      ],
-      "sample": {
-        "mode": "draw-shuffle",
-        "n": "50"
-      },
-      "files": {},
-      "responses": {},
-      "parameters": {},
-      "messageHandlers": {
-        "before:prepare": function anonymous(
-) {
-this.options.viewportScale = 1
-this.options.devicePixelScaling = false
-}
-      },
-      "title": "Experimental Trials_Pre Manip",
-      "shuffleGroups": [],
-      "template": {
-        "type": "lab.flow.Sequence",
-        "files": {},
-        "responses": {},
-        "parameters": {},
-        "messageHandlers": {
-          "before:prepare": function anonymous(
-) {
-this.options.viewportScale = 1
-this.options.devicePixelScaling = false
-}
-        },
-        "title": "Sequence",
-        "content": [
-          {
-            "type": "lab.canvas.Screen",
-            "content": [
-              {
-                "type": "aoi",
-                "left": 0,
-                "top": 250,
-                "angle": 0,
-                "width": 20.84,
-                "height": 20.84,
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "rgba(0, 0, 0, 0.2)",
-                "label": "Start_Button"
-              },
-              {
-                "type": "circle",
-                "left": 0.38,
-                "top": 249.62,
-                "angle": 0,
-                "width": 30.64,
-                "height": 30.64,
-                "stroke": "#aaaaaa",
-                "strokeWidth": 1,
-                "fill": "#dddddd"
-              },
-              {
-                "type": "i-text",
-                "left": 0,
-                "top": 0,
-                "angle": 0,
-                "width": 642.16,
-                "height": 36.16,
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "black",
-                "text": "Click on the grey button to begin the next trial",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-                "fontSize": 32,
-                "fontFamily": "sans-serif",
-                "lineHeight": 1.16,
-                "textAlign": "center"
-              }
-            ],
-            "viewport": [
-              800,
-              600
-            ],
-            "files": {},
-            "responses": {
-              "click @Start_Button": "Start Position"
-            },
-            "parameters": {},
-            "messageHandlers": {
-              "before:prepare": function anonymous(
-) {
-this.options.viewport = [800, 600]
-this.options.viewportScale = 1
-this.options.devicePixelScaling = false
-}
-            },
-            "title": "Start Button"
-          },
-          {
-            "type": "lab.canvas.Screen",
-            "content": [
-              {
-                "type": "image",
-                "left": 0,
-                "top": 0,
-                "angle": 0,
-                "width": "800",
-                "height": "600",
-                "stroke": null,
-                "strokeWidth": 0,
-                "fill": "black",
-                "src": "${ this.files[\"screen.jpeg\"] }"
-              }
-            ],
-            "viewport": [
-              800,
-              600
-            ],
-            "files": {
-              "screen.jpeg": "embedded\u002F0444150c2c031ef7f44caaa0725897453f39206c03dab57ddf1d6532b6aec5b0.jpeg"
-            },
-            "responses": {},
-            "parameters": {},
-            "messageHandlers": {},
-            "title": "Mask",
-            "timeout": "200"
-          },
-          {
-            "type": "lab.canvas.Screen",
-            "content": [
-              {
-                "type": "rect",
-                "left": 0,
-                "top": 0,
-                "angle": 0,
-                "width": "800",
-                "height": "600",
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "black"
-              },
-              {
-                "type": "image",
-                "left": "${parameters.Position}",
-                "top": 0,
-                "angle": 0,
-                "width": "300",
-                "height": "300",
-                "stroke": null,
-                "strokeWidth": 0,
-                "fill": "black",
-                "src": "${ this.files[this.parameters.P_Size] }"
-              },
-              {
-                "type": "aoi",
-                "left": "-200",
-                "top": 0,
-                "angle": 0,
-                "width": "100",
-                "height": "100",
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "rgba(0, 0, 0, 0.2)",
-                "label": "Response_Left"
-              },
-              {
-                "type": "aoi",
-                "left": "200",
-                "top": 0,
-                "angle": 0,
-                "width": "100",
-                "height": "100",
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "rgba(0, 0, 0, 0.2)",
-                "label": "Response_Right"
-              }
-            ],
-            "viewport": [
-              800,
-              600
-            ],
-            "files": {
-              "P_Small_3.png": "embedded\u002F6dc69d0480b14a98a83de75f92c0eca4e2669255731aa141a99f1be6da719c42.png",
-              "P_Large_3.png": "embedded\u002Fd37f527663db56db4b0fdb663ab0dd627ead047fc61d08dd0f6eaa9aef6b2615.png",
-              "Control_3.png": "embedded\u002F7e50a10442cfc7c81fc90163ae942334600b470c1821b5485b1c59f6e81548f2.png",
-              "Control_3 (Big).png": "embedded\u002F708b6f94fcde61e1648d34d6678481c4b21d066970e2ca1ad797bbd3752cdf8e.png",
-              "Control_3 (Small).png": "embedded\u002F946b8f3f3b01a592a1b8fa9b2c099dd13287ee645f541445da4ecaec9e0615d9.png"
-            },
-            "responses": {
-              "click @Response_Left": "Respond_Left",
-              "click @Response_Right": "Respond_Right"
-            },
-            "parameters": {},
-            "messageHandlers": {
-              "before:prepare": function anonymous(
-) {
-this.options.viewport = [800, 600]
-this.options.viewportScale = 1
-this.options.devicePixelScaling = false
-}
-            },
-            "title": "Pre_Manip Exp Trial",
-            "plugins": [
-              {
-                "type": "mousetrap",
-                "mode": "mousetrap",
-                "path": "global.MousetrapPlugin"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "type": "lab.html.Page",
-      "items": [
-        {
-          "type": "text",
-          "title": "You're moving a bit slow!",
-          "content": "Remember: The goal is to click the center of the target circle AS QUICKLY AS POSSIBLE."
-        },
-        {
-          "required": true,
-          "type": "text",
-          "content": "Click 'Continue' to begin the next set of trials."
-        }
-      ],
-      "scrollTop": true,
-      "submitButtonText": "Continue →",
-      "submitButtonPosition": "right",
-      "files": {},
-      "responses": {},
-      "parameters": {},
-      "messageHandlers": {
-        "before:prepare": function anonymous(
-) {
-this.options.viewportScale = 1
-this.options.devicePixelScaling = false
-}
-      },
-      "title": "Speed_Manip Instructions"
-    },
-    {
-      "type": "lab.html.Page",
-      "items": [
-        {
-          "type": "text",
-          "title": "Try to be a bit more accurate when clicking!",
-          "content": "Remember: The goal is to click the CENTER of the target circle AS ACCURATELY AS POSSIBLE."
-        },
-        {
-          "required": true,
-          "type": "text",
-          "content": "Click 'Continue' to begin the next set of trials."
-        }
-      ],
-      "scrollTop": true,
-      "submitButtonText": "Continue →",
-      "submitButtonPosition": "right",
-      "files": {},
-      "responses": {},
-      "parameters": {},
-      "messageHandlers": {
-        "before:prepare": function anonymous(
-) {
-this.options.viewportScale = 1
-this.options.devicePixelScaling = false
-}
-      },
-      "title": "Accuracy_Manip Instructions",
-      "skip": true
-    },
-    {
-      "type": "lab.html.Page",
-      "items": [
-        {
-          "type": "text",
-          "title": "Press the 'Continue' button below to proceed to the next set of trials."
-        }
-      ],
-      "scrollTop": true,
-      "submitButtonText": "Continue →",
-      "submitButtonPosition": "right",
-      "files": {},
-      "responses": {},
-      "parameters": {},
-      "messageHandlers": {},
-      "title": "Control Manip_Instructions",
-      "skip": true
-    },
-    {
-      "type": "lab.flow.Loop",
-      "templateParameters": [
-        {
-          "P_Size": "P_Small_3.png",
-          "Position": "-200"
-        },
-        {
-          "P_Size": "P_Small_3.png",
-          "Position": "200"
-        },
-        {
-          "P_Size": "P_Large_3.png",
-          "Position": "-200"
-        },
-        {
-          "P_Size": "P_Large_3.png",
-          "Position": "200"
-        },
-        {
-          "P_Size": "Control_3.png",
-          "Position": "-200"
-        },
-        {
-          "P_Size": "Control_3.png",
-          "Position": "200"
-        },
-        {
-          "P_Size": "Control_3 (Small).png",
-          "Position": "-200"
-        },
-        {
-          "P_Size": "Control_3 (Small).png",
-          "Position": "200"
-        },
-        {
-          "P_Size": "Control_3 (Big).png",
-          "Position": "-200"
-        },
-        {
-          "P_Size": "Control_3 (Big).png",
-          "Position": "200"
-        }
-      ],
-      "sample": {
-        "mode": "draw-shuffle",
-        "n": "50"
-      },
-      "files": {},
-      "responses": {},
-      "parameters": {},
-      "messageHandlers": {
-        "before:prepare": function anonymous(
-) {
-this.options.viewportScale = 1
-this.options.devicePixelScaling = false
-}
-      },
-      "title": "Experimental Trials_Post Manip",
-      "shuffleGroups": [],
-      "template": {
-        "type": "lab.flow.Sequence",
-        "files": {},
-        "responses": {},
-        "parameters": {},
-        "messageHandlers": {
-          "before:prepare": function anonymous(
-) {
-this.options.viewportScale = 1
-this.options.devicePixelScaling = false
-}
-        },
-        "title": "Sequence",
-        "content": [
-          {
-            "type": "lab.canvas.Screen",
-            "content": [
-              {
-                "type": "aoi",
-                "left": 0,
-                "top": 250,
-                "angle": 0,
-                "width": "20.84",
-                "height": "20.84",
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "rgba(0, 0, 0, 0.2)",
-                "label": "Start_Button"
-              },
-              {
-                "type": "circle",
-                "left": 0.38,
-                "top": 249.62,
-                "angle": 0,
-                "width": 30.64,
-                "height": 30.64,
-                "stroke": "#aaaaaa",
-                "strokeWidth": 1,
-                "fill": "#dddddd"
-              },
-              {
-                "type": "i-text",
-                "left": 0,
-                "top": 0,
-                "angle": 0,
-                "width": 642.16,
-                "height": 36.16,
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "black",
-                "text": "Click on the grey button to begin the next trial",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-                "fontSize": 32,
-                "fontFamily": "sans-serif",
-                "lineHeight": 1.16,
-                "textAlign": "center"
-              }
-            ],
-            "viewport": [
-              800,
-              600
-            ],
-            "files": {},
-            "responses": {
-              "click @Start_Button": "Start Position"
-            },
-            "parameters": {},
-            "messageHandlers": {
-              "before:prepare": function anonymous(
-) {
-this.options.viewport = [800, 600]
-this.options.viewportScale = 1
-this.options.devicePixelScaling = false
-}
-            },
-            "title": "Start Button"
-          },
-          {
-            "type": "lab.canvas.Screen",
-            "content": [
-              {
-                "type": "image",
-                "left": 0,
-                "top": 0,
-                "angle": 0,
-                "width": "800",
-                "height": "600",
-                "stroke": null,
-                "strokeWidth": 0,
-                "fill": "black",
-                "src": "${ this.files[\"screen.jpeg\"] }"
-              }
-            ],
-            "viewport": [
-              800,
-              600
-            ],
-            "files": {
-              "screen.jpeg": "embedded\u002F0444150c2c031ef7f44caaa0725897453f39206c03dab57ddf1d6532b6aec5b0.jpeg"
-            },
-            "responses": {},
-            "parameters": {},
-            "messageHandlers": {},
-            "title": "Mask",
-            "timeout": "200"
-          },
-          {
-            "type": "lab.canvas.Screen",
-            "content": [
-              {
-                "type": "rect",
-                "left": 0,
-                "top": 0,
-                "angle": 0,
-                "width": "800",
-                "height": "600",
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "black"
-              },
-              {
-                "type": "image",
-                "left": "${parameters.Position}",
-                "top": 0,
-                "angle": 0,
-                "width": "300",
-                "height": "300",
-                "stroke": null,
-                "strokeWidth": 0,
-                "fill": "black",
-                "src": "${ this.files[this.parameters.P_Size] }"
-              },
-              {
-                "type": "aoi",
-                "left": "-200",
-                "top": 0,
-                "angle": 0,
-                "width": "100",
-                "height": "100",
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "rgba(0, 0, 0, 0.2)",
-                "label": "Response_Left"
-              },
-              {
-                "type": "aoi",
-                "left": "200",
-                "top": 0,
-                "angle": 0,
-                "width": "100",
-                "height": "100",
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "rgba(0, 0, 0, 0.2)",
-                "label": "Response_Right"
-              }
-            ],
-            "viewport": [
-              800,
-              600
-            ],
-            "files": {
-              "P_Small_3.png": "embedded\u002F6dc69d0480b14a98a83de75f92c0eca4e2669255731aa141a99f1be6da719c42.png",
-              "P_Large_3.png": "embedded\u002Fd37f527663db56db4b0fdb663ab0dd627ead047fc61d08dd0f6eaa9aef6b2615.png",
-              "Control_3.png": "embedded\u002F7e50a10442cfc7c81fc90163ae942334600b470c1821b5485b1c59f6e81548f2.png",
-              "Control_3 (Big).png": "embedded\u002F708b6f94fcde61e1648d34d6678481c4b21d066970e2ca1ad797bbd3752cdf8e.png",
-              "Control_3 (Small).png": "embedded\u002F946b8f3f3b01a592a1b8fa9b2c099dd13287ee645f541445da4ecaec9e0615d9.png"
-            },
-            "responses": {
-              "click @Response_Left": "Respond_Left",
-              "click @Response_Right": "Respond_Right"
-            },
-            "parameters": {},
-            "messageHandlers": {
-              "before:prepare": function anonymous(
-) {
-this.options.viewport = [800, 600]
-this.options.viewportScale = 1
-this.options.devicePixelScaling = false
-}
-            },
-            "title": "Post_Manip Exp Trial",
             "plugins": [
               {
                 "type": "mousetrap",
@@ -2375,8 +2589,8 @@ this.end()
       "messageHandlers": {
         "before:prepare": function anonymous(
 ) {
+this.options.viewport = [800, 600]
 this.options.viewportScale = 1
-this.options.devicePixelScaling = false
 }
       },
       "title": "Debrief_Experiment Complete",
