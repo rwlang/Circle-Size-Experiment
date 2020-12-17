@@ -1400,7 +1400,7 @@ this.options.viewportScale = 1
       ],
       "sample": {
         "mode": "draw-shuffle",
-        "n": "50"
+        "n": "60"
       },
       "files": {
         "Control Context Only.png": "embedded\u002F5e04a73c6cbecd9dac6b3063848adb79e6b7e3fd02bd826bae15c4cd343720dc.png",
@@ -1757,7 +1757,7 @@ this.options.viewportScale = 1
       ],
       "sample": {
         "mode": "draw-shuffle",
-        "n": "50"
+        "n": "60"
       },
       "files": {
         "Control Context Only.png": "embedded\u002F5e04a73c6cbecd9dac6b3063848adb79e6b7e3fd02bd826bae15c4cd343720dc.png",
