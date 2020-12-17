@@ -342,9 +342,11 @@ data284<-fromJSON(txt = data$`a0697d22-51d3-4d0e-a361-ddc325a221d7`$data,simplif
 data285<-fromJSON(txt = data$`e748688b-c121-4fda-b58f-200355d11311`$data,simplifyDataFrame = T,flatten = T)
 data286<-fromJSON(txt = data$`02a9a295-c491-4da5-88f4-8fd5e1d4785d`$data,simplifyDataFrame = T,flatten = T)
 
-datatest1<-fromJSON(txt = data$`96d1f512-6faf-4920-8b8c-f01d4f766cc4`$data,simplifyDataFrame = T,flatten = T)
-datatest2<-fromJSON(txt = data$`b7e69641-594a-4c3c-ae73-13e9aa69a4a0`$data,simplifyDataFrame = T,flatten = T)
-datatest3<-fromJSON(txt = data$`ffff9bbe-da67-40bb-9655-855ca59e692c`$data,simplifyDataFrame = T,flatten = T)
+TEST1<-fromJSON(txt = data$`38349ebd-ec35-4ce1-ba98-607b2963313d`$data,simplifyDataFrame = T,flatten = T)
+TEST2<-fromJSON(txt = data$`917fd4ee-0d1c-4097-8de8-d9f6c64264c2`$data,simplifyDataFrame = T,flatten = T)
+TEST3<-fromJSON(txt = data$`b047b62c-7b98-448c-9c1c-9108675239bc`$data,simplifyDataFrame = T,flatten = T)
+TEST4<-fromJSON(txt = data$`c3972f54-38dc-426e-8fa6-6fc87ab8d43e`$data,simplifyDataFrame = T,flatten = T)
+TEST5<-fromJSON(txt = data$`7fb2bc2a-847e-4b8d-a699-587a085b84fd`$data,simplifyDataFrame = T,flatten = T) 
 
 
 
@@ -375,7 +377,7 @@ library(data.table)
 library(dplyr)
 
 
-Demographics <-head(datatest[c("Participant_Consent", 
+Demographics <-head(TEST5[c("Participant_Consent", 
                             "if-you-would-like-to-receive-a-general-summary-of-the-results-from-this-study-when-it-is-completed-please-provide-your-email-address-below:", 
                             "please-record-the-makemodel-and-(diagonal)-screen-size-of-the-device-you-are-using-to-complete-the-experiment-(e.g.-macbook-pro-13.3-in):", 
                             "how-are-you-controlling-the-cursor-on-your-device-1", 
@@ -398,7 +400,7 @@ Demographics <-head(datatest[c("Participant_Consent",
                             "if-yes-which-sports-do-you-play"
                             )], n = 1000)
                                                          
-Screen_Dim <- head(datatest3[c("meta.screen_width",	
+Screen_Dim <- head(TEST5[c("meta.screen_width",	
                            "meta.screen_height",	
                            "meta.scroll_width",	
                            "meta.scroll_height",	
@@ -407,34 +409,34 @@ Screen_Dim <- head(datatest3[c("meta.screen_width",
                            "meta.devicePixelRatio"
                            )], n = 1000)
 
-Condition <- head(datatest3[c("sender",
+Condition <- head(TEST5[c("sender",
                           "duration",
                           "Horizontal_Pos",
-                          "Vertical_Pos"
+                          "Vertical_Pos",
                           #"P_Size_L",
                           #"P_Size_R",
                           #"P_Size",
-                          #"Context_L",
-                          #"Context_R",
-                          #"Target_Size_L",
-                          #"Target_Size_R",
-                          #"Context_Size",
-                          #"Position",
-                          #"Target_Size"
+                          "Context_Size",
+                          "Target_Size",
+                          "Position",
+                          "Context_L",
+                          "Context_R",
+                          "Target_Size_L",
+                          "Target_Size_R"
                           )], n = 1000)
 
-xPos <-capture.output(datatest3["xpos"])
-yPos <-capture.output(datatest3["ypos"])
+xPos <-capture.output(TEST5["xpos"])
+yPos <-capture.output(TEST5["ypos"])
 
 
 
 
 
-write.csv(Demographics, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\datatest2/Demo.csv", row.names = FALSE)
-write.csv(Condition, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\datatest2/Conditions.csv", row.names = FALSE)
-write.csv(Screen_Dim, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\datatest2/Screen_Dim.csv", row.names = FALSE)
-write.csv(xPos, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\datatest2/xPos.csv", row.names = FALSE)
-write.csv(yPos, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\datatest2/yPos.csv", row.names = FALSE)
+write.csv(Demographics, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\TEST5/Demo.csv", row.names = FALSE)
+write.csv(Condition, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\TEST5/Conditions.csv", row.names = FALSE)
+write.csv(Screen_Dim, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\TEST5/Screen_Dim.csv", row.names = FALSE)
+write.csv(xPos, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\TEST5/xPos.csv", row.names = FALSE)
+write.csv(yPos, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\TEST5/yPos.csv", row.names = FALSE)
 
 
 

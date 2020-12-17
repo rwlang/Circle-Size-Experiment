@@ -717,7 +717,7 @@ this.end()
         {
           "type": "text",
           "title": "Instructions",
-          "content": "In this experiment, you will be using the mouse cursor to click on target circles presented on the screen.\n"
+          "content": "In this experiment, you will be using the cursor to click on target circles presented on the screen.\n"
         },
         {
           "required": true,
@@ -964,6 +964,34 @@ this.options.viewportScale = 1
       "items": [
         {
           "type": "text",
+          "title": "Please try to maintain a distance of 2 feet (approximately 2 ruler lengths) between your head and the computer screen while completing the experiment.",
+          "content": ""
+        },
+        {
+          "required": true,
+          "type": "image",
+          "width": "",
+          "height": "",
+          "src": "${ this.files[\"2 ft distance.PNG\"] }",
+          "name": ""
+        }
+      ],
+      "scrollTop": true,
+      "submitButtonText": "Continue →",
+      "submitButtonPosition": "right",
+      "files": {
+        "2 ft distance.PNG": "embedded\u002F3bd27da3921f84e6eed1485d495605e617e3484161847cc6c0c8ba9a12acfe2e.PNG"
+      },
+      "responses": {},
+      "parameters": {},
+      "messageHandlers": {},
+      "title": "Practice Instructions 1"
+    },
+    {
+      "type": "lab.html.Page",
+      "items": [
+        {
+          "type": "text",
           "title": "Part 2: Practice",
           "content": "A target circle will appear on the screen."
         },
@@ -999,7 +1027,7 @@ this.options.viewportScale = 1
         {
           "required": true,
           "type": "text",
-          "content": "Click 'Continue' to being the first set of practice trials."
+          "content": "Click 'Continue' to begin the first set of practice trials."
         }
       ],
       "scrollTop": true,
@@ -1019,7 +1047,7 @@ this.options.viewport = [800, 600]
 this.options.viewportScale = 1
 }
       },
-      "title": "Practice Instructions"
+      "title": "Practice Instructions 2"
     },
     {
       "type": "lab.flow.Loop",
@@ -1688,8 +1716,7 @@ this.options.viewportScale = 1
       "responses": {},
       "parameters": {},
       "messageHandlers": {},
-      "title": "Control Manip_Instructions",
-      "skip": true
+      "title": "Control Manip_Instructions"
     },
     {
       "type": "lab.flow.Loop",
@@ -1775,7 +1802,6 @@ this.options.viewportScale = 1
 }
       },
       "title": "Experimental Trials_Post Manip",
-      "skip": true,
       "shuffleGroups": [],
       "template": {
         "type": "lab.flow.Sequence",
