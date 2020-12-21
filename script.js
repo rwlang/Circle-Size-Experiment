@@ -1259,23 +1259,13 @@ this.options.viewportScale = 1
                 "left": "${parameters.Position}",
                 "top": 0,
                 "angle": 0,
-                "width": "375",
-                "height": "375",
+                "width": 378,
+                "height": 378,
                 "stroke": null,
                 "strokeWidth": 0,
                 "fill": "black",
-                "src": "${this.files[this.parameters.Context_Size]}"
-              },
-              {
-                "type": "circle",
-                "left": "${parameters.Position}",
-                "top": 0,
-                "angle": 0,
-                "width": "${parameters.Target_Size}",
-                "height": 70,
-                "stroke": "#ffffff",
-                "strokeWidth": 1,
-                "fill": "#ffffff"
+                "src": "${this.files[this.parameters.Context_Size]}",
+                "autoScale": undefined
               },
               {
                 "type": "aoi",
@@ -1288,6 +1278,17 @@ this.options.viewportScale = 1
                 "strokeWidth": 1,
                 "fill": "rgba(0, 0, 0, 0.2)",
                 "label": "Response"
+              },
+              {
+                "type": "circle",
+                "left": "${parameters.Position}",
+                "top": 0,
+                "angle": 0,
+                "width": "${parameters.Target_Size}",
+                "height": 70,
+                "stroke": "#ffffff",
+                "strokeWidth": 1,
+                "fill": "#ffffff"
               }
             ],
             "viewport": [
@@ -1580,17 +1581,6 @@ this.options.viewportScale = 1
                 "src": "${ this.files[this.parameters.Context_Size] }"
               },
               {
-                "type": "circle",
-                "left": "${parameters.Position}",
-                "top": 0,
-                "angle": 0,
-                "width": "${parameters.Target_Size}",
-                "height": 55,
-                "stroke": "#ffffff",
-                "strokeWidth": 1,
-                "fill": "#ffffff"
-              },
-              {
                 "type": "aoi",
                 "left": "${parameters.Position}",
                 "top": 0,
@@ -1601,6 +1591,17 @@ this.options.viewportScale = 1
                 "strokeWidth": 1,
                 "fill": "rgba(0, 0, 0, 0.2)",
                 "label": "Response"
+              },
+              {
+                "type": "circle",
+                "left": "${parameters.Position}",
+                "top": 0,
+                "angle": 0,
+                "width": "${parameters.Target_Size}",
+                "height": 55,
+                "stroke": "#ffffff",
+                "strokeWidth": 1,
+                "fill": "#ffffff"
               }
             ],
             "viewport": [
@@ -1646,7 +1647,7 @@ this.options.viewportScale = 1
       "items": [
         {
           "type": "text",
-          "title": "You're moving a bit slow!",
+          "title": "Try to be faster when clicking!",
           "content": "Remember: The goal is to click the center of the target circle AS QUICKLY AS POSSIBLE."
         },
         {
@@ -1668,15 +1669,14 @@ this.options.viewport = [800, 600]
 this.options.viewportScale = 1
 }
       },
-      "title": "Speed_Manip Instructions",
-      "skip": true
+      "title": "Speed_Manip Instructions"
     },
     {
       "type": "lab.html.Page",
       "items": [
         {
           "type": "text",
-          "title": "Try to be a bit more accurate when clicking!",
+          "title": "Try to be more accurate when clicking!",
           "content": "Remember: The goal is to click the CENTER of the target circle AS ACCURATELY AS POSSIBLE."
         },
         {
@@ -1716,7 +1716,8 @@ this.options.viewportScale = 1
       "responses": {},
       "parameters": {},
       "messageHandlers": {},
-      "title": "Control Manip_Instructions"
+      "title": "Control Manip_Instructions",
+      "skip": true
     },
     {
       "type": "lab.flow.Loop",
@@ -1936,17 +1937,6 @@ this.options.viewportScale = 1
                 "src": "${ this.files[this.parameters.Context_Size] }"
               },
               {
-                "type": "circle",
-                "left": "${parameters.Position}",
-                "top": 0,
-                "angle": 0,
-                "width": "${parameters.Target_Size}",
-                "height": 55,
-                "stroke": "#ffffff",
-                "strokeWidth": 1,
-                "fill": "#ffffff"
-              },
-              {
                 "type": "aoi",
                 "left": "${parameters.Position}",
                 "top": 0,
@@ -1957,6 +1947,17 @@ this.options.viewportScale = 1
                 "strokeWidth": 1,
                 "fill": "rgba(0, 0, 0, 0.2)",
                 "label": "Response"
+              },
+              {
+                "type": "circle",
+                "left": "${parameters.Position}",
+                "top": 0,
+                "angle": 0,
+                "width": "${parameters.Target_Size}",
+                "height": 55,
+                "stroke": "#ffffff",
+                "strokeWidth": 1,
+                "fill": "#ffffff"
               }
             ],
             "viewport": [
@@ -2442,17 +2443,6 @@ this.options.viewportScale = 1
                 "autoScale": undefined
               },
               {
-                "type": "circle",
-                "left": "-200",
-                "top": 0,
-                "angle": 0,
-                "width": "${parameters.Target_Size_L}",
-                "height": 55,
-                "stroke": "#ffffff",
-                "strokeWidth": 1,
-                "fill": "#ffffff"
-              },
-              {
                 "type": "aoi",
                 "left": "-200",
                 "top": 0,
@@ -2463,6 +2453,17 @@ this.options.viewportScale = 1
                 "strokeWidth": 1,
                 "fill": "rgba(0, 0, 0, 0.2)",
                 "label": "Response_Left"
+              },
+              {
+                "type": "circle",
+                "left": "-200",
+                "top": 0,
+                "angle": 0,
+                "width": "${parameters.Target_Size_L}",
+                "height": 55,
+                "stroke": "#ffffff",
+                "strokeWidth": 1,
+                "fill": "#ffffff"
               },
               {
                 "type": "circle",
