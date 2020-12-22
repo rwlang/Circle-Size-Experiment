@@ -1669,7 +1669,8 @@ this.options.viewport = [800, 600]
 this.options.viewportScale = 1
 }
       },
-      "title": "Speed_Manip Instructions"
+      "title": "Speed_Manip Instructions",
+      "skip": true
     },
     {
       "type": "lab.html.Page",
@@ -1698,8 +1699,7 @@ this.options.viewport = [800, 600]
 this.options.viewportScale = 1
 }
       },
-      "title": "Accuracy_Manip Instructions",
-      "skip": true
+      "title": "Accuracy_Manip Instructions"
     },
     {
       "type": "lab.html.Page",

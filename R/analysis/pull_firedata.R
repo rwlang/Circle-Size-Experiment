@@ -412,6 +412,8 @@ data2021_53<-fromJSON(txt = data$`d8429b58-c526-49c6-aae4-b88aac25a438`$data,sim
 data2021_54<-fromJSON(txt = data$`e2085b40-908c-4a64-a832-59b5cc71ac85`$data,simplifyDataFrame = T,flatten = T)
 data2021_55<-fromJSON(txt = data$`e3d5d4d9-3ff1-47d3-97b0-659052c25e0f`$data,simplifyDataFrame = T,flatten = T)
 
+limitTest<-fromJSON(txt = data$`6008ea54-8196-4893-9cdc-568fff7612e2`$data,simplifyDataFrame = T,flatten = T)
+
 
 #********************************************************Circle-Size-Experiment-2***************************#
 
@@ -438,7 +440,7 @@ library("plyr")
 library(data.table)
 library(dplyr)
 
-Demographics <-head(data2021_33[c("Participant_Consent", 
+Demographics <-head(limitTest[c("Participant_Consent", 
                             "if-you-would-like-to-receive-a-general-summary-of-the-results-from-this-study-when-it-is-completed-please-provide-your-email-address-below:", 
                             "please-record-the-makemodel-and-(diagonal)-screen-size-of-the-device-you-are-using-to-complete-the-experiment-(e.g.-macbook-pro-13.3-in):", 
                             "how-are-you-controlling-the-cursor-on-your-device-(reminder:-please-only-complete-this-experiment-using-a-touchpad-or-trackpad-of-a-laptop-computer.-if-you-are-using-a-device-that-does-not-have-a-touchpad-or-trackpad-please-exit-the-experiment-now-and-contact-the-experimenter).-1", 
@@ -461,7 +463,7 @@ Demographics <-head(data2021_33[c("Participant_Consent",
                             "if-yes-which-sports-do-you-play"
                             )], n = 1000)
                                                          
-Screen_Dim <- head(data2021_33[c("meta.screen_width",	
+Screen_Dim <- head(limitTest[c("meta.screen_width",	
                            "meta.screen_height",	
                            "meta.scroll_width",	
                            "meta.scroll_height",	
@@ -470,7 +472,7 @@ Screen_Dim <- head(data2021_33[c("meta.screen_width",
                            "meta.devicePixelRatio"
                            )], n = 1000)
 
-Condition <- head(data2021_33[c("sender",
+Condition <- head(limitTest[c("sender",
                           "duration",
                           "Horizontal_Pos",
                           "Vertical_Pos",
@@ -486,18 +488,18 @@ Condition <- head(data2021_33[c("sender",
                           "Target_Size_R"
                           )], n = 1000)
 
-xPos <-capture.output(data2021_33["xpos"])
-yPos <-capture.output(data2021_33["ypos"])
+xPos <-capture.output(limitTest["xpos"])
+yPos <-capture.output(limitTest["ypos"])
 
 
 
 
 
-write.csv(Demographics, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\data2021\\33/Demo.csv", row.names = FALSE)
-write.csv(Condition, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\data2021\\33/Conditions.csv", row.names = FALSE)
-write.csv(Screen_Dim, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\data2021\\33/Screen_Dim.csv", row.names = FALSE)
-write.csv(xPos, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\data2021\\33/xPos.csv", row.names = FALSE)
-write.csv(yPos, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\data2021\\33/yPos.csv", row.names = FALSE)
+write.csv(Demographics, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\limitTest/Demo.csv", row.names = FALSE)
+write.csv(Condition, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\limitTest/Conditions.csv", row.names = FALSE)
+write.csv(Screen_Dim, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\limitTest/Screen_Dim.csv", row.names = FALSE)
+write.csv(xPos, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\limitTest/xPos.csv", row.names = FALSE)
+write.csv(yPos, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\limitTest/yPos.csv", row.names = FALSE)
 
 
 
