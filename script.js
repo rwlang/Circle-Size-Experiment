@@ -1264,8 +1264,7 @@ this.options.viewportScale = 1
                 "stroke": null,
                 "strokeWidth": 0,
                 "fill": "black",
-                "src": "${this.files[this.parameters.Context_Size]}",
-                "autoScale": undefined
+                "src": "${this.files[this.parameters.Context_Size]}"
               },
               {
                 "type": "aoi",
@@ -1669,7 +1668,8 @@ this.options.viewport = [800, 600]
 this.options.viewportScale = 1
 }
       },
-      "title": "Speed_Manip Instructions"
+      "title": "Speed_Manip Instructions",
+      "skip": true
     },
     {
       "type": "lab.html.Page",
@@ -1698,8 +1698,7 @@ this.options.viewport = [800, 600]
 this.options.viewportScale = 1
 }
       },
-      "title": "Accuracy_Manip Instructions",
-      "skip": true
+      "title": "Accuracy_Manip Instructions"
     },
     {
       "type": "lab.html.Page",
@@ -2426,8 +2425,7 @@ this.options.viewportScale = 1
                 "stroke": null,
                 "strokeWidth": 0,
                 "fill": "black",
-                "src": "${ this.files[this.parameters.Context_L] }",
-                "autoScale": undefined
+                "src": "${ this.files[this.parameters.Context_L] }"
               },
               {
                 "type": "image",
@@ -2439,8 +2437,7 @@ this.options.viewportScale = 1
                 "stroke": null,
                 "strokeWidth": 0,
                 "fill": "black",
-                "src": "${ this.files[this.parameters.Context_R] }",
-                "autoScale": undefined
+                "src": "${ this.files[this.parameters.Context_R] }"
               },
               {
                 "type": "aoi",
