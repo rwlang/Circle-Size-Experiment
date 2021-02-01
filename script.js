@@ -20,6 +20,7 @@ const study = lab.util.fromObject({
     "repository": "",
     "contributors": ""
   },
+  "messageHandlers": {},
   "files": {},
   "responses": {},
   "content": [
@@ -37,7 +38,9 @@ const study = lab.util.fromObject({
       "submitButtonText": "Continue →",
       "submitButtonPosition": "hidden",
       "files": {},
-      "responses": {},
+      "responses": {
+        "": ""
+      },
       "parameters": {},
       "messageHandlers": {},
       "title": "Continue to Experiment"
@@ -130,7 +133,9 @@ this.end()
       "submitButtonText": "Continue →",
       "submitButtonPosition": "hidden",
       "files": {},
-      "responses": {},
+      "responses": {
+        "": ""
+      },
       "parameters": {},
       "messageHandlers": {},
       "title": "No TP exit",
@@ -209,7 +214,7 @@ this.end()
         {
           "required": true,
           "type": "text",
-          "content": "This research has been approved by the Psychology\u002FSociology Research Ethics Board of the University of Manitoba.  If you have any concerns or complaints about this project you may contact any of the above named persons or the Human Ethics Coordinator (HEC) at (204) 474-7122 (Email: humanethics@umanitoba.ca)."
+          "content": "This research has been approved by the Research Ethics Board (REB 1) of the University of Manitoba.  If you have any concerns or complaints about this project you may contact any of the above named persons or the Human Ethics Coordinator (HEC) at (204) 474-7122 (Email: humanethics@umanitoba.ca)."
         },
         {
           "required": true,
@@ -245,7 +250,9 @@ this.end()
       "files": {
         "UM_Logo.png": "embedded\u002Fcdc265bb9ccc663e521b502e8ea913f0265f80613ded26a4eb962293639abb3a.png"
       },
-      "responses": {},
+      "responses": {
+        "": ""
+      },
       "parameters": {},
       "messageHandlers": {},
       "title": "Consent Form",
@@ -286,7 +293,9 @@ this.end()
       "submitButtonText": "Continue →",
       "submitButtonPosition": "right",
       "files": {},
-      "responses": {},
+      "responses": {
+        "": ""
+      },
       "parameters": {},
       "messageHandlers": {},
       "title": "Page",
@@ -306,7 +315,7 @@ this.end()
           "required": true,
           "type": "text",
           "title": "",
-          "content": "During the experimental trials, participants received feedback about their performance (e.g., you were moving too slowly, or not clicking the target circle accurately enough).  These messages were automated, and did not reflect participants' actual speed or accuracy in any way.  Our intention was to encourage participants to emphasize either speed or accuracy while completing the trials, to see how these added motivations would influence their accuracy when clicking the center of the circle."
+          "content": "During the experimental trials, participants may have received feedback about their performance (e.g., you were moving too slowly, or not clicking the target circle accurately enough).  These messages were automated, and did not reflect participants' actual speed or accuracy in any way.  Our intention was to encourage participants to emphasize either speed or accuracy while completing the trials, to see how these added motivations would influence their accuracy when clicking the center of the circle."
         },
         {
           "required": true,
@@ -390,7 +399,9 @@ this.end()
       "submitButtonText": "Continue →",
       "submitButtonPosition": "hidden",
       "files": {},
-      "responses": {},
+      "responses": {
+        "": ""
+      },
       "parameters": {},
       "messageHandlers": {},
       "title": "Page",
@@ -480,8 +491,8 @@ this.end()
               "coding": "3"
             }
           ],
-          "label": "Sex:",
-          "name": "sex:"
+          "label": "What is the sex you were assigned at birth?",
+          "name": "what-is-the-sex-you-were-assigned-at-birth"
         },
         {
           "required": true,
@@ -675,7 +686,9 @@ this.end()
       "submitButtonText": "Continue →",
       "submitButtonPosition": "right",
       "files": {},
-      "responses": {},
+      "responses": {
+        "": ""
+      },
       "parameters": {},
       "messageHandlers": {},
       "title": "Demographics"
@@ -683,7 +696,9 @@ this.end()
     {
       "type": "lab.html.Screen",
       "files": {},
-      "responses": {},
+      "responses": {
+        "": ""
+      },
       "parameters": {},
       "messageHandlers": {
         "before:prepare": function anonymous(
@@ -756,7 +771,9 @@ this.end()
       "files": {
         "cross_r.cur": "embedded\u002F628faecdf73efcb02e6ba66f589b816f3bb3fc1ef42cf76ecad460f5587d4069.cur"
       },
-      "responses": {},
+      "responses": {
+        "": ""
+      },
       "parameters": {},
       "messageHandlers": {
         "before:prepare": function anonymous(
@@ -791,7 +808,9 @@ lab.util.fullscreen.launch(document.body)
       "submitButtonText": "Continue →",
       "submitButtonPosition": "right",
       "files": {},
-      "responses": {},
+      "responses": {
+        "": ""
+      },
       "parameters": {},
       "messageHandlers": {
         "before:prepare": function anonymous(
@@ -836,7 +855,9 @@ this.options.devicePixelScaling = false
         "n": ""
       },
       "files": {},
-      "responses": {},
+      "responses": {
+        "": ""
+      },
       "parameters": {},
       "messageHandlers": {
         "before:prepare": function anonymous(
@@ -851,7 +872,9 @@ this.options.viewportScale = 1
       "template": {
         "type": "lab.flow.Sequence",
         "files": {},
-        "responses": {},
+        "responses": {
+          "": ""
+        },
         "parameters": {},
         "messageHandlers": {},
         "title": "Sequence",
@@ -950,7 +973,9 @@ this.options.viewportScale = 1
             "files": {
               "screen.jpeg": "embedded\u002F0444150c2c031ef7f44caaa0725897453f39206c03dab57ddf1d6532b6aec5b0.jpeg"
             },
-            "responses": {},
+            "responses": {
+              "": ""
+            },
             "parameters": {},
             "messageHandlers": {},
             "title": "Mask",
@@ -982,7 +1007,9 @@ this.options.viewportScale = 1
       "files": {
         "2 ft distance.PNG": "embedded\u002F3bd27da3921f84e6eed1485d495605e617e3484161847cc6c0c8ba9a12acfe2e.PNG"
       },
-      "responses": {},
+      "responses": {
+        "": ""
+      },
       "parameters": {},
       "messageHandlers": {},
       "title": "Practice Instructions 1"
@@ -1038,7 +1065,9 @@ this.options.viewportScale = 1
         "Practice Instructions Image 3.png": "embedded\u002F710483a278877e5a1816ff074b7d463cb23d7e8445af1f0a4bd7ea569d2d2b2c.png",
         "Practice Instructions image.png": "embedded\u002Fc6dfeb72990f3c214a91fd19974e8c0300cf6929abace512f1493e575d9eda02.png"
       },
-      "responses": {},
+      "responses": {
+        "": ""
+      },
       "parameters": {},
       "messageHandlers": {
         "before:prepare": function anonymous(
@@ -1123,7 +1152,9 @@ this.options.viewportScale = 1
         "P_Large Context Only.png": "embedded\u002F992a9d10481882a0cfe4bf27e5395035a6398ea122acfc48cd5163209d98b020.png",
         "P_Small_Far Context Only.png": "embedded\u002F8f0579522952818b5e5ef468a76b6405674fea39f30203977dd5a6321ab75b20.png"
       },
-      "responses": {},
+      "responses": {
+        "": ""
+      },
       "parameters": {},
       "messageHandlers": {
         "before:prepare": function anonymous(
@@ -1137,7 +1168,9 @@ this.options.viewportScale = 1
       "template": {
         "type": "lab.flow.Sequence",
         "files": {},
-        "responses": {},
+        "responses": {
+          "": ""
+        },
         "parameters": {},
         "messageHandlers": {
           "before:prepare": function anonymous(
@@ -1234,7 +1267,9 @@ this.options.viewportScale = 1
             "files": {
               "screen.jpeg": "embedded\u002F0444150c2c031ef7f44caaa0725897453f39206c03dab57ddf1d6532b6aec5b0.jpeg"
             },
-            "responses": {},
+            "responses": {
+              "": ""
+            },
             "parameters": {},
             "messageHandlers": {},
             "title": "Mask",
@@ -1351,7 +1386,9 @@ this.options.viewportScale = 1
       "submitButtonText": "Continue →",
       "submitButtonPosition": "right",
       "files": {},
-      "responses": {},
+      "responses": {
+        "": ""
+      },
       "parameters": {},
       "messageHandlers": {
         "before:prepare": function anonymous(
@@ -1436,7 +1473,9 @@ this.options.viewportScale = 1
         "P_Large Context Only.png": "embedded\u002F992a9d10481882a0cfe4bf27e5395035a6398ea122acfc48cd5163209d98b020.png",
         "P_Small_Far Context Only.png": "embedded\u002F8f0579522952818b5e5ef468a76b6405674fea39f30203977dd5a6321ab75b20.png"
       },
-      "responses": {},
+      "responses": {
+        "": ""
+      },
       "parameters": {},
       "messageHandlers": {
         "before:prepare": function anonymous(
@@ -1450,7 +1489,9 @@ this.options.viewportScale = 1
       "template": {
         "type": "lab.flow.Sequence",
         "files": {},
-        "responses": {},
+        "responses": {
+          "": ""
+        },
         "parameters": {},
         "messageHandlers": {
           "before:prepare": function anonymous(
@@ -1547,7 +1588,9 @@ this.options.viewportScale = 1
             "files": {
               "screen.jpeg": "embedded\u002F0444150c2c031ef7f44caaa0725897453f39206c03dab57ddf1d6532b6aec5b0.jpeg"
             },
-            "responses": {},
+            "responses": {
+              "": ""
+            },
             "parameters": {},
             "messageHandlers": {},
             "title": "Mask",
@@ -1659,7 +1702,9 @@ this.options.viewportScale = 1
       "submitButtonText": "Continue →",
       "submitButtonPosition": "right",
       "files": {},
-      "responses": {},
+      "responses": {
+        "": ""
+      },
       "parameters": {},
       "messageHandlers": {
         "before:prepare": function anonymous(
@@ -1689,7 +1734,9 @@ this.options.viewportScale = 1
       "submitButtonText": "Continue →",
       "submitButtonPosition": "right",
       "files": {},
-      "responses": {},
+      "responses": {
+        "": ""
+      },
       "parameters": {},
       "messageHandlers": {
         "before:prepare": function anonymous(
@@ -1698,7 +1745,8 @@ this.options.viewport = [800, 600]
 this.options.viewportScale = 1
 }
       },
-      "title": "Accuracy_Manip Instructions"
+      "title": "Accuracy_Manip Instructions",
+      "skip": true
     },
     {
       "type": "lab.html.Page",
@@ -1712,11 +1760,12 @@ this.options.viewportScale = 1
       "submitButtonText": "Continue →",
       "submitButtonPosition": "right",
       "files": {},
-      "responses": {},
+      "responses": {
+        "": ""
+      },
       "parameters": {},
       "messageHandlers": {},
-      "title": "Control Manip_Instructions",
-      "skip": true
+      "title": "Control Manip_Instructions"
     },
     {
       "type": "lab.flow.Loop",
@@ -1792,7 +1841,9 @@ this.options.viewportScale = 1
         "P_Large Context Only.png": "embedded\u002F992a9d10481882a0cfe4bf27e5395035a6398ea122acfc48cd5163209d98b020.png",
         "P_Small_Far Context Only.png": "embedded\u002F8f0579522952818b5e5ef468a76b6405674fea39f30203977dd5a6321ab75b20.png"
       },
-      "responses": {},
+      "responses": {
+        "": ""
+      },
       "parameters": {},
       "messageHandlers": {
         "before:prepare": function anonymous(
@@ -1806,7 +1857,9 @@ this.options.viewportScale = 1
       "template": {
         "type": "lab.flow.Sequence",
         "files": {},
-        "responses": {},
+        "responses": {
+          "": ""
+        },
         "parameters": {},
         "messageHandlers": {
           "before:prepare": function anonymous(
@@ -1903,7 +1956,9 @@ this.options.viewportScale = 1
             "files": {
               "screen.jpeg": "embedded\u002F0444150c2c031ef7f44caaa0725897453f39206c03dab57ddf1d6532b6aec5b0.jpeg"
             },
-            "responses": {},
+            "responses": {
+              "": ""
+            },
             "parameters": {},
             "messageHandlers": {},
             "title": "Mask",
@@ -2033,7 +2088,9 @@ this.options.viewportScale = 1
         "Size Judgment Image 2.png": "embedded\u002F48c44a9b8fe72a138d23878688ba883bac8c58003f6990b980d43353b9ace40e.png",
         "Size Judgment Image 1.png": "embedded\u002Fc8043101e739c94bc5fc27971be3262e5178522a6c757ed0ca0ab9bcba182048.png"
       },
-      "responses": {},
+      "responses": {
+        "": ""
+      },
       "parameters": {},
       "messageHandlers": {
         "before:prepare": function anonymous(
@@ -2074,7 +2131,9 @@ this.options.viewportScale = 1
         "Size Judgment Image 2.png": "embedded\u002F48c44a9b8fe72a138d23878688ba883bac8c58003f6990b980d43353b9ace40e.png",
         "Size Judgment Image 1.png": "embedded\u002Fc8043101e739c94bc5fc27971be3262e5178522a6c757ed0ca0ab9bcba182048.png"
       },
-      "responses": {},
+      "responses": {
+        "": ""
+      },
       "parameters": {},
       "messageHandlers": {
         "before:prepare": function anonymous(
@@ -2284,7 +2343,9 @@ this.options.viewportScale = 1
         "P_Large Context Only.png": "embedded\u002F992a9d10481882a0cfe4bf27e5395035a6398ea122acfc48cd5163209d98b020.png",
         "P_Small_Far Context Only.png": "embedded\u002F8f0579522952818b5e5ef468a76b6405674fea39f30203977dd5a6321ab75b20.png"
       },
-      "responses": {},
+      "responses": {
+        "": ""
+      },
       "parameters": {},
       "messageHandlers": {
         "before:prepare": function anonymous(
@@ -2298,7 +2359,9 @@ this.options.viewportScale = 1
       "template": {
         "type": "lab.flow.Sequence",
         "files": {},
-        "responses": {},
+        "responses": {
+          "": ""
+        },
         "parameters": {},
         "messageHandlers": {
           "before:prepare": function anonymous(
@@ -2395,7 +2458,9 @@ this.options.viewportScale = 1
             "files": {
               "screen.jpeg": "embedded\u002F0444150c2c031ef7f44caaa0725897453f39206c03dab57ddf1d6532b6aec5b0.jpeg"
             },
-            "responses": {},
+            "responses": {
+              "": ""
+            },
             "parameters": {},
             "messageHandlers": {},
             "title": "Mask",
@@ -2524,7 +2589,9 @@ this.options.viewportScale = 1
       "content": "\u003Cbutton id=\"Continue\"\u003EContinue\u003C\u002Fbutton\u003E",
       "scrollTop": true,
       "files": {},
-      "responses": {},
+      "responses": {
+        "": ""
+      },
       "parameters": {},
       "messageHandlers": {
         "before:prepare": function anonymous(
@@ -2566,7 +2633,7 @@ this.end()
           "required": true,
           "type": "text",
           "title": "",
-          "content": "During the experimental trials, participants received feedback about their performance (e.g., you were moving too slowly, or not clicking the target circle accurately enough).  These messages were automated, and did not reflect participants' actual speed or accuracy in any way.  Our intention was to encourage participants to emphasize either speed or accuracy while completing the trials, to see how these added motivations would influence their accuracy when clicking the center of the circle."
+          "content": "During the experimental trials, participants may have received feedback about their performance (e.g., you were moving too slowly, or not clicking the target circle accurately enough).  These messages were automated, and did not reflect participants' actual speed or accuracy in any way.  Our intention was to encourage participants to emphasize either speed or accuracy while completing the trials, to see how these added motivations would influence their accuracy when clicking the center of the circle."
         },
         {
           "required": true,
