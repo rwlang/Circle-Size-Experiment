@@ -1713,8 +1713,7 @@ this.options.viewport = [800, 600]
 this.options.viewportScale = 1
 }
       },
-      "title": "Speed_Manip Instructions",
-      "skip": true
+      "title": "Speed_Manip Instructions"
     },
     {
       "type": "lab.html.Page",
@@ -1765,7 +1764,8 @@ this.options.viewportScale = 1
       },
       "parameters": {},
       "messageHandlers": {},
-      "title": "Control Manip_Instructions"
+      "title": "Control Manip_Instructions",
+      "skip": true
     },
     {
       "type": "lab.flow.Loop",
