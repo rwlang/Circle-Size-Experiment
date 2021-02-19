@@ -2063,7 +2063,7 @@ this.options.viewportScale = 1
         {
           "required": true,
           "type": "text",
-          "content": "Choose which target circle is largest by clicking on it."
+          "content": "Choose which target circle is largest by clicking on it.\n\nYour speed and accuracy is not important for this part of the experiment."
         },
         {
           "required": true,
