@@ -586,6 +586,35 @@ data2021_221<-fromJSON(txt = data$`ea8007ea-4af3-487c-9a75-cdd164bb51fd`$data,si
 data2021_222<-fromJSON(txt = data$`f934dfb5-ff92-4e0b-83ef-58d8aefba4a2`$data,simplifyDataFrame = T,flatten = T)
 data2021_223<-fromJSON(txt = data$`fbc6e276-c303-4423-a5d4-317fc530ea63`$data,simplifyDataFrame = T,flatten = T)
 
+data2021_224<-fromJSON(txt = data$`25990e52-7ea2-447a-b601-51908c8db642`$data,simplifyDataFrame = T,flatten = T)
+data2021_225<-fromJSON(txt = data$`409bf6a7-9c17-4fd0-9ad5-28ba76bf9008`$data,simplifyDataFrame = T,flatten = T)
+data2021_226<-fromJSON(txt = data$`7c5deb40-d311-4313-aff8-5c641e216d7f`$data,simplifyDataFrame = T,flatten = T)
+data2021_227<-fromJSON(txt = data$`b21550ae-a87b-4288-8e61-22f847cc9e2c`$data,simplifyDataFrame = T,flatten = T)
+data2021_228<-fromJSON(txt = data$`b295352f-a6b1-4b32-8f97-cc2f11d7a1b0`$data,simplifyDataFrame = T,flatten = T)
+data2021_229<-fromJSON(txt = data$`b9ee8efc-c13d-444e-8f12-02be5ead2157`$data,simplifyDataFrame = T,flatten = T)
+data2021_230<-fromJSON(txt = data$`dae48274-ff4f-4893-ab49-3baa844d770c`$data,simplifyDataFrame = T,flatten = T)
+data2021_231<-fromJSON(txt = data$`13867911-1f2e-412d-8f52-f9245bed6e9b`$data,simplifyDataFrame = T,flatten = T)
+data2021_232<-fromJSON(txt = data$`794f8de4-aa5b-4fbd-997b-a24be459918d`$data,simplifyDataFrame = T,flatten = T)
+data2021_233<-fromJSON(txt = data$`a5989a44-9b7c-4294-93b3-fb6f8f392fad`$data,simplifyDataFrame = T,flatten = T)
+data2021_234<-fromJSON(txt = data$`cc29efd3-c73c-429a-a6a9-06ba8b2aa70e`$data,simplifyDataFrame = T,flatten = T)
+data2021_235<-fromJSON(txt = data$`fed2b4ab-c9a8-4990-a6df-b368984abcf5`$data,simplifyDataFrame = T,flatten = T)
+data2021_236<-fromJSON(txt = data$`262238b3-e4fb-4a57-9367-6e35a833234a`$data,simplifyDataFrame = T,flatten = T)
+
+data2021_237<-fromJSON(txt = data$`0856bfca-e1af-4517-9112-e930d9418758`$data,simplifyDataFrame = T,flatten = T)
+data2021_238<-fromJSON(txt = data$`0b2bbd90-dfd7-4714-bf94-cc7b5071b7d6`$data,simplifyDataFrame = T,flatten = T)
+data2021_239<-fromJSON(txt = data$`531bf797-dcbc-4cb2-8d22-f87324e1ab78`$data,simplifyDataFrame = T,flatten = T)
+data2021_240<-fromJSON(txt = data$`5e4cc705-90b6-49b2-8ea7-112de7406fc1`$data,simplifyDataFrame = T,flatten = T)
+data2021_241<-fromJSON(txt = data$`63d52f85-6f82-48c3-8b3e-936af89888eb`$data,simplifyDataFrame = T,flatten = T)
+data2021_242<-fromJSON(txt = data$`7e441e4f-7c72-4046-bec7-bf95b7872ce2`$data,simplifyDataFrame = T,flatten = T)
+data2021_243<-fromJSON(txt = data$`828d02f9-93ca-45c6-9cbb-055107178eb3`$data,simplifyDataFrame = T,flatten = T)
+data2021_244<-fromJSON(txt = data$`8f5cfac1-75be-4c5e-9052-126ba9d68dfe`$data,simplifyDataFrame = T,flatten = T)
+data2021_245<-fromJSON(txt = data$`b9ba3ad6-0034-42e9-b9ab-263f2c6d5d41`$data,simplifyDataFrame = T,flatten = T)
+data2021_246<-fromJSON(txt = data$`e9b985ae-07d3-4c3e-a1e2-e3f58081380b`$data,simplifyDataFrame = T,flatten = T)
+data2021_247<-fromJSON(txt = data$`f1237be0-dbb9-4fdd-99cc-89343577f82a`$data,simplifyDataFrame = T,flatten = T)
+
+data2021_248<-fromJSON(txt = data$`589a8d63-7739-401c-ac29-850a403c4b4e`$data,simplifyDataFrame = T,flatten = T)
+
+
 
 limitTest<-fromJSON(txt = data$`6008ea54-8196-4893-9cdc-568fff7612e2`$data,simplifyDataFrame = T,flatten = T)
 
@@ -615,7 +644,7 @@ library("plyr")
 library(data.table)
 library(dplyr)
 
-Demographics <-head(data2021_223[c("Participant_Consent", 
+Demographics <-head(data2021_247[c("Participant_Consent", 
                             "if-you-would-like-to-receive-a-general-summary-of-the-results-from-this-study-when-it-is-completed-please-provide-your-email-address-below:", 
                             "please-record-the-makemodel-and-(diagonal)-screen-size-of-the-device-you-are-using-to-complete-the-experiment-(e.g.-macbook-pro-13.3-in):", 
                             "how-are-you-controlling-the-cursor-on-your-device-(reminder:-please-only-complete-this-experiment-using-a-touchpad-or-trackpad-of-a-laptop-computer.-if-you-are-using-a-device-that-does-not-have-a-touchpad-or-trackpad-please-exit-the-experiment-now-and-contact-the-experimenter).-1", 
@@ -638,7 +667,7 @@ Demographics <-head(data2021_223[c("Participant_Consent",
                             "if-yes-which-sports-do-you-play"
                             )], n = 1000)
                                                          
-Screen_Dim <- head(data2021_223[c("meta.screen_width",	
+Screen_Dim <- head(data2021_247[c("meta.screen_width",	
                            "meta.screen_height",	
                            "meta.scroll_width",	
                            "meta.scroll_height",	
@@ -647,7 +676,7 @@ Screen_Dim <- head(data2021_223[c("meta.screen_width",
                            "meta.devicePixelRatio"
                            )], n = 1000)
 
-Condition <- head(data2021_223[c("sender",
+Condition <- head(data2021_247[c("sender",
                           "duration",
                           "Horizontal_Pos",
                           "Vertical_Pos",
@@ -663,18 +692,18 @@ Condition <- head(data2021_223[c("sender",
                           "Target_Size_R"
                           )], n = 1000)
 
-xPos <-capture.output(data2021_223["xpos"])
-yPos <-capture.output(data2021_223["ypos"])
+xPos <-capture.output(data2021_247["xpos"])
+yPos <-capture.output(data2021_247["ypos"])
 
 
 
 
 
-write.csv(Demographics, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\data2021\\Speed\\223/Demo.csv", row.names = FALSE)
-write.csv(Condition, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\data2021\\Speed\\223/Conditions.csv", row.names = FALSE)
-write.csv(Screen_Dim, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\data2021\\Speed\\223/Screen_Dim.csv", row.names = FALSE)
-write.csv(xPos, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\data2021\\Speed\\223/xPos.csv", row.names = FALSE)
-write.csv(yPos, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\data2021\\Speed\\223/yPos.csv", row.names = FALSE)
+write.csv(Demographics, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\data2021\\Accuracy\\247/Demo.csv", row.names = FALSE)
+write.csv(Condition, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\data2021\\Accuracy\\247/Conditions.csv", row.names = FALSE)
+write.csv(Screen_Dim, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\data2021\\Accuracy\\247/Screen_Dim.csv", row.names = FALSE)
+write.csv(xPos, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\data2021\\Accuracy\\247/xPos.csv", row.names = FALSE)
+write.csv(yPos, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\data2021\\Accuracy\\247/yPos.csv", row.names = FALSE)
 
 
 
