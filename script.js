@@ -1316,7 +1316,7 @@ this.options.viewportScale = 1
               {
                 "type": "circle",
                 "left": "${parameters.Position}",
-                "top": 0,
+                "top": "0",
                 "angle": 0,
                 "width": "${parameters.Target_Size}",
                 "height": 70,
@@ -1713,7 +1713,8 @@ this.options.viewport = [800, 600]
 this.options.viewportScale = 1
 }
       },
-      "title": "Speed_Manip Instructions"
+      "title": "Speed_Manip Instructions",
+      "skip": true
     },
     {
       "type": "lab.html.Page",
@@ -1764,8 +1765,7 @@ this.options.viewportScale = 1
       },
       "parameters": {},
       "messageHandlers": {},
-      "title": "Control Manip_Instructions",
-      "skip": true
+      "title": "Control Manip_Instructions"
     },
     {
       "type": "lab.flow.Loop",
