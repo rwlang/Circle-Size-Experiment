@@ -1745,8 +1745,7 @@ this.options.viewport = [800, 600]
 this.options.viewportScale = 1
 }
       },
-      "title": "Accuracy_Manip Instructions",
-      "skip": true
+      "title": "Accuracy_Manip Instructions"
     },
     {
       "type": "lab.html.Page",
@@ -1765,7 +1764,8 @@ this.options.viewportScale = 1
       },
       "parameters": {},
       "messageHandlers": {},
-      "title": "Control Manip_Instructions"
+      "title": "Control Manip_Instructions",
+      "skip": true
     },
     {
       "type": "lab.flow.Loop",
@@ -2063,7 +2063,7 @@ this.options.viewportScale = 1
         {
           "required": true,
           "type": "text",
-          "content": "Choose which target circle is largest by clicking on it.\n\nYour speed and accuracy is not important for this part of the experiment."
+          "content": "Choose which target circle is largest by clicking on it.\n\n"
         },
         {
           "required": true,
