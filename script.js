@@ -1745,7 +1745,8 @@ this.options.viewport = [800, 600]
 this.options.viewportScale = 1
 }
       },
-      "title": "Accuracy_Manip Instructions"
+      "title": "Accuracy_Manip Instructions",
+      "skip": true
     },
     {
       "type": "lab.html.Page",
@@ -1764,8 +1765,7 @@ this.options.viewportScale = 1
       },
       "parameters": {},
       "messageHandlers": {},
-      "title": "Control Manip_Instructions",
-      "skip": true
+      "title": "Control Manip_Instructions"
     },
     {
       "type": "lab.flow.Loop",
