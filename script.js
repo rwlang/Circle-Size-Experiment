@@ -43,7 +43,8 @@ const study = lab.util.fromObject({
       },
       "parameters": {},
       "messageHandlers": {},
-      "title": "Continue to Experiment"
+      "title": "Continue to Experiment",
+      "skip": true
     },
     {
       "type": "lab.html.Page",
@@ -119,7 +120,8 @@ this.end()
 
 }
       },
-      "title": "TP Check"
+      "title": "TP Check",
+      "skip": true
     },
     {
       "type": "lab.html.Page",
@@ -140,7 +142,7 @@ this.end()
       "messageHandlers": {},
       "title": "No TP exit",
       "tardy": true,
-      "skip": "${this.state['response'] == 'Yes'}"
+      "skip": true
     },
     {
       "type": "lab.html.Page",
@@ -256,7 +258,8 @@ this.end()
       "parameters": {},
       "messageHandlers": {},
       "title": "Consent Form",
-      "width": "m"
+      "width": "m",
+      "skip": true
     },
     {
       "type": "lab.html.Page",
@@ -300,7 +303,7 @@ this.end()
       "messageHandlers": {},
       "title": "Page",
       "tardy": true,
-      "skip": "${this.state['Participant_Consent'] == '1'}"
+      "skip": true
     },
     {
       "type": "lab.html.Page",
@@ -385,7 +388,7 @@ this.end()
       "title": "Debrief No Consent",
       "width": "l",
       "tardy": true,
-      "skip": "${this.state['Participant_Consent'] == '1'}"
+      "skip": true
     },
     {
       "type": "lab.html.Page",
@@ -406,7 +409,7 @@ this.end()
       "messageHandlers": {},
       "title": "Page",
       "tardy": true,
-      "skip": "${this.state['Participant_Consent'] == '1'}"
+      "skip": true
     },
     {
       "type": "lab.html.Form",
@@ -419,7 +422,8 @@ this.end()
       "parameters": {},
       "messageHandlers": {},
       "title": "Participation Credit",
-      "tardy": true
+      "tardy": true,
+      "skip": true
     },
     {
       "type": "lab.html.Page",
@@ -691,7 +695,8 @@ this.end()
       },
       "parameters": {},
       "messageHandlers": {},
-      "title": "Demographics"
+      "title": "Demographics",
+      "skip": true
     },
     {
       "type": "lab.html.Screen",
@@ -788,7 +793,8 @@ lab.util.fullscreen.launch(document.body)
 }
 }
       },
-      "title": "Instructions_1"
+      "title": "Instructions_1",
+      "skip": true
     },
     {
       "type": "lab.html.Page",
@@ -819,7 +825,8 @@ this.options.viewportScale = 1
 this.options.devicePixelScaling = false
 }
       },
-      "title": "Instructions 1.5"
+      "title": "Instructions 1.5",
+      "skip": true
     },
     {
       "type": "lab.flow.Loop",
@@ -868,6 +875,7 @@ this.options.viewportScale = 1
 }
       },
       "title": "Screen Setup",
+      "skip": true,
       "shuffleGroups": [],
       "template": {
         "type": "lab.flow.Sequence",
@@ -878,6 +886,7 @@ this.options.viewportScale = 1
         "parameters": {},
         "messageHandlers": {},
         "title": "Sequence",
+        "skip": true,
         "content": [
           {
             "type": "lab.canvas.Screen",
@@ -948,7 +957,8 @@ this.options.viewportScale = 1
                 "mode": "mousetrap",
                 "path": "global.MousetrapPlugin"
               }
-            ]
+            ],
+            "skip": true
           },
           {
             "type": "lab.canvas.Screen",
@@ -979,7 +989,8 @@ this.options.viewportScale = 1
             "parameters": {},
             "messageHandlers": {},
             "title": "Mask",
-            "timeout": "200"
+            "timeout": "200",
+            "skip": true
           }
         ]
       }
@@ -1012,7 +1023,8 @@ this.options.viewportScale = 1
       },
       "parameters": {},
       "messageHandlers": {},
-      "title": "Practice Instructions 1"
+      "title": "Practice Instructions 1",
+      "skip": true
     },
     {
       "type": "lab.html.Page",
@@ -1076,7 +1088,8 @@ this.options.viewport = [800, 600]
 this.options.viewportScale = 1
 }
       },
-      "title": "Practice Instructions 2"
+      "title": "Practice Instructions 2",
+      "skip": true
     },
     {
       "type": "lab.flow.Loop",
@@ -1164,6 +1177,7 @@ this.options.viewportScale = 1
 }
       },
       "title": "Practice Trials",
+      "skip": true,
       "shuffleGroups": [],
       "template": {
         "type": "lab.flow.Sequence",
@@ -1180,6 +1194,7 @@ this.options.viewportScale = 1
 }
         },
         "title": "Sequence",
+        "skip": true,
         "content": [
           {
             "type": "lab.canvas.Screen",
@@ -1242,7 +1257,8 @@ this.options.viewport = [800, 600]
 this.options.viewportScale = 1
 }
             },
-            "title": "Start Button"
+            "title": "Start Button",
+            "skip": true
           },
           {
             "type": "lab.canvas.Screen",
@@ -1273,7 +1289,8 @@ this.options.viewportScale = 1
             "parameters": {},
             "messageHandlers": {},
             "title": "Mask",
-            "timeout": "200"
+            "timeout": "200",
+            "skip": true
           },
           {
             "type": "lab.canvas.Screen",
@@ -1357,7 +1374,8 @@ this.options.viewportScale = 1
                 "mode": "mousetrap",
                 "path": "global.MousetrapPlugin"
               }
-            ]
+            ],
+            "skip": true
           }
         ]
       }
@@ -1464,8 +1482,8 @@ this.options.viewportScale = 1
         }
       ],
       "sample": {
-        "mode": "draw-shuffle",
-        "n": "60"
+        "mode": "draw",
+        "n": "12"
       },
       "files": {
         "Control Context Only.png": "embedded\u002F5e04a73c6cbecd9dac6b3063848adb79e6b7e3fd02bd826bae15c4cd343720dc.png",
@@ -1713,8 +1731,7 @@ this.options.viewport = [800, 600]
 this.options.viewportScale = 1
 }
       },
-      "title": "Speed_Manip Instructions",
-      "skip": true
+      "title": "Speed_Manip Instructions"
     },
     {
       "type": "lab.html.Page",
@@ -1745,8 +1762,7 @@ this.options.viewport = [800, 600]
 this.options.viewportScale = 1
 }
       },
-      "title": "Accuracy_Manip Instructions",
-      "skip": true
+      "title": "Accuracy_Manip Instructions"
     },
     {
       "type": "lab.html.Page",
@@ -1853,6 +1869,7 @@ this.options.viewportScale = 1
 }
       },
       "title": "Experimental Trials_Post Manip",
+      "skip": true,
       "shuffleGroups": [],
       "template": {
         "type": "lab.flow.Sequence",
@@ -1869,6 +1886,7 @@ this.options.viewportScale = 1
 }
         },
         "title": "Sequence",
+        "skip": true,
         "content": [
           {
             "type": "lab.canvas.Screen",
@@ -1931,7 +1949,8 @@ this.options.viewport = [800, 600]
 this.options.viewportScale = 1
 }
             },
-            "title": "Start Button"
+            "title": "Start Button",
+            "skip": true
           },
           {
             "type": "lab.canvas.Screen",
@@ -1962,7 +1981,8 @@ this.options.viewportScale = 1
             "parameters": {},
             "messageHandlers": {},
             "title": "Mask",
-            "timeout": "200"
+            "timeout": "200",
+            "skip": true
           },
           {
             "type": "lab.canvas.Screen",
@@ -2047,7 +2067,8 @@ this.options.viewportScale = 1
                 "mode": "mousetrap",
                 "path": "global.MousetrapPlugin"
               }
-            ]
+            ],
+            "skip": true
           }
         ]
       }
