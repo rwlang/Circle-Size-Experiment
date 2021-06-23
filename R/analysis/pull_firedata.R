@@ -26,7 +26,7 @@ library("jsonlite")
 #································To check the number of data points in the database ··············································
 
 # open the file that was just downloaded
-data<-jsonlite::fromJSON(txt = "./data/data.json")
+data<-jsonlite::fromJSON
 data$
 
 #dataZ<-jsonlite::fromJSON(txt = "C:/Users/Ryan Langridge/Desktop/Online Participant Data/circle-size-experiment-export (July 23, 2020).json")
@@ -656,6 +656,10 @@ data2021_284<-fromJSON(txt = data$`c30a51a3-ffc2-45cb-8511-4206056d1e1b`$data,si
 data2021_285<-fromJSON(txt = data$`e64cc931-52b5-4f1e-85d5-e79c13b60f74`$data,simplifyDataFrame = T,flatten = T)
 data2021_286<-fromJSON(txt = data$`ecabba10-ae8a-4e2d-b9d2-70a1d510212c`$data,simplifyDataFrame = T,flatten = T)
 
+data2021_287<-fromJSON(txt = data$`418d64c9-7ff9-43bc-a563-e96db86650d0`$data,simplifyDataFrame = T,flatten = T)
+data2021_288<-fromJSON(txt = data$`a6c5ce7d-9348-4578-8f2b-5820957f74e8`$data,simplifyDataFrame = T,flatten = T)
+data2021_289<-fromJSON(txt = data$`b564be4a-6870-4478-9f7c-460ce79318f0`$data,simplifyDataFrame = T,flatten = T)
+
 
 limitTest<-fromJSON(txt = data$`6008ea54-8196-4893-9cdc-568fff7612e2`$data,simplifyDataFrame = T,flatten = T)
 
@@ -685,7 +689,7 @@ library("plyr")
 library(data.table)
 library(dplyr)
 
-Demographics <-head(data2021_276[c("Participant_Consent", 
+Demographics <-head(data2021_287[c("Participant_Consent", 
                             "if-you-would-like-to-receive-a-general-summary-of-the-results-from-this-study-when-it-is-completed-please-provide-your-email-address-below:", 
                             "please-record-the-makemodel-and-(diagonal)-screen-size-of-the-device-you-are-using-to-complete-the-experiment-(e.g.-macbook-pro-13.3-in):", 
                             "how-are-you-controlling-the-cursor-on-your-device-(reminder:-please-only-complete-this-experiment-using-a-touchpad-or-trackpad-of-a-laptop-computer.-if-you-are-using-a-device-that-does-not-have-a-touchpad-or-trackpad-please-exit-the-experiment-now-and-contact-the-experimenter).-1", 
@@ -708,7 +712,7 @@ Demographics <-head(data2021_276[c("Participant_Consent",
                             "if-yes-which-sports-do-you-play"
                             )], n = 1000)
                                                          
-Screen_Dim <- head(data2021_276[c("meta.screen_width",	
+Screen_Dim <- head(data2021_287[c("meta.screen_width",	
                            "meta.screen_height",	
                            "meta.scroll_width",	
                            "meta.scroll_height",	
@@ -717,7 +721,7 @@ Screen_Dim <- head(data2021_276[c("meta.screen_width",
                            "meta.devicePixelRatio"
                            )], n = 1000)
 
-Condition <- head(data2021_276[c("sender",
+Condition <- head(data2021_287[c("sender",
                           "duration",
                           "Horizontal_Pos",
                           "Vertical_Pos",
@@ -733,23 +737,23 @@ Condition <- head(data2021_276[c("sender",
                           "Target_Size_R"
                           )], n = 1000)
 
-xPos <-capture.output(data2021_280["xpos"])
-yPos <-capture.output(data2021_276["ypos"])
+xPos <-capture.output(data2021_287["xpos"])
+yPos <-capture.output(data2021_287["ypos"])
 
 
 
 
-write.csv(Demographics, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\data2021\\Control\\276/Demo.csv", row.names = FALSE)
-write.csv(Condition, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\data2021\\Control\\276/Conditions.csv", row.names = FALSE)
-write.csv(Screen_Dim, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\data2021\\Control\\276/Screen_Dim.csv", row.names = FALSE)
-write.csv(xPos, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\data2021\\Control\\280/xPos.csv", row.names = FALSE)
-write.csv(yPos, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\data2021\\Control\\276/yPos.csv", row.names = FALSE)
+write.csv(Demographics, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\data2021\\Accuracy\\287/Demo.csv", row.names = FALSE)
+write.csv(Condition, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\data2021\\Accuracy\\287/Conditions.csv", row.names = FALSE)
+write.csv(Screen_Dim, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\data2021\\Accuracy\\287/Screen_Dim.csv", row.names = FALSE)
+write.csv(xPos, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\data2021\\Accuracy\\287/xPos.csv", row.names = FALSE)
+write.csv(yPos, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\data2021\\Accuracy\\287/yPos.csv", row.names = FALSE)
 
 
 
 
-write.csv(P_data, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P9/P_data.csv", row.names = FALSE)
-write.csv(timestamps, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P9/timestamps.csv", row.names = FALSE)
+#write.csv(P_data, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P9/P_data.csv", row.names = FALSE)
+w#rite.csv(timestamps, "C:\\Users\\Ryan Langridge\\Desktop\\Online Participant Data\\P9/timestamps.csv", row.names = FALSE)
 
 
 #Trying to merge data.
