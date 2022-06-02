@@ -43,8 +43,7 @@ const study = lab.util.fromObject({
       },
       "parameters": {},
       "messageHandlers": {},
-      "title": "Continue to Experiment",
-      "skip": true
+      "title": "Continue to Experiment"
     },
     {
       "type": "lab.html.Page",
@@ -1135,16 +1134,6 @@ this.options.viewportScale = 1
           "Context_Size": "Control Context Only.png",
           "Position": "200",
           "Target_Size": "80"
-        },
-        {
-          "Context_Size": "P_Small_Far Context Only.png",
-          "Position": "-200",
-          "Target_Size": "70"
-        },
-        {
-          "Context_Size": "P_Small_Far Context Only.png",
-          "Position": "200",
-          "Target_Size": "70"
         }
       ],
       "sample": {
@@ -1368,446 +1357,6 @@ this.options.viewportScale = 1
       }
     },
     {
-      "type": "lab.flow.Loop",
-      "templateParameters": [
-        {
-          "Context_L": "P_Large Context Only.png",
-          "Context_R": "P_Small Context Only.png",
-          "Target_Size_L": "70",
-          "Target_Size_R": "70"
-        },
-        {
-          "Context_L": "P_Large Context Only.png",
-          "Context_R": "Control Context Only.png",
-          "Target_Size_L": "70",
-          "Target_Size_R": "70"
-        },
-        {
-          "Context_L": "P_Large Context Only.png",
-          "Context_R": "Control Context Only.png",
-          "Target_Size_L": "70",
-          "Target_Size_R": "80"
-        },
-        {
-          "Context_L": "P_Large Context Only.png",
-          "Context_R": "Control Context Only.png",
-          "Target_Size_L": "70",
-          "Target_Size_R": "60"
-        },
-        {
-          "Context_L": "P_Small Context Only.png",
-          "Context_R": "P_Large Context Only.png",
-          "Target_Size_L": "70",
-          "Target_Size_R": "70"
-        },
-        {
-          "Context_L": "P_Small Context Only.png",
-          "Context_R": "Control Context Only.png",
-          "Target_Size_L": "70",
-          "Target_Size_R": "70"
-        },
-        {
-          "Context_L": "P_Small Context Only.png",
-          "Context_R": "Control Context Only.png",
-          "Target_Size_L": "70",
-          "Target_Size_R": "80"
-        },
-        {
-          "Context_L": "P_Small Context Only.png",
-          "Context_R": "Control Context Only.png",
-          "Target_Size_L": "70",
-          "Target_Size_R": "60"
-        },
-        {
-          "Context_L": "Control Context Only.png",
-          "Context_R": "P_Large Context Only.png",
-          "Target_Size_L": "70",
-          "Target_Size_R": "70"
-        },
-        {
-          "Context_L": "Control Context Only.png",
-          "Context_R": "P_Small Context Only.png",
-          "Target_Size_L": "70",
-          "Target_Size_R": "70"
-        },
-        {
-          "Context_L": "Control Context Only.png",
-          "Context_R": "Control Context Only.png",
-          "Target_Size_L": "70",
-          "Target_Size_R": "80"
-        },
-        {
-          "Context_L": "Control Context Only.png",
-          "Context_R": "Control Context Only.png",
-          "Target_Size_L": "70",
-          "Target_Size_R": "60"
-        },
-        {
-          "Context_L": "Control Context Only.png",
-          "Context_R": "P_Large Context Only.png",
-          "Target_Size_L": "80",
-          "Target_Size_R": "70"
-        },
-        {
-          "Context_L": "Control Context Only.png",
-          "Context_R": "P_Small Context Only.png",
-          "Target_Size_L": "80",
-          "Target_Size_R": "70"
-        },
-        {
-          "Context_L": "Control Context Only.png",
-          "Context_R": "Control Context Only.png",
-          "Target_Size_L": "80",
-          "Target_Size_R": "70"
-        },
-        {
-          "Context_L": "Control Context Only.png",
-          "Context_R": "Control Context Only.png",
-          "Target_Size_L": "80",
-          "Target_Size_R": "60"
-        },
-        {
-          "Context_L": "Control Context Only.png",
-          "Context_R": "P_Large Context Only.png",
-          "Target_Size_L": "60",
-          "Target_Size_R": "70"
-        },
-        {
-          "Context_L": "Control Context Only.png",
-          "Context_R": "P_Small Context Only.png",
-          "Target_Size_L": "60",
-          "Target_Size_R": "70"
-        },
-        {
-          "Context_L": "Control Context Only.png",
-          "Context_R": "Control Context Only.png",
-          "Target_Size_L": "60",
-          "Target_Size_R": "80"
-        },
-        {
-          "Context_L": "Control Context Only.png",
-          "Context_R": "Control Context Only.png",
-          "Target_Size_L": "60",
-          "Target_Size_R": "70"
-        },
-        {
-          "Context_L": "P_Small_Far Context Only.png",
-          "Context_R": "P_Large Context Only.png",
-          "Target_Size_L": "70",
-          "Target_Size_R": "70"
-        },
-        {
-          "Context_L": "P_Small_Far Context Only.png",
-          "Context_R": "P_Small Context Only.png",
-          "Target_Size_L": "70",
-          "Target_Size_R": "70"
-        },
-        {
-          "Context_L": "P_Small_Far Context Only.png",
-          "Context_R": "Control Context Only.png",
-          "Target_Size_L": "70",
-          "Target_Size_R": "70"
-        },
-        {
-          "Context_L": "P_Small_Far Context Only.png",
-          "Context_R": "Control Context Only.png",
-          "Target_Size_L": "70",
-          "Target_Size_R": "60"
-        },
-        {
-          "Context_L": "P_Small_Far Context Only.png",
-          "Context_R": "Control Context Only.png",
-          "Target_Size_L": "70",
-          "Target_Size_R": "80"
-        },
-        {
-          "Context_L": "P_Large Context Only.png",
-          "Context_R": "P_Small_Far Context Only.png",
-          "Target_Size_L": "70",
-          "Target_Size_R": "70"
-        },
-        {
-          "Context_L": "P_Small Context Only.png",
-          "Context_R": "P_Small_Far Context Only.png",
-          "Target_Size_L": "70",
-          "Target_Size_R": "70"
-        },
-        {
-          "Context_L": "Control Context Only.png",
-          "Context_R": "P_Small_Far Context Only.png",
-          "Target_Size_L": "70",
-          "Target_Size_R": "70"
-        },
-        {
-          "Context_L": "Control Context Only.png",
-          "Context_R": "P_Small_Far Context Only.png",
-          "Target_Size_L": "60",
-          "Target_Size_R": "70"
-        },
-        {
-          "Context_L": "Control Context Only.png",
-          "Context_R": "P_Small_Far Context Only.png",
-          "Target_Size_L": "80",
-          "Target_Size_R": "70"
-        }
-      ],
-      "sample": {
-        "mode": "draw-shuffle",
-        "n": ""
-      },
-      "files": {
-        "Control_3.png": "embedded\u002F7e50a10442cfc7c81fc90163ae942334600b470c1821b5485b1c59f6e81548f2.png",
-        "P_Large_3.png": "embedded\u002Fd37f527663db56db4b0fdb663ab0dd627ead047fc61d08dd0f6eaa9aef6b2615.png",
-        "P_Small_3.png": "embedded\u002F6dc69d0480b14a98a83de75f92c0eca4e2669255731aa141a99f1be6da719c42.png",
-        "Control_3 (Big).png": "embedded\u002F708b6f94fcde61e1648d34d6678481c4b21d066970e2ca1ad797bbd3752cdf8e.png",
-        "Control_3 (Small).png": "embedded\u002F946b8f3f3b01a592a1b8fa9b2c099dd13287ee645f541445da4ecaec9e0615d9.png",
-        "P_Small Context Only.png": "embedded\u002Faf40cc0dbb8fe690520ca84449a67f81604c58e66d62189adaaa4c32f00eb819.png",
-        "Control Context Only.png": "embedded\u002F5e04a73c6cbecd9dac6b3063848adb79e6b7e3fd02bd826bae15c4cd343720dc.png",
-        "P_Large Context Only.png": "embedded\u002F992a9d10481882a0cfe4bf27e5395035a6398ea122acfc48cd5163209d98b020.png",
-        "P_Small_Far Context Only.png": "embedded\u002F8f0579522952818b5e5ef468a76b6405674fea39f30203977dd5a6321ab75b20.png"
-      },
-      "responses": {
-        "": ""
-      },
-      "parameters": {},
-      "messageHandlers": {
-        "before:prepare": function anonymous(
-) {
-this.options.viewport = [800, 600]
-this.options.viewportScale = 1
-}
-      },
-      "title": "Perceptual Comparison",
-      "shuffleGroups": [],
-      "template": {
-        "type": "lab.flow.Sequence",
-        "files": {},
-        "responses": {
-          "": ""
-        },
-        "parameters": {},
-        "messageHandlers": {
-          "before:prepare": function anonymous(
-) {
-this.options.viewport = [800, 600]
-this.options.viewportScale = 1
-}
-        },
-        "title": "Sequence",
-        "content": [
-          {
-            "type": "lab.canvas.Screen",
-            "content": [
-              {
-                "type": "aoi",
-                "left": 0,
-                "top": 250,
-                "angle": 0,
-                "width": 20.84,
-                "height": 20.84,
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "rgba(0, 0, 0, 0.2)",
-                "label": "Start_Button"
-              },
-              {
-                "type": "circle",
-                "left": 0,
-                "top": 250,
-                "angle": 0,
-                "width": 30.64,
-                "height": 30.64,
-                "stroke": "#aaaaaa",
-                "strokeWidth": 1,
-                "fill": "#dddddd"
-              },
-              {
-                "type": "i-text",
-                "left": 0,
-                "top": 0,
-                "angle": 0,
-                "width": 642.16,
-                "height": 36.16,
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "black",
-                "text": "Click on the grey button to begin the next trial",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-                "fontSize": 32,
-                "fontFamily": "sans-serif",
-                "lineHeight": 1.16,
-                "textAlign": "center"
-              }
-            ],
-            "viewport": [
-              800,
-              600
-            ],
-            "files": {},
-            "responses": {
-              "click @Start_Button": "Start Position"
-            },
-            "parameters": {},
-            "messageHandlers": {
-              "before:prepare": function anonymous(
-) {
-this.options.viewport = [800, 600]
-this.options.viewportScale = 1
-}
-            },
-            "title": "Start Button"
-          },
-          {
-            "type": "lab.canvas.Screen",
-            "content": [
-              {
-                "type": "image",
-                "left": 0,
-                "top": 0,
-                "angle": 0,
-                "width": "800",
-                "height": "600",
-                "stroke": null,
-                "strokeWidth": 0,
-                "fill": "black",
-                "src": "${ this.files[\"screen.jpeg\"] }"
-              }
-            ],
-            "viewport": [
-              800,
-              600
-            ],
-            "files": {
-              "screen.jpeg": "embedded\u002F0444150c2c031ef7f44caaa0725897453f39206c03dab57ddf1d6532b6aec5b0.jpeg"
-            },
-            "responses": {
-              "": ""
-            },
-            "parameters": {},
-            "messageHandlers": {},
-            "title": "Mask",
-            "timeout": "200"
-          },
-          {
-            "type": "lab.canvas.Screen",
-            "content": [
-              {
-                "type": "rect",
-                "left": "0",
-                "top": "0",
-                "angle": 0,
-                "width": "800",
-                "height": "600",
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "black"
-              },
-              {
-                "type": "image",
-                "left": -200,
-                "top": 0,
-                "angle": 0,
-                "width": "375",
-                "height": "375",
-                "stroke": null,
-                "strokeWidth": 0,
-                "fill": "black",
-                "src": "${ this.files[this.parameters.Context_L] }"
-              },
-              {
-                "type": "image",
-                "left": 200,
-                "top": 0,
-                "angle": 0,
-                "width": "375",
-                "height": "375",
-                "stroke": null,
-                "strokeWidth": 0,
-                "fill": "black",
-                "src": "${ this.files[this.parameters.Context_R] }"
-              },
-              {
-                "type": "aoi",
-                "left": "-200",
-                "top": 0,
-                "angle": 0,
-                "width": "${parameters.Target_Size_L}",
-                "height": "${parameters.Target_Size_L}",
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "rgba(0, 0, 0, 0.2)",
-                "label": "Response_Left"
-              },
-              {
-                "type": "circle",
-                "left": "-200",
-                "top": 0,
-                "angle": 0,
-                "width": "${parameters.Target_Size_L}",
-                "height": 55,
-                "stroke": "#ffffff",
-                "strokeWidth": 1,
-                "fill": "#ffffff"
-              },
-              {
-                "type": "circle",
-                "left": 200,
-                "top": 0,
-                "angle": 0,
-                "width": "${parameters.Target_Size_R}",
-                "height": 50,
-                "stroke": "#ffffff",
-                "strokeWidth": 1,
-                "fill": "#ffffff"
-              },
-              {
-                "type": "aoi",
-                "left": "200",
-                "top": 0,
-                "angle": 0,
-                "width": "${parameters.Target_Size_R}",
-                "height": "${parameters.Target_Size_R}",
-                "stroke": null,
-                "strokeWidth": 1,
-                "fill": "rgba(0, 0, 0, 0.2)",
-                "label": "Response_Right"
-              }
-            ],
-            "viewport": [
-              800,
-              600
-            ],
-            "files": {
-              "P_Small_3.png": "embedded\u002F6dc69d0480b14a98a83de75f92c0eca4e2669255731aa141a99f1be6da719c42.png",
-              "P_Large_3.png": "embedded\u002Fd37f527663db56db4b0fdb663ab0dd627ead047fc61d08dd0f6eaa9aef6b2615.png",
-              "Control_3.png": "embedded\u002F7e50a10442cfc7c81fc90163ae942334600b470c1821b5485b1c59f6e81548f2.png"
-            },
-            "responses": {
-              "click @Response_Left": "Respond_Left",
-              "click @Response_Right": "Respond_Right"
-            },
-            "parameters": {},
-            "messageHandlers": {
-              "before:prepare": function anonymous(
-) {
-this.options.viewport = [800, 600]
-this.options.viewportScale = 1
-}
-            },
-            "title": "Comparison",
-            "plugins": [
-              {
-                "type": "mousetrap",
-                "mode": "mousetrap",
-                "path": "global.MousetrapPlugin"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
       "type": "lab.html.Page",
       "items": [
         {
@@ -1896,16 +1445,6 @@ this.options.viewportScale = 1
           "Context_Size": "Control Context Only.png",
           "Position": "200",
           "Target_Size": "80"
-        },
-        {
-          "Context_Size": "P_Small_Far Context Only.png",
-          "Position": "-200",
-          "Target_Size": "70"
-        },
-        {
-          "Context_Size": "P_Small_Far Context Only.png",
-          "Position": "200",
-          "Target_Size": "70"
         }
       ],
       "sample": {
@@ -2264,16 +1803,6 @@ this.options.viewportScale = 1
           "Context_Size": "Control Context Only.png",
           "Position": "200",
           "Target_Size": "80"
-        },
-        {
-          "Context_Size": "P_Small_Far Context Only.png",
-          "Position": "-200",
-          "Target_Size": "70"
-        },
-        {
-          "Context_Size": "P_Small_Far Context Only.png",
-          "Position": "200",
-          "Target_Size": "70"
         }
       ],
       "sample": {
@@ -2590,6 +2119,386 @@ this.options.viewportScale = 1
       "title": "Instructions_3"
     },
     {
+      "type": "lab.flow.Loop",
+      "templateParameters": [
+        {
+          "Context_L": "P_Large Context Only.png",
+          "Context_R": "P_Small Context Only.png",
+          "Target_Size_L": "70",
+          "Target_Size_R": "70"
+        },
+        {
+          "Context_L": "P_Large Context Only.png",
+          "Context_R": "Control Context Only.png",
+          "Target_Size_L": "70",
+          "Target_Size_R": "70"
+        },
+        {
+          "Context_L": "P_Large Context Only.png",
+          "Context_R": "Control Context Only.png",
+          "Target_Size_L": "70",
+          "Target_Size_R": "80"
+        },
+        {
+          "Context_L": "P_Large Context Only.png",
+          "Context_R": "Control Context Only.png",
+          "Target_Size_L": "70",
+          "Target_Size_R": "60"
+        },
+        {
+          "Context_L": "P_Small Context Only.png",
+          "Context_R": "P_Large Context Only.png",
+          "Target_Size_L": "70",
+          "Target_Size_R": "70"
+        },
+        {
+          "Context_L": "P_Small Context Only.png",
+          "Context_R": "Control Context Only.png",
+          "Target_Size_L": "70",
+          "Target_Size_R": "70"
+        },
+        {
+          "Context_L": "P_Small Context Only.png",
+          "Context_R": "Control Context Only.png",
+          "Target_Size_L": "70",
+          "Target_Size_R": "80"
+        },
+        {
+          "Context_L": "P_Small Context Only.png",
+          "Context_R": "Control Context Only.png",
+          "Target_Size_L": "70",
+          "Target_Size_R": "60"
+        },
+        {
+          "Context_L": "Control Context Only.png",
+          "Context_R": "P_Large Context Only.png",
+          "Target_Size_L": "70",
+          "Target_Size_R": "70"
+        },
+        {
+          "Context_L": "Control Context Only.png",
+          "Context_R": "P_Small Context Only.png",
+          "Target_Size_L": "70",
+          "Target_Size_R": "70"
+        },
+        {
+          "Context_L": "Control Context Only.png",
+          "Context_R": "Control Context Only.png",
+          "Target_Size_L": "70",
+          "Target_Size_R": "80"
+        },
+        {
+          "Context_L": "Control Context Only.png",
+          "Context_R": "Control Context Only.png",
+          "Target_Size_L": "70",
+          "Target_Size_R": "60"
+        },
+        {
+          "Context_L": "Control Context Only.png",
+          "Context_R": "P_Large Context Only.png",
+          "Target_Size_L": "80",
+          "Target_Size_R": "70"
+        },
+        {
+          "Context_L": "Control Context Only.png",
+          "Context_R": "P_Small Context Only.png",
+          "Target_Size_L": "80",
+          "Target_Size_R": "70"
+        },
+        {
+          "Context_L": "Control Context Only.png",
+          "Context_R": "Control Context Only.png",
+          "Target_Size_L": "80",
+          "Target_Size_R": "70"
+        },
+        {
+          "Context_L": "Control Context Only.png",
+          "Context_R": "Control Context Only.png",
+          "Target_Size_L": "80",
+          "Target_Size_R": "60"
+        },
+        {
+          "Context_L": "Control Context Only.png",
+          "Context_R": "P_Large Context Only.png",
+          "Target_Size_L": "60",
+          "Target_Size_R": "70"
+        },
+        {
+          "Context_L": "Control Context Only.png",
+          "Context_R": "P_Small Context Only.png",
+          "Target_Size_L": "60",
+          "Target_Size_R": "70"
+        },
+        {
+          "Context_L": "Control Context Only.png",
+          "Context_R": "Control Context Only.png",
+          "Target_Size_L": "60",
+          "Target_Size_R": "80"
+        },
+        {
+          "Context_L": "Control Context Only.png",
+          "Context_R": "Control Context Only.png",
+          "Target_Size_L": "60",
+          "Target_Size_R": "70"
+        }
+      ],
+      "sample": {
+        "mode": "draw-shuffle",
+        "n": ""
+      },
+      "files": {
+        "Control_3.png": "embedded\u002F7e50a10442cfc7c81fc90163ae942334600b470c1821b5485b1c59f6e81548f2.png",
+        "P_Large_3.png": "embedded\u002Fd37f527663db56db4b0fdb663ab0dd627ead047fc61d08dd0f6eaa9aef6b2615.png",
+        "P_Small_3.png": "embedded\u002F6dc69d0480b14a98a83de75f92c0eca4e2669255731aa141a99f1be6da719c42.png",
+        "Control_3 (Big).png": "embedded\u002F708b6f94fcde61e1648d34d6678481c4b21d066970e2ca1ad797bbd3752cdf8e.png",
+        "Control_3 (Small).png": "embedded\u002F946b8f3f3b01a592a1b8fa9b2c099dd13287ee645f541445da4ecaec9e0615d9.png",
+        "P_Small Context Only.png": "embedded\u002Faf40cc0dbb8fe690520ca84449a67f81604c58e66d62189adaaa4c32f00eb819.png",
+        "Control Context Only.png": "embedded\u002F5e04a73c6cbecd9dac6b3063848adb79e6b7e3fd02bd826bae15c4cd343720dc.png",
+        "P_Large Context Only.png": "embedded\u002F992a9d10481882a0cfe4bf27e5395035a6398ea122acfc48cd5163209d98b020.png",
+        "P_Small_Far Context Only.png": "embedded\u002F8f0579522952818b5e5ef468a76b6405674fea39f30203977dd5a6321ab75b20.png"
+      },
+      "responses": {
+        "": ""
+      },
+      "parameters": {},
+      "messageHandlers": {
+        "before:prepare": function anonymous(
+) {
+this.options.viewport = [800, 600]
+this.options.viewportScale = 1
+}
+      },
+      "title": "Perceptual Comparison",
+      "shuffleGroups": [],
+      "template": {
+        "type": "lab.flow.Sequence",
+        "files": {},
+        "responses": {
+          "": ""
+        },
+        "parameters": {},
+        "messageHandlers": {
+          "before:prepare": function anonymous(
+) {
+this.options.viewport = [800, 600]
+this.options.viewportScale = 1
+}
+        },
+        "title": "Sequence",
+        "content": [
+          {
+            "type": "lab.canvas.Screen",
+            "content": [
+              {
+                "type": "aoi",
+                "left": 0,
+                "top": 250,
+                "angle": 0,
+                "width": 20.84,
+                "height": 20.84,
+                "stroke": null,
+                "strokeWidth": 1,
+                "fill": "rgba(0, 0, 0, 0.2)",
+                "label": "Start_Button"
+              },
+              {
+                "type": "circle",
+                "left": 0,
+                "top": 250,
+                "angle": 0,
+                "width": 30.64,
+                "height": 30.64,
+                "stroke": "#aaaaaa",
+                "strokeWidth": 1,
+                "fill": "#dddddd"
+              },
+              {
+                "type": "i-text",
+                "left": 0,
+                "top": 0,
+                "angle": 0,
+                "width": 642.16,
+                "height": 36.16,
+                "stroke": null,
+                "strokeWidth": 1,
+                "fill": "black",
+                "text": "Click on the grey button to begin the next trial",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+                "fontSize": 32,
+                "fontFamily": "sans-serif",
+                "lineHeight": 1.16,
+                "textAlign": "center"
+              }
+            ],
+            "viewport": [
+              800,
+              600
+            ],
+            "files": {},
+            "responses": {
+              "click @Start_Button": "Start Position"
+            },
+            "parameters": {},
+            "messageHandlers": {
+              "before:prepare": function anonymous(
+) {
+this.options.viewport = [800, 600]
+this.options.viewportScale = 1
+}
+            },
+            "title": "Start Button"
+          },
+          {
+            "type": "lab.canvas.Screen",
+            "content": [
+              {
+                "type": "image",
+                "left": 0,
+                "top": 0,
+                "angle": 0,
+                "width": "800",
+                "height": "600",
+                "stroke": null,
+                "strokeWidth": 0,
+                "fill": "black",
+                "src": "${ this.files[\"screen.jpeg\"] }"
+              }
+            ],
+            "viewport": [
+              800,
+              600
+            ],
+            "files": {
+              "screen.jpeg": "embedded\u002F0444150c2c031ef7f44caaa0725897453f39206c03dab57ddf1d6532b6aec5b0.jpeg"
+            },
+            "responses": {
+              "": ""
+            },
+            "parameters": {},
+            "messageHandlers": {},
+            "title": "Mask",
+            "timeout": "200"
+          },
+          {
+            "type": "lab.canvas.Screen",
+            "content": [
+              {
+                "type": "rect",
+                "left": "0",
+                "top": "0",
+                "angle": 0,
+                "width": "800",
+                "height": "600",
+                "stroke": null,
+                "strokeWidth": 1,
+                "fill": "black"
+              },
+              {
+                "type": "image",
+                "left": -200,
+                "top": 0,
+                "angle": 0,
+                "width": "375",
+                "height": "375",
+                "stroke": null,
+                "strokeWidth": 0,
+                "fill": "black",
+                "src": "${ this.files[this.parameters.Context_L] }"
+              },
+              {
+                "type": "image",
+                "left": 200,
+                "top": 0,
+                "angle": 0,
+                "width": "375",
+                "height": "375",
+                "stroke": null,
+                "strokeWidth": 0,
+                "fill": "black",
+                "src": "${ this.files[this.parameters.Context_R] }"
+              },
+              {
+                "type": "aoi",
+                "left": "-200",
+                "top": 0,
+                "angle": 0,
+                "width": "${parameters.Target_Size_L}",
+                "height": "${parameters.Target_Size_L}",
+                "stroke": null,
+                "strokeWidth": 1,
+                "fill": "rgba(0, 0, 0, 0.2)",
+                "label": "Response_Left"
+              },
+              {
+                "type": "circle",
+                "left": "-200",
+                "top": 0,
+                "angle": 0,
+                "width": "${parameters.Target_Size_L}",
+                "height": 55,
+                "stroke": "#ffffff",
+                "strokeWidth": 1,
+                "fill": "#ffffff"
+              },
+              {
+                "type": "circle",
+                "left": 200,
+                "top": 0,
+                "angle": 0,
+                "width": "${parameters.Target_Size_R}",
+                "height": 50,
+                "stroke": "#ffffff",
+                "strokeWidth": 1,
+                "fill": "#ffffff"
+              },
+              {
+                "type": "aoi",
+                "left": "200",
+                "top": 0,
+                "angle": 0,
+                "width": "${parameters.Target_Size_R}",
+                "height": "${parameters.Target_Size_R}",
+                "stroke": null,
+                "strokeWidth": 1,
+                "fill": "rgba(0, 0, 0, 0.2)",
+                "label": "Response_Right"
+              }
+            ],
+            "viewport": [
+              800,
+              600
+            ],
+            "files": {
+              "P_Small_3.png": "embedded\u002F6dc69d0480b14a98a83de75f92c0eca4e2669255731aa141a99f1be6da719c42.png",
+              "P_Large_3.png": "embedded\u002Fd37f527663db56db4b0fdb663ab0dd627ead047fc61d08dd0f6eaa9aef6b2615.png",
+              "Control_3.png": "embedded\u002F7e50a10442cfc7c81fc90163ae942334600b470c1821b5485b1c59f6e81548f2.png"
+            },
+            "responses": {
+              "click @Response_Left": "Respond_Left",
+              "click @Response_Right": "Respond_Right"
+            },
+            "parameters": {},
+            "messageHandlers": {
+              "before:prepare": function anonymous(
+) {
+this.options.viewport = [800, 600]
+this.options.viewportScale = 1
+}
+            },
+            "title": "Comparison",
+            "plugins": [
+              {
+                "type": "mousetrap",
+                "mode": "mousetrap",
+                "path": "global.MousetrapPlugin"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "type": "lab.html.Form",
       "content": "\u003Cbutton id=\"Continue\"\u003EContinue\u003C\u002Fbutton\u003E",
       "scrollTop": true,
@@ -2617,7 +2526,8 @@ this.end()
 }
 }
       },
-      "title": "Download to Firebase"
+      "title": "Download to Firebase",
+      "skip": true
     },
     {
       "type": "lab.html.Page",
